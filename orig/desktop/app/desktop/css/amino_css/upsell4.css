@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.upsell-container{
+    width: 741px;
+    margin: auto;
+}
+.upsell-container .logo{
+    width: 150px;
+    float: left;
+    padding: 20px 0 0;
+}
+.progress{
+    float: left;
+    width: 100%;
+    margin:20px 0;
+    position: relative;
+}
+
+.overText{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.overText ul {
+    list-style: none;
+    display: inline-block;
+    margin: 8px 0;
+}
+.overText ul li {
+    display: inline-block;
+    color: #fff;
+    padding: 0 85px 0 33px;
+    font-weight: 600;
+    line-height: 100%;
+}
+.mid-container {
+    width: 690px;
+    margin: 0 auto;
+}
+
+
+.mid-container h3, .mid-container p {
+    margin: 0;
+}
+
+.mid-container h3{
+margin-bottom: 10px;
+float: left;
+width: 100%;
+font-size: 24px
+}
+.mid-container .left {
+    width: 37%;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.progress img {
+    height: 38px;
+}
+.mid-container .right {
+    width: 58%;
+    float: left;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+.upsell-wrapper {
+    border: 2px dashed #444;
+    float: left;
+    width: 100%;
+
+    position: relative;
+}
+.upsell-wrapper::after {
+    display: block;
+    content: '';
+    background-image: url(../../images/cut.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    bottom: -22px;
+    right: 80px;
+}
+.upsell-wrapper ul {
+    padding-left: 35px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.upsell-wrapper ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    list-style: disc !important;
+}
+.lineThgough-red{
+    text-decoration: line-through;
+    color:#ff0000;
+    font-weight: 600;
+}
+.green{
+    color:#009900;
+    font-weight: 600;
+}
+.offerSection {
+    width: 80%;
+    margin: 0 auto;
+    padding: 8px 0px;
+    font-size: 14px;
+}
+.fr{
+    float: right;
+}
+.red{
+    color:#ff0000;
+}
+.fSize13{
+    font-size: 13px
+}
+
+.marginR15{
+    margin-right: 15px
+}
+.mb5{
+    margin-bottom: 5px !important
+}
+.upsell3-btn {
+    color: #fff;
+    font-weight: 500;
+    background: #ff9900 !important;
+    border: 0;
+    padding: 11px 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 20px;
+    clear: both;
+    cursor: pointer;
+     text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+.upsell3-btn:hover{
+    background:#d88303 !important;
+}
+.disc{
+    margin-left: 15px;
+    font-weight: 600
+}
+
+p.fSize18.mb20 {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+}
+.secureBit img {
+    width: 100%;
+    float: left;
+    vertical-align: middle;
+}
+.secureBit {
+    font-size: 18px;
+    margin: 0 auto 20px;
+    color: #333;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 20px 181px 0
+}
+.signature {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.disclose a{
+    color:#444;
+    font-size: 13px;
+    font-style: italic;
+}
+
+footer{
+    background:#000;
+    color:#fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 0
+}
+footer a{
+    color:#fff;
+    text-decoration: none;
+}
+
+
+.mb20{margin-bottom: 20px !important}
+.mb9{margin-bottom: 9px !important}
+
+.flex-space {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+}
+.flex-space div {
+    width: 50%;
+    text-align: center;
+}
+
+.underLine {
+    border-bottom: 3px solid #000;
+    width: 75%;
+    padding-bottom: 5px;
+    margin: 0 auto !important;
+}
+
+.center{
+    text-align: center;
+}
+
+.upsell-wrapper h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+p.center.mb9 {
+    margin: -1px 0 15px 0px !important
+}
+
+span.inline {
+    width: 51px;
+    display: block;
+    margin: 0 8px;
+}
+
+.upsell-wrapper .left .up2 {
+    width: 85px;
+    position: absolute;
+    bottom: -11px;
+    left: 161px;
+}

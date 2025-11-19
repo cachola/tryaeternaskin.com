@@ -1,0 +1,42 @@
+
+
+    .cards_sp {
+        text-align: center;
+        margin: 2.2em 0 2.2em 0;
+      }
+      .cards_sp span {
+        display: inline-block;
+      }
+      .cards_sp .card-visa {
+        width: 80px;
+        height: 50px;
+        background: url(../images/cards_sprite.png) no-repeat 0px 0;
+      }
+      .cards_sp .card-mastercard {
+        width: 80px;
+        height: 50px;
+        background: url(../images/cards_sprite.png) no-repeat -86px 0;
+      }
+      .cards_sp .card-discover {
+        width: 80px;
+        height: 50px;;
+        background: url(../images/cards_sprite.png) no-repeat -172px 0;
+      }
+      .cards_sp .card-amex {
+        width: 80px;
+        height: 50px;
+        background: url(../images/cards_sprite.png) no-repeat -258px 0;
+      }
+      .cards_sp .card-visa.inactive {
+        background-position: 0px -50px;
+      }
+      .cards_sp .card-mastercard.inactive {
+        background-position: -86px -50px;
+      }
+      .cards_sp .card-discover.inactive {
+        background-position: -172px -50px;
+      }
+      .cards_sp .card-amex.inactive {
+        background-position: -258px -50px;
+      }
+  

@@ -1,0 +1,1 @@
+{"type":"success","msg":"Affiliate Param value updated successfully."}

@@ -1,0 +1,1 @@
+{"last_id":0,"schema":{"id":"integer","coupon_label":"string","coupon_code":"string","coupon_type":"string","applied_on":"string","coupon_amt":"string","coupon_use_times":"string"},"relations":{}}

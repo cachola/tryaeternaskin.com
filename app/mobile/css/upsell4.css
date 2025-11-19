@@ -1,0 +1,438 @@
+@charset "utf-8";
+/* CSS Document */
+/*----------------
+RESET CSS
+-----------------*/
+body {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 0;
+	background: #fff;
+	text-align: center;
+	font-family: 'Sailec';
+	font-weight: normal;
+	}
+div, ul, h1, h2, h3, h4, h5, li, p, img, form, input, textarea {
+	margin: 0;
+	padding: 0;
+	}
+header, section, footer, aside, nav, main, article, figure {display: block;}
+table, tr, td {border: 0;}
+a {outline: none;color: #333;text-decoration: none;}
+a:hover {outline: none;color: #000;text-decoration: none;}
+img {border: none;}
+li {list-style: none;}
+* {box-sizing: border-box;}
+.img-full {max-width: 100%;}
+.clearall {
+	clear: both;
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+	}
+/*-------------pulse-------------------*/
+.pulse {
+	animation-name: pulse;
+	-webkit-animation-name: pulse;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	}
+@keyframes pulse {
+0% {transform: scale(0.9);opacity: 0.9;}
+50% {transform: scale(1);opacity: 1;}
+100% {transform: scale(0.9);opacity: 0.9;}
+}
+@-webkit-keyframes pulse {
+0% {-webkit-transform: scale(0.95);opacity: 0.9;}
+50% {-webkit-transform: scale(1);opacity: 1;}
+100% {-webkit-transform: scale(0.95);opacity: 0.9;}
+}
+
+/*-----------------------
+MAIN CSS START
+------------------------*/
+.container {
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	}
+/*-------------------------
+CSS FOR TOP BAR
+--------------------------*/
+.top-bar{
+	float: left;
+	width: 100%;
+	padding:15px 0;
+	font-family: Acronym;
+	}
+.logo{
+	float: left;
+	max-width:280px;
+	width:100%;
+	}
+.top-right{
+	float:right;
+	margin:18px 0;
+	}
+.top-call{
+	display: inline-block;
+	color: #343434;
+	font-size: 18px;
+	line-height: 24px;
+	vertical-align:middle;
+	letter-spacing:0.5px;
+	}
+.m-left {margin-left: 15px;}	
+.f{
+	display: inline-block;
+	margin-right:12px;
+	vertical-align:middle;
+	width:22px;
+	}
+.top-line{
+	vertical-align:middle;
+	margin:0 9px;
+	display: inline-block;
+	}
+.app-ic{
+	vertical-align:middle;
+	display: inline-block;
+	width:20px;
+	}
+a.log, a.join{
+	display: inline-block;
+	border:1px solid #ffd03a;
+	border-radius:5px;
+	width:114px;
+	height:36px;
+	color: #343434;
+	font-size: 19px;
+	line-height: 30px;
+	vertical-align:middle;
+	margin:0 10px 0 18px;
+	}
+a.join{
+	background:#ffd03a;
+	margin:0 10px 0 0;
+	}
+.app-p{
+	margin-right:10px;
+	}
+/*-------------------------
+CSS FOR UPSELL
+--------------------------*/
+.upsell-bg{
+	float:left;
+	width:100%;
+	background:#f4f8fd;
+	padding:30px 0 50px;	
+	}
+.upsell-Box {
+	display: inline-block;
+	width: 88%;
+	text-align:center;
+	-webkit-box-shadow: 1px 1px 4px 3px #d9dbdc;
+	box-shadow: 1px 1px 4px 3px #d9dbdc;
+	background: #ffffff;
+	border-radius: 5px;
+	overflow:hidden;
+	}
+.upsell-head{
+	float:left;
+	width:100%;
+	background:#ff495d;
+	font-size:34px;
+	line-height:34px;
+	color:#fff;
+	font-weight:bold;
+	padding:20px 0px;
+	}
+.upsell-mid{
+	float:left;
+	width:100%;
+	background:#fff;
+	padding:20px 0 30px;	
+	}
+.up-txt1{
+	float:left;
+	width:100%;
+	font-size:24px;
+	line-height:34px;
+	color:#474746;
+	font-weight:500;
+	}
+.up-txt1 span{
+	float:left;
+	width:100%;
+	font-size:30px;
+	color:#035692;
+	font-weight:bold;
+	} 	
+.vdo-img{
+	max-width:100%;
+	display:inline-block;
+	vertical-align:middle;
+	margin:25px 0 50px;
+	}		
+.upsell-lft{
+	float:left;
+	width:100%;
+	text-align:left;
+	padding:0 50px 50px 50px;	
+	}
+.up-txt2{
+	float:left;
+	width:100%;
+	font-size:22px;
+	line-height:30px;
+	color:#211e1e;
+	font-weight:bold;	
+	text-align: center;
+	}
+.up-txt3{
+	float:left;
+	width:100%;
+	font-size:18px;
+	line-height:28px;
+	color:#211e1e;
+	font-weight:300;
+	margin-top:25px;	
+	}	
+ul.upsell-list{
+	float:left;
+	width:100%;	
+	}
+ul.upsell-list li{
+    background: url(../images/up-tike.png) no-repeat left 5px;
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    color: #211e1e;
+    font-weight: 300;
+    margin-top: 30px;
+    padding-left: 30px;	
+	}	
+.up-last{
+	float:left;
+	width:100%;
+	padding:0 10px;
+	text-align:center;
+	}		
+.frmfieldToggle {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #211e1e;
+    font-size: 18px;
+    line-height: 19px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 300;
+	}
+.frmfieldToggle a{
+	color: #211e1e;
+	}
+.frmfieldToggle input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+	}
+.frmfieldToggle input[type=checkbox] + span {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+	width: 20px;
+	height:20px;
+	border: 1px solid #808080;
+	border-radius: 2px;
+	position: relative;
+	background:#fff;
+	}
+.frmfieldToggle input[type=checkbox] + span {
+	left: 0;
+	top: 1px;
+	}
+.frmfieldToggle input[type=checkbox]:checked + span:after {
+	position: absolute;
+	content: '';
+	width: 16px;
+	height: 16px;
+	background: url(../images/tik-blk.svg) no-repeat center center;
+	background-size: 100%;
+	left: 0px;
+	top: 0px;
+	}
+.frm-lock{
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    color: #686868;
+    letter-spacing: 0.5px;
+    margin: 35px 0 15px;
+	}
+.frm-lock img{
+    vertical-align: top;
+    margin-right: 5px;
+    margin-top: 2px;
+	}
+.frm-btn {
+	max-width:100%;
+    display: inline-block;
+	vertical-align:middle;
+    border: none;
+	outline:none;
+	}	
+.frm-secure{
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 10px;
+	}
+a.no-thanx{
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    color: #211e1e;
+	font-style:italic;
+	text-decoration:underline;
+	margin-top:30px;
+	padding:0 10px;
+	}												
+/*-------------------------
+CSS FOR FOOTER
+--------------------------*/
+footer{
+	float: left;
+	width: 100%;
+	padding: 40px 0;
+	letter-spacing:0.5px;
+	}
+.foo-ul{
+	float: left;
+	width: 100%;
+	padding:0 70px;
+	}
+.foo-ul li{
+	float: left;
+	width:35%;
+	text-align:left;
+	}
+.foo-ul li:nth-child(2){
+	width: 30%;
+	padding:0 30px;
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+	}
+.foo-ul li:nth-child(3){
+	padding-left:40px;
+	width: 35%;
+	}
+.foo-ul li:nth-child(1){
+	padding-right:30px;
+	}
+.foo-logo{
+	float:left;
+	max-width:300px;
+	width:90%;
+	margin-bottom:10px;
+	}
+.f-p1{
+	float: left;
+	width: 100%;
+	color: #474746;
+	font-size: 16px;
+	line-height: 24px;
+	}
+.pad-2{
+	padding:12px 0 0;
+	}
+.foo-icon{
+	float:left;
+	width:100%;
+	}
+.foo-ul li .s2-p3{
+	color:#474746;
+	margin-bottom:15px;
+	}
+.foo-ul li:nth-child(2) .f-p1{
+	margin-bottom:8px;
+	}
+.f-p2{
+	float:left;
+	width:100%;
+	padding:5px 0 5px 44px;
+	color:#474746;
+	font-size: 16px;
+	line-height: 24px;
+	position:relative;
+	margin-bottom:15px;
+	}
+.f-p2 img{
+	position:absolute;
+	left:0;
+	top:0;
+	}
+.ft-btm{padding-top:0;}
+
+/*-============================
+CSS FOR FAQ PAGE
+===============================*/
+.faq-banner{
+	float:left;
+	width:100%;
+	padding: 35px 0;
+    background: url(../images/checkout-banner.jpg) no-repeat center top;
+	color: #18b7f0;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 800;
+	}
+.faq-sec-1{
+	float:left;
+	width:100%;
+	padding:40px 0 60px 0;
+	border-bottom:1px solid #e7e7e7;
+	}
+.faqHdng{
+	float:left;
+	width:100%;
+	float:left;
+	text-align:left;
+	font-size:22px;
+	line-height:30px;
+	margin-top:30px;
+	color:#035692;
+	border-top:1px solid #e7e7e7;
+	border-bottom:1px solid #e7e7e7;
+	padding:7px 0;
+	letter-spacing:1px;
+	}
+.faq-para{
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:17px;
+	line-height:26px;
+	margin-top:10px;
+	color:#2d2d2d;
+	letter-spacing:0.5px;
+	}
+	
+.faq-para a{ color:#06C;}
+
+.s1-video-box{
+	float: left;
+	width: 100%;
+	margin:20px 0 20px;
+	}
+	.s1-video{
+		width: 100%   !important;
+		height: auto   !important;
+		}

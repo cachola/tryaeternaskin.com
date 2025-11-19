@@ -1,0 +1,33 @@
+.cards {
+    text-align: center;
+}
+.cards span {
+    display: inline-block;
+}
+.cards .card-visa {
+    width: 85px;
+    height: 54px;
+	background: url(../images/card_sprite_250.png) no-repeat 0 0;
+	/* background-size: 200% 200%; */
+}
+.cards .card-discover {
+    width: 76px;
+    height: 54px;
+	background: url(../images/card_sprite_250.png) no-repeat -86px 0;
+	/* background-size: 200% 200%; */
+}	
+.cards .card-mastercard {
+    width: 91px;
+    height: 54px;
+	background: url(../images/card_sprite_250.png) no-repeat -161px 0;
+	/* background-size: 200% 200%; */
+}	
+.cards .card-visa.inactive {
+    background-position: 0px -55px;
+}
+.cards .card-discover.inactive {
+    background-position: -86px -55px;
+}
+.cards .card-mastercard.inactive {
+    background-position: -161px -55px;
+}

@@ -1,0 +1,432 @@
+@charset "utf-8";
+/*---------------------
+CSS FOR MEDIA QUERY
+----------------------*/
+.show-mob, .show-tab {display: none;}
+.show-desk {display: block;}
+.fr {float: right;}
+.fl {float: left;}
+.tl{text-align:left;}
+#conf-inf-box{
+    margin-top:30px;
+}
+@media only screen and (min-width:1024px) {
+#emailbox{
+    width: 300px;
+}
+#chk-right-checkout{
+    padding-top: 25px;
+}
+}
+
+
+@media only screen and (max-width:1185px) {
+
+.container {width: 1004px;}
+
+/*-------------------------
+CSS FOR BANNER
+--------------------------*/
+.pad-1 {padding: 30px 53px 0;}
+.form-box {padding: 30px 15px 15px;}
+.join-save-btn {font-size: 17px;line-height: 20px;width: 234px;padding: 0 0 0 8px;}
+.input-box {width: 217px;margin: 8px 4px 8px 0;}
+.s4-slide-txt {padding: 80px 50px;}
+.section-7 .s2-p3 {padding: 15px 0 10px;}
+.foo-ul li {width: 39%;}
+.foo-ul li:nth-child(2) {width: 24%;}
+
+/*----------CSS FOR CHECKOUT---------------*/
+.chk-rgtBox {height: 477px;}
+.frm-mid{margin-bottom: 10px;}
+.frm-head p {
+    font-size: 28px;
+}
+.frm-head img {
+    margin-right: 5px;
+    left: 5px;
+    top: 8px;
+}
+.order-summary{
+    margin-top: 20px;
+}
+
+}
+
+
+@media only screen and (max-width:1023px) {
+.container {width: 755px;}
+.show-mob, .show-desk {display: none;}
+.show-tab {display: block;}
+
+/*----------CSS FOR LOGO BAR--------------*/
+.top-bar {padding: 8px 0;}
+.top-right {margin: 10px 0;}
+.logo {width: 210px;}
+.f {margin-right: 3px;width:18px;}
+.app-ic {width: 16px;}
+.top-line {margin: 0 2px;}
+.app-p {margin-right: 2px;}
+a.log, a.join {width: 90px;font-size: 17px;margin: 0 2px 0 7px;}
+a.join {margin: 0 5px 0 0;}
+.top-call {font-size: 16px;line-height: 24px;}
+
+/*--------CSS FOR BANNER--------------*/
+.banner {background: url(../images/banner-bg.jpg) no-repeat 32% top;padding: 55px 0 100px;}
+.bnr-p1 {font-size: 40px;}
+.bnr-lft {width: 63%;}
+.bnr-p2 {padding-left: 11px;}
+.bnr-seal {left: 0;}
+.bnr-strip {padding-left: 66px;}
+
+/*----------CSS FOR FORM----------------*/
+.field-all {padding: 0 10px 0 35px;}
+.input-box {width: 365px;margin: 8px 0.5% 8px 0;}
+.form-box {padding: 30px 7px 15px;}
+.join-save-btn {font-size: 13px;line-height: 20px;height: 52px;width: 25%;margin-left: 0;padding: 4px 0 0 5px;margin-top: 4px;}
+.form-p1 { left: 27px; top: -27px; font-size: 22px; line-height: 25px;padding: 9px 30px;}
+.frm-p-arw {top: 43px;}
+
+/*------------CSS FOR SECTION 1---------------*/
+.icon-ul li {padding: 0 10px;}
+.section-1, .section-2, .section-3, .section-4, .section-6, .section-7 {padding: 50px 0 50px;}
+.s1-p1 {font-size: 30px;line-height: 32px;}
+.s1-ul li {padding: 0 10px 0 48px;font-size: 18px;line-height: 25px;}
+.s1-ul li img {left: 10px;}
+
+/*--------CSS FOR SECTION 2----------------*/
+.s2-p1 {font-size: 37px;line-height: 40px;}
+.s2-p2 {font-size: 22px;line-height: 28px;}
+.pad-1 {padding: 30px 0 0;}
+.s2-p4 {font-size: 20px;line-height: 25px;}
+.s2-ul li {margin-top: 0;}
+
+/*---------CSS FOR SECTION 3--------------*/
+.s3-ul {margin: 30px 0 0;}
+
+/*-------CSS FOR SECTION 4----------*/
+.s4-slide-txt {padding: 40px 20px;}
+.s4-box {margin-top: 40px;}
+.s4-box a.join-save-sec-btn {margin-top: 30px;}
+.s4-ic-1 {margin-bottom: 25px;}
+
+/*--------CSS FOR SECTION 5------------*/
+.section-5 {padding: 50px 0 10px;}
+
+
+/*---------CSS FOR SECTION 7-----------*/
+.section-7{background-size:cover;}
+
+/*----------CSS FOR CHECKOUT---------------*/
+.chk-bnr{ padding:15px 0;}
+.chk-txt1{ font-size:30px; line-height:35px;}
+.clk-txt{ font-size:40px; line-height:45px;}
+.clk-txt img{ width:30px;}
+.check-seal{ width:120px;}
+
+.chk-left{ padding:0 15px 30px;}
+.formBox{ margin-top:33px;}
+.frm-head{ padding:10px;}
+.frm-head img{ 
+    margin-right:5px;
+    left: 5px;
+    top: 8px;
+}
+.frm-head p{ font-size:20px;}
+.frm-half,.frm-small{ width:48%;}
+
+.money-back{ padding: 15px 10px 15px 100px; margin-top:20px;}
+.money-back img{left: 10px;top: 20px;width: 80px;}
+.money-back p{ font-size:17px; line-height:22px;}
+.money-back p span{ font-size:23px; line-height:25px; margin-bottom:3px;}
+
+.chk-right{ padding:0px 15px;}
+.chk-rgtBox {height: 452px;}
+.chk-rgt-vdo{ margin:20px auto;}
+ul.innr-list{ padding:25px 10px 35px}
+ul.innr-list li{ font-size:19px; margin-bottom:15px;}
+.cusmr-coments{ margin-top:10px;}
+.cust-t1,.innr-head{ font-size:28px; line-height:30px;}
+ul.cust-list li{ padding: 0px 0 20px 80px; margin-top: 20px;}
+ul.cust-list li img{ width:80px;}
+.frm-mid{margin-bottom: 5px;}
+#pay-inf-box{
+    margin-top:30px;
+}
+.order-summary {
+    margin-top: 20px;
+}
+.cards span {
+    margin: 0 0px 0 0px;
+}
+.frm-head img {
+    margin-right: 5px;
+    left: 5px;
+    top: 8px;
+}
+/*----------CSS FOR FOOter---------------*/
+.foo-ul {padding: 0 0;}
+.foo-ul li:nth-child(1) {padding-right: 10px; width:40%}
+.foo-ul li:nth-child(2) {padding: 0 10px; width:20%}
+.foo-ul li:nth-child(3) {padding-left: 10px;width: 40%;}
+.f-p2{word-break:break-all;}
+
+/*--------CSS FOR UPSELL--------------*/
+.upsell-head{ font-size:30px;}
+.up-txt1{ font-size:20px; line-height: 34px;}
+.up-txt1 span{ font-size:28px;}
+.up-txt2{ font-size:20px; line-height:30px;}
+
+/*--------CSS FOR UPSELL--------------*/
+.m-left{ margin-left:0;}
+.upsell-bg{ padding:20px 0;}
+.upsell-Box{ width:100%;}
+.upsell-head{ font-size:28px; padding:10px 0;}
+
+.upsell-mid{ padding:20px 0;}
+.up-txt1{ font-size:18px; line-height: 26px;}
+.up-txt1 span{ font-size:24px; margin-bottom:5px;}
+.vdo-img{ margin:10px 0;}
+
+.upsell-lft{ padding:0 10px 20px 10px;}
+.up-txt2{ font-size:18px; line-height:28px;}
+.up-txt3{ margin-top:20px;}
+ul.upsell-list li{ margin-top:20px;}
+.frmfieldToggle{ font-size:16px;}
+a.no-thanx{ margin-top:20px;}
+
+
+/*-=======================
+CSS FOR THANKYOU PAGE
+===========================*/
+.thnk-Box {width: 100%;}
+.frm-input{
+    font-size: 14px;
+    padding: 0px 5px;
+}
+}
+
+@media only screen and (max-width:767px) {
+.container {width: 100%;padding: 0 10px;max-width: 600px;}
+.show-desk, .show-tab {display: none;}
+.show-mob {display: block;}
+
+/*--------CSS FOR LOGO BAR-------------*/
+.top-bar {padding: 10px 0;}
+.logo {width: 175px;}
+.f, .app-p, .app-ic, .top-line, a.log, a.join {display:none;}
+.top-right { margin: 9px 0 0;}
+.top-call{letter-spacing:0;}
+
+/*----------CSS FOR BANNER------------*/
+.banner {background: #024381;padding: 10px 0 85px;}
+.banner .container{padding:0;}
+.bnr-lft {width: 100%;text-align: center;}
+.bnr-p1 {font-size: 24px;line-height: 30px;padding:0 10px;font-weight:bold;}
+.mob-bnr{display:inline-block;max-width:100%;margin:15px 0 0;vertical-align:top;}
+.bnr-strip {margin: 0px;float:none;display:inline-block;width:auto;text-align:left;padding:7px 5px 7px 60px;}
+.bnr-seal {left: 7px;width:45px;top:50%;transform:translateY(-50%);}
+.bnr-p2 {padding-left: 10px;font-size: 18px; line-height: 25px;float:none;display:inline-block;width:auto;}
+.bnr-p2 span{float:none;display:inline-block;width:auto;}
+.bnr-strip-mob{float:left;width:100%;background:#003a73;margin: 5px 0 10px;}
+.bnr-ul li {font-size: 20px;line-height: 24px; margin: 5px 0; padding: 0 0 0 30px; text-align: left;}
+.bnr-ul { float:none;display:inline-block; width: 100%;max-width:345px;padding:0 5px;}
+.input-box {width: 100%;margin: 3px 0;}
+.join-save-btn {font-size: 20px; line-height: 20px; height: 55px; width: 100%; margin-left: 0; padding: 3px 39px 0 0; margin-top: 6px; text-align: center;}
+.form-box {padding: 30px 20px 15px;}
+.form-p1 {left: 17px; top: -21px; font-size: 18px; line-height: 25px;  padding: 6px 12px;}
+.frm-p-arw {top: 35px;}
+
+.icon-ul li { width: 100%; padding: 0 20px; background: url(../images/icon-line-mob.png) no-repeat bottom center!important; padding-bottom:20px;margin-bottom:20px;}
+.icon-ul li:nth-child(3){display:none;}
+.icon-ul li:last-child{padding-bottom:0px; background:none!important;}
+.icon-ul {padding: 15px 0;}
+.stripMbg-mob{display:inline-block; vertical-align:middle; margin:20px auto 10px auto; width:150px;}
+.bnr-hand-img{ display:none;}
+/*-------------------------
+CSS FOR SECTION 1
+--------------------------*/
+.section-1, .section-2, .section-3, .section-4, .section-6, .section-7 {padding: 30px 0;}
+.s1-p1 {font-size: 32px;line-height: 37px;}
+.s1-video-box {margin: 20px 0 0px;}
+.s1-ul {padding: 0;float:none;display:inline-block;max-width:350px;}
+.s1-ul li {width: 100%;background:none;}
+.s1-video-img-mob{display:inline-block;max-width:100%;}
+.s1-video-img{display:none;}
+
+/*-------------------------
+CSS FOR SECTION 2
+--------------------------*/
+.s2-p1 {font-size: 32px;line-height: 37px;}
+.s2-p2 {font-size: 20px;line-height: 25px;}
+.pad-1 {padding: 10px 0 0;}
+.s2-ul li {width: 100%;margin-top:30px;background:none;}
+.s2-ic-1 { margin-bottom: 0;}
+.s2-ul li:nth-child(3) {display:none;}
+.s2-p4 {font-size: 20px; line-height: 24px;}
+.s2-img-1-mob{display:inline-block;max-width:100%;margin-top:25px;}
+.s2-ul { margin: 0px 0 25px;}
+.s2-p5 {font-size: 20px;line-height: 26px;}
+a.join-save-sec-btn {margin-top: 20px;}
+
+/*-------------------------
+CSS FOR SECTION 3
+--------------------------*/
+.s3-ul li {width: 100%;}
+.s3-ul li:nth-child(2) {margin: 35px 0;}
+.s3-ul {margin: 20px 0 0;}
+.s3-line {margin: 20px 0 10px;}
+
+/*-------------------------
+CSS FOR SECTION 4
+--------------------------*/
+.s4-box {margin-top: 20px;background: none;}
+.s4-slide-txt{width: 100%;padding: 30px 10px 20px;}
+.s4-bx-img{display:none !important;}
+.s4-box a.join-save-sec-btn {margin-top: 25px;}
+.s4-slide-ritbox {width: 100%;}
+.s4-bx-img-mob {display: block !important;max-width:100%;margin:0 auto;}
+
+/*-------------------------
+CSS FOR SECTION 5
+--------------------------*/
+.section-5 { padding: 30px 0 10px; background-size:cover;}
+.s5-ul {padding: 0 0px 0px;position:relative;margin:-10px 0 -10px;}
+.s5-ul li {width: 100%;margin:0 auto;}
+.s5-ul li img { margin:0 auto;max-width: 290px;width:100%;}
+
+.app-desktop-img{display:none;}
+.app-mob-img{display:inline-block; vertical-align:middle; max-width:100%;  margin:40px 0 20px 0;}
+
+/*-------------------------
+CSS FOR SECTION 6
+--------------------------*/
+.s6-ul {margin: 15px 0 0;}
+.s6-ul li {width: 100%;}
+.s6-ul li:nth-child(2) {margin: 35px 0;}
+.section-7 .s2-p3 {padding: 9px 0 5px;}
+
+/*--------CSS FOR CHACKOUT-------------*/
+.chk-bnr{ background:url(../images/chkbnr-bg-mob.jpg) no-repeat center top; background-size:cover;}
+.check-seal{ display:none;}
+.chk-txt1 {font-size: 26px;line-height: 30px;}
+.clk-txt {font-size: 30px;line-height: 35px;}
+.clk-txt img{ width:25px; margin-right:0;}
+
+.chk-sec .container{ padding:0;}
+.chk-block{ border:none;}
+.chk-left{ width:100%; padding:0 10px 15px; border:none;}
+.formBox{ margin-top:20px;}
+.order-summary{ margin:20px 0 5px;}
+ul.odr-row li.total{ margin-bottom:0;}
+
+.frm-head img {
+    margin-right: 5px;
+    left: 5px;
+    top: 12px;
+    width:30px;
+}
+/* .frm-head {
+height: 40px;
+} */
+.frm-head p {font-size: 22px;line-height: 24px;}
+.chk-rgtBox{ margin-top:20px;}
+.chk-rgt-vdo{ margin:0 auto 0;}
+	
+.frmElement{ margin:5px 0;}
+.cards{ margin:0 auto 15px;}
+
+.chk-right{ width:100%; padding:15px 10px;}
+.chk-rgtBox {height: auto;}
+.chk-rgtBox-m {margin-bottom: 20px;}
+ul.cust-list{ padding:0;}
+.money-back {padding: 20px 10px;text-align: center; margin-top:15px;}
+.money-back img {width: 100px;position: static; display: block;margin: 0px auto 10px;}
+.money-back p span{ margin-bottom:5px;}
+
+.cusmr-coments{ margin-top:5px;}
+.cards span {
+    margin: 0 10px 0 10px;
+}
+/*-------------------------
+CSS FOR FOOTER
+--------------------------*/
+footer {padding: 30px 0 20px;}
+.foo-ul li{width:100%;text-align:center;}
+.foo-ul li:nth-child(1) {padding-right:0px;width:100%;margin-bottom:20px;}
+.foo-logo {float: none;margin-bottom: 5px;max-width: 200px;}
+footer .f, footer .app-p, footer .app-ic, footer .top-line{display: inline-block;}
+.foo-ul li:nth-child(2) {width: 100%;padding: 0 0px 0 0;border-left: none;border-right: none;}
+.f-p1 {font-size: 15px;line-height: 23px;}
+.foo-ul li:nth-child(3) { padding-left: 10px;width: 100%;margin-top:20px;}
+.foo-ul li:nth-child(2) .f-p1 {margin-bottom: 0px;width:auto;padding:0 5px;float:none;display:inline-block;}
+.foo-ul li .s2-p3 {margin-bottom: 5px;}
+.foo-ul li:nth-child(3) .f-p2 {text-align:left;}
+
+/*-=======================================
+CSS FOR THANKYOU PAGE
+===========================================*/
+.thank-sec-1 {padding: 30px 0;}
+.thnk-Box{padding:15px 15px 25px 15px;}
+.thank-heading{font-size:28px; line-height:32px; margin-bottom:5px;}
+.thank-p1{font-size:16px; line-height:24px; margin-top:5px;}
+.thank-p1 img{display:inline-block; vertical-align:middle;}
+a.ty-btn{margin-top:20px; height:auto; font-size:20px; line-height:26px; padding:10px;}
+.thank-left, .thank-right{width:100%; margin-top:15px;}
+.thank-right .chk-sum-row{padding:7px 0;}
+.m-left{margin-left:0;}
+
+
+.popBox{width:95%; top:100px; margin-top:0; height:auto; display:table;}
+.pop-inner{padding-left:0;}
+.pop-model{display:none;}
+/*.pop-img-mob{display:inline-block; vertical-align:middle; margin-top:-50px;}*/
+.pop-Heading{padding:10px; text-align:center; font-size:20px; line-height:26px;}
+.pop-para{padding:0 10px; text-align:center;}
+.popfrm{padding:20px 20px;}
+
+/*-============================
+CSS FOR FAQ PAGE
+===============================*/
+.faq-banner{padding:15px 0; font-size:30px;}
+.faq-sec-1{padding:10px 0 30px;}
+.faq-para{ font-size:16px;}
+.faq-para a{word-break:break-all;}
+}
+
+@media only screen and (max-width:360px) {
+.bnr-ul {max-width: 310px;}
+.s1-ul {max-width: 310px;}
+.s5-ul li img {max-width: 250px;}
+.top-call { font-size: 14px;line-height: 24px;}
+.logo {width: 153px;}
+.cards span {
+    margin: 0 0px 0 0px;
+}
+
+}
+
+@media only screen and (max-width:320px) {
+    /* .bnr-ul {max-width: 310px;}
+    .s1-ul {max-width: 310px;}
+    .s5-ul li img {max-width: 250px;}
+    .top-call { font-size: 14px;line-height: 24px;}
+    .logo {width: 153px;}
+    .cards span {
+        margin: 0 0px 0 0px;
+    } */
+    #card-box{
+        width: 61%;
+    }
+    
+    #cvv-box{
+        width: 36%;
+    }
+    .frm-lab {
+        font-size: 15px;
+    }
+    .frm-head p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    }

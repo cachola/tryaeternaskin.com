@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'Acronym-RegularItalic';
+	src: url('Acronym-RegularItalic.woff2') format('woff2'),
+		url('Acronym-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family: 'Acronym';
+	src: url('Acronym-Light.woff2') format('woff2'),
+		url('Acronym-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Acronym';
+	src: url('Acronym-Regular.woff2') format('woff2'),
+		url('Acronym-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Acronym';
+	src: url('Acronym-Bold.woff2') format('woff2'),
+		url('Acronym-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Acronym';
+	src: url('Acronym-ExtraBold.woff2') format('woff2'),
+		url('Acronym-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Acronym';
+	src: url('Acronym-Semibold.woff2') format('woff2'),
+		url('Acronym-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	}
+
+
+

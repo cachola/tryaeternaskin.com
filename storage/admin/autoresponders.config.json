@@ -1,0 +1,1 @@
+{"last_id":0,"schema":{"id":"integer","label":"string","template":"string","enable_smtp_profile":"boolean","enable_ssl":"boolean","smtp_host":"string","smtp_port":"string","smtp_username":"string","smtp_password":"string","email_subject":"string","sender_email":"string","sender_name":"string","notifier_email":"string","bcc_email":"string"},"relations":[]}

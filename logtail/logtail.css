@@ -1,0 +1,95 @@
+        /* The navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+
+            /* Full width */
+            height: 50px;
+        }
+
+        .titlebar {
+            overflow: hidden;
+            background-color: lavender;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 50px;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+
+            /* Full width */
+            height: 30px;
+        }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change background on mouse-over */
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
+        /* Main content */
+        .main {
+            margin-top: 50px;
+            /* Add a top margin to avoid content overlay */
+        }
+
+        .leftpanel {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        .rightpanel {
+            float: right;
+            width: 50%;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* easier box-model calculations */
+            -webkit-box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .textarea1 {
+            position: fixed;
+            left: 0%;
+            top: 80px;
+            width: calc(50vw - 7px);
+            /* calc and viewport to the rescue */
+            height: calc(100vh - 80px);
+            resize: none;
+            background-color: black;
+            color: silver;
+        }
+
+        .textarea2 {
+            position: fixed;
+            left: 50%;
+            top: 80px;
+            width: calc(50vw - 7px);
+            /* calc and viewport to the rescue */
+            height: calc(100vh - 70px);
+            resize: none;
+            background-color: black;
+            color: silver;
+        }

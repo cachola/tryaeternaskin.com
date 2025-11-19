@@ -1,0 +1,62 @@
+ 
+            .dwn_lnk{ padding-left:40px; font-size:28px; line-height:34px; text-decoration:underline; padding-bottom:10px;}
+            .dwn_btn {
+                -moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+                -webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+                box-shadow:inset 0px 1px 0px 0px #54a3f7;
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+                background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+                background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+                background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+                background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+                background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+                background-color:#007dc1;
+                -moz-border-radius:3px;
+                -webkit-border-radius:3px;
+                border-radius:3px;
+                border:1px solid #124d77;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:22px;
+                padding:12px 24px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #154682;
+                margin-left:40px;
+                margin-bottom:10px;
+            }
+            .dwn_btn:hover {
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+                background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+                background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+                background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+                background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+                background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+                background-color:#0061a7;
+            }
+            .dwn_btn:active {
+                position:relative;
+                top:1px;
+            }
+            .top_sec22{
+                padding:0; margin:0px; width:520px;
+                text-align:justify;
+            }
+            .top_sec22 .f12{
+                font-sise:12px;
+                line-height:14px;
+                font-weight:bold;
+                margin-bottom:20px !important;
+            }
+            .dwn_btn{min-width:48%;text-align:center;}
+            #banner .logo {
+    top: 14px;
+    left: 28px;
+    width: 165px;
+}
+.pro-div{clear:both;}
+.survey{text-align:left;padding:15px 40px 0;float:none}.survey form{margin:0;display:block;background:#f2f2f2;padding:15px;text-align:left}.survey h4{font-size:16px;font-weight:700;padding:0 0 10px;color:#5a5a5a}.survey h6{margin:0 0 5px;padding:0;font-size:14px}.survey select{width:244px;padding:0;border:1px solid #ccc;height:26px;line-height:26px;color:#444;font-size:12px}.survey .btn_submit{margin:0 0 0 8px;padding:0 15px;font-size:14px;color:#fff;background:#6e6e6e;height:26px;border:none;outline:none;cursor:pointer;text-transform:uppercase;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none}.survey .btn_submit:hover{background:#444}.msg_text{font-size:14px;line-height:18px}
+        

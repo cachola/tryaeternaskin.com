@@ -1,0 +1,97 @@
+<?php
+// require_once ('library' . DIRECTORY_SEPARATOR . 'app.php');
+require_once (dirname(__DIR__) . DIRECTORY_SEPARATOR . 'library' . DIRECTORY_SEPARATOR . 'app.php');
+
+use Application\Helper\Provider;
+use Application\Session;
+
+
+$orderId=[];
+if(Session::has('steps.1.orderId')){
+    $orderId[]=Session::get('steps.1.orderId');
+    // echo Session::get('steps.1.orderId');
+    // die();
+}
+
+
+
+$orders = Provider::orderView($orderId);
+$product_details = Session::get('product_details');
+$items='';
+if(isset($orders[0]))
+{
+    $items=$orders[0]['data'][0]['items'];
+}
+//$total=$orders[0]['data'][0]['totalAmount'];
+$subtotal=0;
+$ship_price=0;
+$total=0;
+$subtotal_main=0;
+$ship_price_main=0;
+$total_main=0;
+// $steps[]='';
+
+if(!empty(Session::get('steps.2.products')))
+{
+	foreach(Session::get('steps.2.products') as $productId => $item){
+    if(isset($item['productId']) && $item['productId']!='')
+    {
+
+
+        $steps[] = $item;
+        $subtotal += $item['productPrice'];
+        $ship_price += $item['shippingPrice'];
+        $total = $subtotal + $ship_price;
+    }
+    }
+}
+
+if(!empty(Session::get('steps.1.products')))
+{
+ foreach(Session::get('steps.1.products') as $productId => $item){
+    if(isset($item['productId']) && $item['productId']!='')
+    {
+
+
+        $steps_main[] = $item;
+        $subtotal_main += $item['productPrice'];
+        $ship_price_main += $item['shippingPrice'];
+        $total_main = $subtotal_main + $ship_price_main;
+        }
+    }
+
+    $totalprice=$total_main+$total;
+}
+// echo '<br>';
+// echo $total;
+// print_r($items);
+// die();
+$customerdetails=array();
+if(Session::get('customer')){
+
+$customerdetails=Session::get('customer');
+}
+// echo '<pre>';
+// print_r($customerdetails);
+// die();
+
+App::run(array(
+    'config_id' => 2,
+    'step'      => 3,
+    'version'   => 'mobile',
+    'tpl'       => 'thank-you.tpl',
+    'go_to'     => '',
+    'tpl_vars'  => array(),
+    'tpl_vars'  => array(
+    'subTotal' =>  number_format($total_main,2),
+    'total' => number_format($total,2),
+    'ship_price' => number_format($ship_price,2),
+    'step' => $steps,
+    'totalprice'=>number_format($totalprice,2),
+    // 'order' => $orderDetails,
+    'total'=>number_format($total,2),
+    'customer'=>$customerdetails,
+    ),
+    'pageType'  => 'thankyouPage',
+));
+

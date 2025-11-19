@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <?php include 'general/__header__.tpl'; ?>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Detox Colon Cleanse</title>
+<meta name="description" content="Detox Colon Cleanse">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="content-language" content="en-us">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="HandheldFriendly" content="true">
+<link href="<?= $path['images'] ?>/favicon.png" rel="icon" type="image/png">
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?= $path['css'] ?>/upsell_style.css?v=1120393071">
+<meta charset="utf-8"/>
+
+<title>Detox Colon Cleanse</title>
+
+<meta name="description" content="Detox Colon Cleanse" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-language" content="en-us" />
+ 
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+<link rel="stylesheet" href="<?= $path['assets_css'] ?>/app.css" />
+
+  </head>
+  <body>
+    <?php perform_body_tag_open_actions(); ?>
+    <p id="loading-indicator" style="display:none;">Processing...</p>
+
+    <!-- header -->
+  <div class="header_upsell">
+    <div class="container text-center">
+       <div class="offer_tag"><img src="<?= $path['images'] ?>/tag.png" alt=""></div>
+       <span><img src="<?= $path['images'] ?>/bar.png" alt=""></span>
+    </div>
+  </div>
+  <div class="body_content text-center upsell2">
+    <div class="container">
+       <h5>This Offer Expires When Sold Out!</h5>
+       <h1>Wait, your order is not complete...</h1>
+       <p>Others who have purchased Keto Fire Gummies have also had incredible results with this
+<span>Detox Colon Cleanse!</span> Would you like to add this to your order?</p>
+      <div class="product_wrap clearfix" id="mydiv">
+        <div class="product_left">
+           <span class="badge"><img src="<?= $path['images'] ?>/badge.png" alt=""></span>
+           <div class="product_pic">
+           	 <img src="<?= $path['images'] ?>/product2.png" alt="">
+           </div>
+        </div>
+        <div class="product_content">
+             <h2>OUR #1 BEST SELLING</h2>
+             <div class="price_tagD">
+               <span class="pic1"><img src="<?= $path['images'] ?>/pic1.png" alt=""></span>
+               <div class="pricepic">
+                 REG
+                 <span>$129.95</span>
+               </div>
+             </div>
+             <div class="big_text">
+               INTERNAL CLEANSING               <span>FORMULA!</span>
+             </div>
+             <div class="sub_text">JUMPSTART YOUR KETO DIET</div>
+             <p>Clear your body of any toxins before and while you’re on a keto diet. 
+Ginger root is a key ingredient for any detox since it stimulates digestion 
+and circulation. Ginger root also helps to cleanse the build-up of waste 
+and toxins in the colon, liver, and other organs. </p>
+             <div class="price_area">
+               Claim your Bottles Today ONLY               <span>$34.97<span class="title-block__retail">/bottle</span></span>
+             </div>
+        </div>
+      </div>
+      <div class="left_area">
+        <div class="only_text">ONLY 22 LEFT!</div>
+        <form name="is-upsell" class="is-upsell" accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8">
+
+        <center><button type="submit" class="checkout_btn pulse" onclick="processUpsell();">Complete Checkout!</button></center>
+        </form>
+        <br>
+        <br>
+        <div class="dont_text">
+          <i><img src="<?= $path['images'] ?>/close.png" alt=""></i>
+          <span><a href="upsell2.php" style="text-decoration: none;color:#8e8e8e;">NO, I DON’T WANT TO TURBO CHARGE MY RESULTS</a></span>
+        </div>
+        <div class="pic2"><img src="<?= $path['images'] ?>/pic2.png" alt=""></div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+  <div class="comnt_area">
+    <div class="container">
+       <div class="connection_text">
+         <span><img src="<?= $path['images'] ?>/text_pic.png" alt=""></span>
+         <span><img src="<?= $path['images'] ?>/visa.png" alt=""></span>
+       </div>
+       <div class="star_blog">
+         <i><img src="<?= $path['images'] ?>/star.png" alt=""></i>
+         <h4>Get it, you won't regret it!</h4>
+         <span>by Jannett</span>
+         <p>I love Keto products- I tried this stuff for my weight management - you know, to stay on top of my weight - it is amazing!
+highly recommend it.</p>
+       </div>
+       <div class="star_blog">
+         <i><img src="<?= $path['images'] ?>/star.png" alt=""></i>
+         <h4>It works.</h4>
+         <span>by Amylynn</span>
+         <p>Ordered it on a whim. I figured what the heck, I'll give it a try. Both of these products work amazingly. After a short time I began start seeing the effects. I recommend using it to keep that weight off and continue looking your best!</p>
+       </div>
+       <div class="star_blog">
+         <i><img src="<?= $path['images'] ?>/star.png" alt=""></i>
+         <h4>Ordered for my husband</h4>
+         <span>by Karae</span>
+         <p>I ordered it for my husband - he’s had a real tough time losing weight. He’s less than two months in and already dropped so much weight! He not only looks better, but feels better as well. It has really changed his life!</p>
+       </div>
+       <div class="star_blog">
+         <i><img src="<?= $path['images'] ?>/star.png" alt=""></i>
+         <h4>Amazing!</h4>
+         <span>by K.J. Peasley</span>
+         <p>I was skeptical, but honestly, this stuff is the real deal. IT DOES WHAT IT SAYS IT DOES! It's changed my life - I feel so much</p>better now!
+       </div>
+    </div>
+  </div>
+  <p id="loading-indicator" style="display:none;">Processing...</p>
+    
+  <div class="footer text-center">
+    <div class="container">
+        <ul class="terms-links">
+            <li> <a href="javascript:void(0);" onclick="javascript:openNewWindow('page-terms.php','modal');" class="modalClick" style="color: #000;">Terms and Conditions | </a></li>
+            <li> <a href="javascript:void(0);" onclick="javascript:openNewWindow('page-privacy.php','modal');" class="modalClick" style="color: #000;">Privacy Policy | </a></li>
+            <li> <a href="javascript:void(0);" onclick="javascript:openNewWindow('page-contact.php', 'modal');" class="modalClick" style="color: #000;">Contact Us</a></li>
+            
+        </ul>
+        <span>© <script> var date = new Date(); document.write(date.getFullYear())</script> Keto Fire Gummies. All Rights Reserved</span>
+    </div>
+  </div>
+
+<div class="loading-screen" style="display:none;">
+	<div class="loading-pop">
+    	<div class="pop-content">
+        	<img src="<?= $path['images'] ?>/loading.gif" class="loading-img">
+        	<ul class="pop-list">
+            	<li class="show-1"><img src="<?= $path['images'] ?>/pop-tik.png"> Checking Inventory</li>
+                <li class="show-2"><img src="<?= $path['images'] ?>/pop-tik.png"> Processing Transaction</li>
+                <li class="show-3"><img src="<?= $path['images'] ?>/pop-tik.png"> Sending to Fulfillment</li>
+                <li class="show-4"><img src="<?= $path['images'] ?>/pop-tik.png"> Order Confirmed</li>
+            </ul>
+            <div id="grp-progress">
+                <div id="progress-bar"><div id="text_bar"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include 'general/__scripts__.tpl'; ?>
+
+<?php include 'general/__analytics__.tpl'; ?>
+<?php perform_body_tag_close_actions(); ?>
+<script type="text/ecmascript" src="<?= $path['assets_js'] ?>/jquery.magnific-popup.js"></script>
+
+<script>
+
+$(".checkout_btn").click(function(e) {
+            e.preventDefault();
+            window.location.href='upsell2.php';
+        });
+
+</script>
+    
+    <!-- <p id="loading-indicator" style="display:none;">Processing...</p>
+        <script type="text/javascript">AJAX_PATH="ajax.php/"; app_config={"valid_class":"no-error","error_class":"has-error","loading_class":"loading","exit_popup_enabled":false,"exit_popup_element_id":"","exit_popup_page":"","offer_path":"\/v1\/","current_step":2,"cbtoken":"","dev_mode":"N","show_validation_errors":"modal","allowed_tc":"8\"m0l0d0J050k050O0lv8sm\"l\"d4J454k454O4l480mvlsd\"J\"50k151O1l181m1l7dvJs5\"k\"50O1l089m0l3d4J45vks5\"O\"l989m9l9d9J959k95vOsl\"8[r0j0V0H0q0h0k0R0X|Niraj,V1H4q4h4k4R4X4N4r|jiVaH,q6h1k1R1X1N1r1j1V|Hiqah,k6R1X0N0r9j1V9H2q|hikaR,X7N9r9j9V9H9q9h9k|RiXaN]","allowed_country_codes":["US"],"countries":{"US":{"name":"United States","states":{"AL":{"name":"Alabama"},"AK":{"name":"Alaska"},"AS":{"name":"American Samoa"},"AZ":{"name":"Arizona"},"AR":{"name":"Arkansas"},"AE":{"name":"Armed Forces Middle East"},"AA":{"name":"Armed Forces Americas"},"AP":{"name":"Armed Forces Pacific"},"CA":{"name":"California"},"CO":{"name":"Colorado"},"CT":{"name":"Connecticut"},"DE":{"name":"Delaware"},"DC":{"name":"District of Columbia"},"FM":{"name":"Federated States of Micronesia"},"FL":{"name":"Florida"},"GA":{"name":"Georgia"},"GU":{"name":"Guam"},"HI":{"name":"Hawaii"},"ID":{"name":"Idaho"},"IL":{"name":"Illinois"},"IN":{"name":"Indiana"},"IA":{"name":"Iowa"},"KS":{"name":"Kansas"},"KY":{"name":"Kentucky"},"LA":{"name":"Louisiana"},"ME":{"name":"Maine"},"MD":{"name":"Maryland"},"MA":{"name":"Massachusetts"},"MI":{"name":"Michigan"},"MN":{"name":"Minnesota"},"MS":{"name":"Mississippi"},"MO":{"name":"Missouri"},"MT":{"name":"Montana"},"NE":{"name":"Nebraska"},"NV":{"name":"Nevada"},"NH":{"name":"New Hampshire"},"NJ":{"name":"New Jersey"},"NM":{"name":"New Mexico"},"NY":{"name":"New York"},"NC":{"name":"North Carolina"},"ND":{"name":"North Dakota"},"MP":{"name":"Northern Mariana Islands"},"OH":{"name":"Ohio"},"OK":{"name":"Oklahoma"},"OR":{"name":"Oregon"},"PA":{"name":"Pennsylvania"},"PR":{"name":"Puerto Rico"},"MH":{"name":"Republic of Marshall Islands"},"RI":{"name":"Rhode Island"},"SC":{"name":"South Carolina"},"SD":{"name":"South Dakota"},"TN":{"name":"Tennessee"},"TX":{"name":"Texas"},"UT":{"name":"Utah"},"VT":{"name":"Vermont"},"VI":{"name":"Virgin Islands of the U.S."},"VA":{"name":"Virginia"},"WA":{"name":"Washington"},"WV":{"name":"West Virginia"},"WI":{"name":"Wisconsin"},"WY":{"name":"Wyoming"}}}},"country_lang_mapping":{"US":{"state":"State:","zip":"Zip Code:"},"GB":{"state":"County:","zip":"Postal Code:"},"CA":{"state":"Province:","zip":"Pin Code:"},"IN":{"state":"State:","zip":"Pin:"}},"device_is_mobile":false,"pageType":"upsellPage1","enable_browser_back_button":false,"disable_trialoffer_cardexp":false,"enable_csrf_token":false}</script><script type="text/javascript">app_lang={"error_messages":{"zip_invalid":"Please enter a valid zip code!","email_invalid":"Please enter a valid email id!","cc_invalid":"Please enter a valid credit card number!","cvv_invalid":"Please enter a valid CVV code!","card_expired":"Card seems to have expired already!","card_expire_soon":"Your credit card is about to expire, please update your card information.","common_error":"Oops! Something went wrong! Can you please retry?","not_checked":"Please check the agreement box in order to proceed.","ca_zip_invalid":"Invalid Canada state code","xv_invalid_shipping":"Your shipping address could not be verified","xv_email":"Your email address could not be verified","xv_phone":"Your phone number could not be verified"},"exceptions":{"config_error":"General config error","config_file_missing":"General config error","invalid_array":"Argument is not a valid array","empty_prospect_id":"Prospect ID is empty or invalid","curl_error":"Something went wrong with the request, Please try again.","generic_error":"Something went wrong with the request, Please try again."}};</script><script type="text/javascript">var cbUtilConfig = {"disable_non_english_char_input":false};</script>
+<script src="<?= $path['assets_js'] ?>/promise.min.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/jquery.min.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/jquery.mask.min.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/validator.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/codebase.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/form_handler.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/app.js" type="text/javascript"></script>
+<script src="<?= $path['assets_js'] ?>/outro.js" type="text/javascript"></script>
+<script src="/v1/extensions/CbUtilityPackage/js/cb-util-pkg.js" type="text/javascript"></script><script>$(function(){$.get("/v1/ajax.php/extensions/checktrafficnew/initialize");});</script>        <script type="text/javascript">
+            $(function(){
+
+                setTimeout(function(){
+                    $.get("/v1/ajax.php/extensions/checktrafficnew/place", function( data ) {
+                        if(data == null) return;
+                
+                        if(typeof data == 'string') {
+                            data = JSON.parse(data);
+                        }
+                
+                        data.forEach(function(el) {
+                            
+                            if(el.type == 'head') {
+                                $('head').append(el.content);
+                            }
+    
+                            if(el.type == 'top') {
+                                $('body').prepend(el.content);
+                            }
+    
+                            if(el.type == 'bottom') {
+                                $('body').append(el.content);
+                            }
+                        });
+                    });
+                }, 500);
+                
+            });
+            
+        </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQnHiycs0_Lw7fvK0WYtNbSNKS0v0pyWs&libraries=places&callback=attachListener"></script>
+<script>var event_type= 'keyup';var autopopulate_by= 'zip';var disable_component_restriction= '1';var restricted_countries= 'US';</script>
+<script src='https://www.buynewageketoburner.com/v1/extensions/GoogleAutoComplete/js/google-auto-complete.js'></script>
+<script src='https://www.buynewageketoburner.com/v1/extensions/GoogleAutoComplete/js/address-auto-complete.js'></script>    <script>
+    document.getElementById('mydiv').addEventListener('click', function(e) {
+        $("form[name='is-upsell']").submit(); 
+    });
+    </script> -->
+</body></html>
