@@ -28,19 +28,20 @@ foreach ($orders_details as $key => $value) {
         $product['price'] = 0;
         $product['subtotal'] = 0;
         $product['qty'] = $value['product_qty'];
-        if ($value['product_id'] != "922") {
-            $product['price'] = $value['price'];
-            $product['subtotal'] = number_format($value['price'] * $value['product_qty'], 2);
-            $total = $total + ($value['price'] * $value['product_qty']);
-        };
+        // if ($value['product_id'] != "922") {
+        //     $product['price'] = $value['price'];
+        //     $product['subtotal'] = number_format($value['price'] * $value['product_qty'], 2);
+        //     $total = $total + ($value['price'] * $value['product_qty']);
+        // };
         array_push($items, $product);
     }
 }
 
 $productsDesc = [
-    '772' => array('Keto Fire Gummies', '14-Gummy Sample Pack', 'keto-prod.png', 1),
-    '922' => array('ACV Gummies', '14-Gummy Sample Pack', 'up1-prod.png', 2),
-    '784' => array('Sleep Gummies', '1 Bottle Special', 'up2-prod.png', 3),
+    '969' => array('Aeterna Skin Hydration Cream', 'Sample Pack', 'keto-prod.png', 1),
+    '971' => array('Aeterna Hyaluronic Acid Serum', 'Sample Pack', 'up1-prod.png', 2),
+    '973' => array('Aeterna Vitamin C Serum', '1 Bottle Special', 'up2-prod.png', 3),
+    '974' => array('Aeterna Sleep Plus Collagen Cream', '1 Bottle Special', 'up3-prod.png', 4),
     '924' => array('Rush Processing', '', 'up3-prod.png', 4),
     // '776' => array('FitnessXr Free Trial', '', 'up4-prod.png'),
     // '774' => array('USADC Free Trial', '', 'up4-prod.png'),
@@ -96,31 +97,31 @@ if (!$hidethk) {
             $shipping_amount = "19.90";
         }
         $pixel = $pixel . '> </script>';
-        $iframe = '';
+        // $iframe = '';
 
-        switch ($affiliates['c1']) {
-            case '11':
-                $transaction_id = $affiliates['clickId'];
-                $sub3           = $affiliates['c3'];
+//         switch ($affiliates['c1']) {
+//             case '11':
+//                 $transaction_id = $affiliates['clickId'];
+//                 $sub3           = $affiliates['c3'];
 
-                $iframe = <<<HTML
-<iframe src="https://gencracking.com/p.ashx?o=7344&e=1111&fb=1&t={$transaction_id}&r={$sub3}" height="1" width="1" frameborder="0"></iframe>
-HTML;
+//                 $iframe = <<<HTML
+// <iframe src="https://gencracking.com/p.ashx?o=7344&e=1111&fb=1&t={$transaction_id}&r={$sub3}" height="1" width="1" frameborder="0"></iframe>
+// HTML;
 
-                break;
-    //             case '463':
-    //                 $transaction_id = $affiliates['clickId'];
-    //                 $sub3           = $affiliates['c3'];
+//                 break;
+//     //             case '463':
+//     //                 $transaction_id = $affiliates['clickId'];
+//     //                 $sub3           = $affiliates['c3'];
     
-    //                 $iframe = <<<HTML
-    // <iframe src="https://copilot.lasasoft.com/testpostback?p.ashx?o=7344&e=1111&fb=1&t={$transaction_id}&r={$sub3}" height="1" width="1" frameborder="0"></iframe>
-    // HTML;
+//     //                 $iframe = <<<HTML
+//     // <iframe src="https://copilot.lasasoft.com/testpostback?p.ashx?o=7344&e=1111&fb=1&t={$transaction_id}&r={$sub3}" height="1" width="1" frameborder="0"></iframe>
+//     // HTML;
     
-    //                 break;
-            default:
-                break;
-        }
-        $pixel=$iframe . PHP_EOL . $pixel;
+//     //                 break;
+//             default:
+//                 break;
+//         }
+        // $pixel=$iframe . PHP_EOL . $pixel;
     }
 }
 App::run(array(

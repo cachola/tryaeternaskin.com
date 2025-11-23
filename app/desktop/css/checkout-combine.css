@@ -1330,7 +1330,7 @@ ul {list-style:none; padding:0;}
          padding-right: 2%;
          }
          .checkout-form .fields { padding-bottom: 8px;}
-         .checkout-form .fields input[type="text"], .checkout-form .fields input[type="tel"] { width:60%; padding: 5px; }
+         .checkout-form .fields input[type="text"], .checkout-form .fields input[type="tel"], .checkout-form .fields input[type="email"] { width:60%; padding: 5px; }
          select { 
          width:64%;
          padding: 4px 5px;

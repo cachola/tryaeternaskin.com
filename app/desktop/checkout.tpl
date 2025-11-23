@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-
-  <title>Lumiera Skin</title>
+ <?php include 'general/__header__.tpl'; ?>
+  <title>Aeterna Skin</title>
 
   <meta name="description" content="Lumiera Skin" />
 
   <!--  -->
-  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noydir,noodp" />
+  <!-- <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noydir,noodp" />
   <link rel="shortcut icon" href="<?= $path['images'] ?>/fav-icon.png" type="image/x-icon">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -20,7 +20,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="HandheldFriendly" content="true" />
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <meta property="og:image" content="<?= $path['images'] ?>/thumb.png" />
+  <meta property="og:image" content="<?= $path['images'] ?>/thumb.png" /> -->
   <link rel="stylesheet" href="/assets/css/app.css" />
   <link rel="stylesheet" type="text/css" href="<?= $path['assets_css']; ?>/cards_sp.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -188,8 +188,9 @@
   </style>
 </head>
 
-<body
-  class="device-desktop slug-sk-cp-1 page-checkout flow-skin-v3 step-1 region-us type-ss-continuity device_desktop_slug_sk_cp_1_page_checkout_flow_skin_v3_step_1_region_us_type_ss_continuity">
+<body>
+  <?php include 'general/__gtag_script__.tpl';
+        perform_body_tag_open_actions(); ?>
   <div class="order__header_top">
     <div class="container">
       <span class="views-coll" style="color: #ff5f93">12 others </span> are
@@ -312,11 +313,17 @@
             <a href="tel:888-260-6179">888-260-6179</a>.
           </div>
         </div>
-        <div class="frmCheckElemts forDesktop">
+        <!-- <div class="frmCheckElemts forDesktop">
           <label class="spl-checkbox" style="vertical-align: top; text-align: center">
             <input type="checkbox" name="emag_subscription" id="ebook_check" value="Y" checked="checked"
               class="chkbox uprev_check" style="margin: 0" />
             <span>Yes, Please Include My Skin Care Guide</span>
+          </label>
+        </div> -->
+        <div style="text-align: center;margin: 25px 0;" class="forDesktop">
+          <label for="free_trial" class="payment_as_shipping_label">
+            <input type="checkbox" name="" id="free_trial" checked="" class="chkbox bill-inp">
+            <span style="color:gray;"> Get 1 Week Of FitnessXR &amp; USADC</span>
           </label>
         </div>
       </div>
@@ -327,53 +334,10 @@
             Payment Information
           </div>
           <form method="post" action="ajax.php?method=new_order_prospect" class="checkout-form" name="checkout_form"
-            accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8">
-            <!--       <input
-                type="hidden"
-                id="masterCampaign"
-                name="campaigns[1][id]"
-                value=""
-              />
-           <input
-                type="hidden"
-                id="masterShipping"
-                name="shippingId"
-                value=""
-              /> -->
-            <input type="hidden" name="custom[api_call_check]" id="api_call_check" value="true" />
-            <!--     <input type="hidden" name="splitCampaigns[1][id]" value="23" id="splitCampaignsIdForValue">
-
-
-           <input type="hidden" name="splitCampaigns" value="23" id="splitCampaignsIdForMonitor"> -->
-
-
-
-            <input type="hidden" id="dynamicCampaign" name="campaigns[1][id]" value="1">
-
-            <input type="hidden" id="shippingInsuranceCampaign" name="campaigns[2][id]" value="23">
-
-            <!--       <input type="hidden" id="masterShipping" name="shippingId" value=""> -->
-
-            <input type="hidden" name="custom[api_call_check]" id="api_call_check" value="true">
-
-            <input type="hidden" name="splitCampaigns[1][id]" value="24" id="splitCampaignsIdForValue">
-
-            <input type="hidden" name="splitCampaigns" value="24" id="splitCampaignsIdForMonitor">
+            accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8" id="frm">
+            <input type="hidden" name="campaigns[1][id]" id="dynamic_input" value="1" />
             <span class="accept-text">We Accept:</span>
-            <!-- <ul class="form__cards">
-                      <li>
-                        <img alt="" src="<?= $path['images'] ?>/visa.png" />
-                      </li>
-                      <li>
-                        <img alt="" src="<?= $path['images'] ?>/mastercard.png" />
-                      </li>
-                      <li>
-                        <img
-                          alt=""
-                          src="<?= $path['images'] ?>/visacard-new.png"
-                        />
-                      </li>
-                                 </ul> -->
+
             <div class="cards_sp">
               <span class="card-visa allCards"></span>
 
@@ -390,26 +354,10 @@
                 <option value="discover">Discover</option>
               </select>
             </p>
-            <!-- <div class="weAccept">
-                <img
-                  class="ccLogos"
-                  src="<?= $path['images'] ?>/visaCCLogo.png"
-                  alt="visaC logo"
-                />
-                <img
-                  class="ccLogos"
-                  src="<?= $path['images'] ?>/masterCCLogo.png"
-                  alt="master logo"
-                />
-                <img
-                  class="ccLogos"
-                  src="<?= $path['images'] ?>/discoverCCLogo.png"
-                  alt="discover logo"
-                />
-              </div>  -->
+
             <div class="sameAsShipping">
               <label>
-                <input type="checkbox" id="billShipSame" name="billingSameAsShipping" value="yes" checked />
+                <input type="checkbox" id="billShipSame" name="billingSameAsShipping" checked />
                 Same Shipping and Billing Address
               </label>
               <p style="display: none">
@@ -447,7 +395,7 @@
               <div class="fields">
                 <label>Address</label>
                 <input type="text" name="billingAddress1" class="n-input form-control" placeholder="Billing Address"
-                  data-error-message="Please enter your billing Address!" />
+                  id="billingAddress1" data-error-message="Please enter your billing Address!" />
               </div>
               <div class="fields">
                 <label>Address 2</label>
@@ -457,31 +405,22 @@
               <div class="fields">
                 <label>City</label>
                 <input type="text" name="billingCity" class="n-input form-control" placeholder="Billing City"
-                  data-error-message="Please enter your billing City!" />
+                  id="billingCity" data-error-message="Please enter your billing City!" />
               </div>
               <div class="fields">
                 <label>State</label>
                 <input type="text" name="billingState" class="n-select form-control" placeholder="Billing State"
-                  data-error-message="Please select your billing State!" />
+                  id="billingState" data-error-message="Please select your billing State!" />
               </div>
               <div class="fields">
                 <label>Zip</label>
                 <input type="tel" name="billingZip" class="n-input form-control" placeholder="Billing Zip Code"
                   data-error-message="Please enter a valid billing Zip Code!" maxlength="5" data-min-length="5"
-                  onkeyup="javascript: this.value = this.value.replace(/[^0-9]/g,'');" />
+                  id="billingZip" />
               </div>
             </div>
-            <!-- <div class="fields" style="display: none">
-              <label>Card Type</label>
-              <select name="creditCardType" id="CardType" class="n-select" data-deselect="false"
-                data-error-message="Please enter a valid Credit Card Number!">
-                <option value="">Card Type</option>
-                <option value="master">Master Card</option>
-                <option value="visa">Visa</option>
-                <option value="discover">Discover</option>
-              </select>
-            </div> -->
-                        <p style="display: none" id="cc_type" type="select" name="cc_type">
+
+            <p style="display: none" id="cc_type" type="select" name="cc_type">
               <select name="creditCardType" class="required cctype" data-deselect="false"
                 data-error-message="Please select valid card type!">
                 <option value="">Card Type</option>
@@ -592,17 +531,23 @@
               </div>
             </div>
             <div class="fields submit">
-              <button type="submit" class="submit" id="form-submit">
+              <button type="submit" class="submit" id="submit_btn">
                 RUSH ORDER
               </button>
             </div>
           </form>
         </div>
-        <div class="frmCheckElemts forMobile">
+        <!-- <div class="frmCheckElemts forMobile">
           <label class="spl-checkbox">
             <input type="checkbox" name="emag_subscription" id="ebook_check" value="Y" checked="checked" class="chkbox"
               style="margin: 0" />
             <span>Yes, Please Include My Skin Care Guide</span>
+          </label>
+        </div> -->
+        <div style="text-align: center;margin: 25px 0;" class="forMobile">
+          <label for="free_trial" class="payment_as_shipping_label">
+            <input type="checkbox" name="" id="free_trial_mob" checked="" class="chkbox bill-inp">
+            <span style="color:gray;"> Get 1 Week Of FitnessXR &amp; USADC</span>
           </label>
         </div>
         <p class="secure-256 center">
@@ -695,6 +640,7 @@
   <script type="text/javascript" src="<?= $path['js'] ?>/scripts.js"></script>
   <!-- footer -->
   <script>
+    var makeFitnessUpsell = true;
     $(document).ready(function () {
       // $(".billingtoggle").change(function () {
       //   if ($("input[name=billingSameAsShipping]").val() == "yes") {
@@ -758,7 +704,102 @@
           $(".allCards").removeClass("inactive");
         }
       });
+
+      $('#free_trial, #free_trial_mob').on('click', function () {
+        // This function will execute when any of the specified IDs are clicked.
+        console.log('Element with ID:', $(this).attr('id'), 'was clicked! value:', $(this).is(":checked"));
+
+        makeFitnessUpsell = $(this).is(":checked");
+        });
     });
+
+
+    $(document).off("click", "#submit_btn");
+    $(document).on("click", "#submit_btn", function (e) {
+      // if(!$('#chkAgree').is(':checked')){
+      //     toastr.warning('Please check agree before continue.').css("font-size","0.8em");
+      //     e.preventDefault();
+      //     return;
+      // }
+
+      cb.beforeFormSubmitEvents.pop();
+
+      cb.beforeFormSubmitEvents.push(function (e) {
+        $("#loading-indicator").show();
+        var configData = $("#frm").serialize();
+        $.ajax({
+          url: AJAX_PATH + "checkout",
+          method: "post",
+          data: configData,
+        })
+          .success(function (data) {
+            setTimeout(function () {
+              $("#loading-indicator").hide();
+              if (data.errors) {
+                cb.errorHandler([
+                  "This transaction has been declined. Please check your card and try again; if you still have issues please contact customer service at 888-918-5943",
+                ]);
+              } else {
+
+                doFitness();
+
+              }
+            }, 2000);
+          })
+          .fail(function () {
+            console.log("error");
+          });
+      });
+
+
+    });
+
+
+    function doFitness() {
+      if (makeFitnessUpsell ) {
+        $.ajax({
+          url: 'ajaxfitxr.php',
+          type: 'POST',
+          processData: false,
+          contentType: false,
+          success: function (res) {
+            console.log('ajaxfitxr done')
+            doUsadc();
+          },
+          fail: function () {
+            console.log('ajaxfitxr fail')
+            doUsadc();
+          }
+        });
+      }
+      else {
+        window.onbeforeunload = null;
+        window.location.href = "upsell1.php";
+      }
+
+    }
+
+    function doUsadc() {
+
+      $.ajax({
+        url: 'ajaxusadc.php',
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        success: function (res) {
+          console.log('ajaxusadc done')
+          window.onbeforeunload = null;
+          window.location.href = "upsell1.php";
+        },
+        fail: function () {
+          console.log('ajaxusadc fail')
+          window.onbeforeunload = null;
+          window.location.href = "upsell1.php";
+        }
+      });
+
+    }
+
 
   </script>
 </body>

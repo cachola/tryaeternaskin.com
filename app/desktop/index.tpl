@@ -224,7 +224,9 @@
    </style>
 </head>
 
-<body <?php perform_body_tag_open_actions(); ?>
+<body>
+    <?php include 'general/__gtag_script__.tpl';
+        perform_body_tag_open_actions(); ?>
    <p id="loading-indicator" style="display:none;">Processing...</p>
 
    <div class="top">
@@ -295,7 +297,7 @@
                   </div>
                   <div class="stripe"> EXCLUSIVE CLINICAL FORMULA AVAILABLE NOW </div>
                   <div id="form-top"></div>
-                  <form method="post" class="prospect-form" action="ajax.php?method=new_prospect" name="prospect_form1"
+                  <form method="post" class="prospect-form" action="ajax.php?method=new_prospect" name="fullprospect_form"
                      accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8">
                      <div class="formBody">
                         <div class="fields">
@@ -790,8 +792,7 @@
 
    <!-- <script type="text/javascript" src="<?= $path['js']; ?>/bookmarkscroll.js"></script> -->
    <script type="text/ecmascript" src="<?= $path['assets_js'] ?>/jquery.magnific-popup.js"></script>
-   <script type="text/ecmascript" src="<?= $path['js'] ?>/lazysizes.min.js"></script>
-   <script type="text/ecmascript" src="<?= $path['js'] ?>/ls.unveilhooks.min.js"></script>
+
    <script type="text/javascript" src="<?= $path['assets_js'] ?>/places.js"></script>
    <!-- <script type="text/javascript" async defer src="<?= $path['js']; ?>/socialproof.js"></script> -->
 
@@ -799,7 +800,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_PLACES_API_ID; ?>&libraries=places&callback=initAutocomplete"></script>
 
    <script src="<?= $path['js'] ?>/slick_min.js"></script>
-   <script type="text/javascript">
+   <!-- <script type="text/javascript">
 
 
       $(document).ready(function (e) {
@@ -828,41 +829,219 @@
 
 
    
-   </script>
-   <script type="text/javascript">
-      $(window).load(function () {
-         if (navigator.userAgent.match(/Trident.*rv:11\./)) {
-            $('body').addClass('ie11');
-         }
+   </script> -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".accept_pop").click(function () {
+          $("#popoverNew").hide();
+          // window.location.href = 'dtc.php';
+        });
+        $(".no-thank").click(function () {
+          cb.ignoreExitPop = true;
+          $("#popoverNew").hide();
+        });
+        $(".cancel-butt").click(function () {
+          cb.ignoreExitPop = true;
+          $("#popoverNew").hide();
+        });
+        $(".slider-modal").slick({
+          arrows: false,
+          dots: true,
+          autoplay: false,
+          autoplaySpeed: 2600,
+        });
+        $('.line-block').click(function(e){
+         var _selfOptions= {
+            type: 'fullprospect',
+            errorModal: true,
+            autoFillFormElement: 'fullprospect_form', // form name only
+            countryDropdown: 'Select Country',
+            ajaxLoader: {
+                div: '#loading-indicator',
+                timeInOut: 0
+            },
+        };
+         e.preventDefault();
+            var errors = cb.validateForm($('#frm'), cb.formActions[_selfOptions.type]);
+            if (Object.keys(errors).length !== 0) {
+                cb.errorHandler(getArrangedErrorMessages(errors));
+                return;
+            }
+          doCheckout();
+        })
+        getTid();
       });
-      // $('.submit').off('click');
-      // $('.submit').on('click', function(e) {
-      //    // e.preventDefault();
-      //    window.location.href = ;
-      // });
+      function getArrangedErrorMessages(errors) {
+            var arrangedErrors = {};
+           $('#frm').find('input, select').each(function () {
+                if (errors.hasOwnProperty($(this).attr('name'))) {
+                    arrangedErrors[$(this).attr('name')] = errors[$(this).attr('name')];
+                    delete errors[$(this).attr('name')];
+                }
+            });
+            $.each(errors, function (key, value) {
+                arrangedErrors[key] = value;
+            });
+            return arrangedErrors;
+        }
+      $("a[href='#top']").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+      });
+
       // nsZoomZoom();
 
       // $(window).resize(function () {
-      //    nsZoomZoom();
+      //   nsZoomZoom();
       // });
+var prospectDone=false;
+var ajaxPending = 0;
+// $("input[name=email]").blur(function () {
+//                     if (!prospectDone) {
+//                         var re =
+//                             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//                         if (re.test(String($(this).val()).toLowerCase()) == false) {
+//                             return;
+//                         }
 
 
-      function nsZoomZoom() {
-         htmlWidth = $('html').innerWidth();
-         bodyWidth = 992;
-         var scale = 1;
-         var bs = '';
-         if (htmlWidth < bodyWidth) { scale = .8; bs = "1300px"; }
-         // else { scale = htmlWidth / bodyWidth; } 
-         else { scale = 0.9; bs = "100%"; }
-         $(".sec1inner").css('-ms-transform', 'scale(' + scale + ')');
-         $(".sec1inner").css('transform', 'scale(' + scale + ')');
+//                         //    doprospect
+//                         prospectPending=true;
+//                         setTimeout(() => {
+//                             doProspect();
 
-         // $("#section1").css("background-size", bs);
 
-      }
+//                         }, 50);
 
-   </script>
+//                     }
+//                 });
+
+
+                // $("input[name=firstName], input[name=lastName], input[name=shippingAddress1], input[name=shippingCity], input[name=shippingZip], input[name=phone]").blur(function () {
+                //     if (prospectDone) {
+                //         console.log('blur input all')
+                //         //    doprospectupdate
+                //         setTimeout(() => {
+                //             doProspectUpdate();
+
+                //         }, 50);
+
+
+                //     }
+                // });
+
+
+                // $("#shippingState").on('change', function () {
+                //     console.log('change input state')
+                //     setTimeout(() => {
+                //         doProspectUpdate();
+
+                //     }, 50);
+                // })
+
+
+                function doProspect() {
+                var configData = $('#frm').serialize();
+                ajaxPending += 1;
+                $.ajax({
+                    url: AJAX_PATH + 'fullprospect',
+                    method: 'post',
+                    data: configData,
+                }).success(function (data) {
+                  ajaxPending -= 1;
+                    if (!data.errors) {
+                        prospectDone = true;
+                        
+                    }
+                }).fail(function () {
+                  ajaxPending -= 1;
+                    console.log("prospect error");
+                });
+            }
+
+            function doProspectUpdate() {
+                var configData = $('#frm').serialize();
+                ajaxPending += 1;
+                $.ajax({
+                    url: AJAX_PATH + 'prospectupdate',
+                    method: 'post',
+                    data: configData,
+                }).success(function (data) {
+                  ajaxPending -= 1;
+                    if (!data.errors) {
+                        console.log('prospect update success')
+                    }
+                }).fail(function () {
+                  ajaxPending -= 1;
+                    console.log("error");
+                });
+            }
+function doCheckout(){
+  if (! prospectDone){
+  doProspect();
+}
+// doProspectUpdate();
+  waitForQueue(() => ajaxPending == 0, 15000).then((resolve) => {
+                        window.onbeforeunload = null;
+                        console.log('wait for queue authorize location to checkout')
+                        window.location.href = 'checkout.php';
+                    })
+
+}
+
+            let sleep = ms => new Promise(r => setTimeout(r, ms));
+            async function waitForQueue(f, timeout = 0) {
+                timeoutDone = false;
+                if (timeout != 0) {
+                    setTimeout(() => {
+                        timeoutDone = true;
+                        console.log('waitForQueue timeout. ajaxPending:' + ajaxPending)
+                        ajaxPending = 0;
+                    }, timeout);
+                }
+                while (!(f() || timeoutDone)) {
+                    await sleep(100);
+                    console.log('Waiting. ' + 'ajaxPending:' + ajaxPending + ' f():' + f());
+
+                };
+                console.log('waitForQueue Done. ajaxPending:' + ajaxPending)
+                return f();
+            };
+function nsZoomZoom() {
+   htmlWidth = $('html').innerWidth();
+   bodyWidth = 992;
+   scale = 0.9;
+  //  if (htmlWidth < bodyWidth) { scale = 1 } 
+  //  // else { scale = htmlWidth / bodyWidth; } 
+  //        else { scale = 0.9; }
+   $(".section1").css('-ms-transform', 'scale(' + scale + ')');
+   $(".section1").css('transform', 'scale(' + scale + ')');
+}
+var tidSession = '';
+        var tidInterval;
+        function getTid() {
+
+
+            tidInterval = setInterval(function () {
+                var tid = sessionStorage.getItem('tid');
+                if (tid != null && tid.length > 5) {
+                    var formData = new FormData();
+                    formData.append("tid", tid);
+                    $.ajax({
+                        url: 'ajaxtid.php',
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (res) {
+                            res = JSON.parse(res);
+                        },
+                    });
+                    clearInterval(tidInterval);
+                }
+            }, 1000)
+        }
+    </script>
 
 
 </body>

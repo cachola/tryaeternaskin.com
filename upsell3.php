@@ -10,7 +10,7 @@ App::run(array(
     'config_id'    => 1,
     'step'         => 4,
     'tpl'          => 'upsell3',
-    'go_to'        => 'authorize',
+    'go_to'        => 'upsell4',
     'version'      => 'desktop',
     'tpl_vars'     => array(),
     'pageType'     => 'upsell',

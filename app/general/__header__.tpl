@@ -59,59 +59,28 @@
        $noLoadPixels= Session::get('queryParams.noloadpixels',false);
         if (!$noLoadPixels  && !env('IS_LOCAL',false)) { ?>
 
+
+
 <!-- Google Tag Manager -->
-<script>
-  (function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s),
-      dl = l != "dataLayer" ? "&l=" + l : "";
-    j.async = true;
-    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-    f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", "GTM-NRL2JBFC");
-</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5K4RVSRP');</script>
 <!-- End Google Tag Manager -->
 
+
 <!-- Google tag (gtag.js) -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-SSQ6XFQ6E2"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK4HQPYKPN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  gtag("config", "G-SSQ6XFQ6E2");
+  gtag('config', 'G-VK4HQPYKPN');
 </script>
 
-<!-- Begin Inspectlet Asynchronous Code -->
-<script type="text/javascript">
-  (function () {
-    window.__insp = window.__insp || [];
-    __insp.push(["wid", 189645210]);
-    var ldinsp = function () {
-      if (typeof window.__inspld != "undefined") return;
-      window.__inspld = 1;
-      var insp = document.createElement("script");
-      insp.type = "text/javascript";
-      insp.async = true;
-      insp.id = "inspsync";
-      insp.src =
-        ("https:" == document.location.protocol ? "https" : "http") +
-        "://cdn.inspectlet.com/inspectlet.js?wid=189645210&r=" +
-        Math.floor(new Date().getTime() / 3600000);
-      var x = document.getElementsByTagName("script")[0];
-      x.parentNode.insertBefore(insp, x);
-    };
-    setTimeout(ldinsp, 0);
-  })();
-</script>
-<!-- End Inspectlet Asynchronous Code -->
+
 
 <?php }  ?>
 <?php perfom_head_tag_close_actions(); ?>

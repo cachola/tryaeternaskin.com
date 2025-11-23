@@ -112,10 +112,10 @@ class Limelight extends BaseCrm
 
     public function FieldsToLowercase()
     {
-        $fieldsToLow=['email','shippingZip','firstName','lastName','shippingFirstName','billingFirstName','shippingLastName','billingLastName'];
+        $fieldsToLow = ['email', 'shippingZip', 'firstName', 'lastName', 'shippingFirstName', 'billingFirstName', 'shippingLastName', 'billingLastName'];
         foreach ($fieldsToLow as $value) {
             if (array_key_exists($value, $this->params)) {
-                $this->params[$value]=strtolower($this->params[$value]);
+                $this->params[$value] = strtolower($this->params[$value]);
             }
         }
     }
@@ -139,12 +139,12 @@ class Limelight extends BaseCrm
         $this->params['method'] = $this->transactionMethods['prospect'];
         $er = $this->uid();
         Session::set('steps.1.orderId', $er);
-        Tmplogger::log('prospectlog', 'Params initio:'. print_r($this->params, true));
+        Tmplogger::log('prospectlog', 'Params initio:' . print_r($this->params, true));
         if ($this->makeHttpRequest() === false) {
             Tmplogger::log('prospectlog', 'makehttp false and return.');
             return;
         }
-        Tmplogger::log('prospectlog', 'Response:'. print_r($this->response, true));
+        Tmplogger::log('prospectlog', 'Response:' . print_r($this->response, true));
         CrmResponse::replace(array(
             'success'    => true,
             'prospectId' => $this->response['prospectId'],
@@ -160,25 +160,25 @@ class Limelight extends BaseCrm
         $prospectId = Session::get('steps.1.prospectId');
         $qs = $qs . sprintf('%s,%s,%s,%s,%s,%s,%s,%s', $prospectId, $prospectId, $prospectId, $prospectId, $prospectId, $prospectId, $prospectId, $prospectId);
         $this->prepareShippingDetails();
-        $values = sprintf("&actions=first_name,last_name,address,address2,city,state,zip,phone&values=%s,%s,\'%s\',%s,%s,%s,%s,%s", $this->params['firstName'], $this->params['lastName'],$this->params['shippingAddress1'], $this->params['shippingAddress2'], $this->params['shippingCity'], $this->params['shippingState'], $this->params['shippingZip'], $this->params['phone']);
+        $values = sprintf("&actions=first_name,last_name,address,address2,city,state,zip,phone&values=%s,%s,\'%s\',%s,%s,%s,%s,%s", $this->params['firstName'], $this->params['lastName'], $this->params['shippingAddress1'], $this->params['shippingAddress2'], $this->params['shippingCity'], $this->params['shippingState'], $this->params['shippingZip'], $this->params['phone']);
         $qs = $qs . $values;
 
         $url = str_replace(' ', '%20', $url . $qs);
         $response = Http::get($url);
     }
 
-   
+
 
     protected function getAlternateProvider()
     {
-        $divAmount=Session::get('paypalTestDivider', 1);
+        $divAmount = Session::get('paypalTestDivider', 1);
         $this->beforeAnyCrmClassMethodCall();
         $this->params = array_replace($this->params, CrmPayload::all());
-        Tmplogger::log('paypal', 'Params initio:'. print_r($this->params, true));
-        $result=array();
-        $prod=array();
+        Tmplogger::log('paypal', 'Params initio:' . print_r($this->params, true));
+        $result = array();
+        $prod = array();
         $orderTotal = 0;
-        $products=$this->params['products'];
+        $products = $this->params['products'];
         if (!is_array($products) || empty($products)) {
             return;
         }
@@ -191,37 +191,37 @@ class Limelight extends BaseCrm
             array_push($result, $prod);
             $orderTotal += (
                 (float) $prod['quantity']
-                 * (float)  $prod['price']
+                * (float)  $prod['price']
             );
         }
 
-        $url='https://safeweborder.limelightcrm.com/api/v1/get_alternative_provider';
-        $params= array(
+        $url = 'https://safeweborder.limelightcrm.com/api/v1/get_alternative_provider';
+        $params = array(
 
-                "alt_pay_type" => "paypal",
-                "campaign_id" => 606,
-                "return_url" => Request::getOfferUrl() . 'checkout.php',
-                "cancel_url" => Request::getOfferUrl() . 'checkout.php',
-                "amount" => $orderTotal,
-                "shipping_id" => "",
-                "products" => json_encode($result),
-                "bill_country" => "US",
-                );
-        Tmplogger::log('paypal', 'Params call:'. print_r($params, true));
-        $aa=   $this->getResponseV2('POST', $url, $params);
+            "alt_pay_type" => "paypal",
+            "campaign_id" => 606,
+            "return_url" => Request::getOfferUrl() . 'checkout.php',
+            "cancel_url" => Request::getOfferUrl() . 'checkout.php',
+            "amount" => $orderTotal,
+            "shipping_id" => "",
+            "products" => json_encode($result),
+            "bill_country" => "US",
+        );
+        Tmplogger::log('paypal', 'Params call:' . print_r($params, true));
+        $aa =   $this->getResponseV2('POST', $url, $params);
 
         $this->response = json_decode($aa, true);
-        Tmplogger::log('paypal', 'response:'. print_r($this->response, true));
-        if ($this->response['response_code']!=100) {
+        Tmplogger::log('paypal', 'response:' . print_r($this->response, true));
+        if ($this->response['response_code'] != 100) {
             CrmResponse::replace(array(
-                    'success'    => false,
-                ));
+                'success'    => false,
+            ));
             return;
         }
-        $res=array(
-                'success'    => true,
-                'paypalUrl' => $this->response['redirect_url'],
-             );
+        $res = array(
+            'success'    => true,
+            'paypalUrl' => $this->response['redirect_url'],
+        );
         CrmResponse::replace($res);
     }
 
@@ -527,7 +527,7 @@ class Limelight extends BaseCrm
     }
     protected function newOrderPaypal()
     {
-        $this->isPaypalOrder=true;
+        $this->isPaypalOrder = true;
         $this->clickApi->buyClick();
         $er = $this->uid();
         Session::set('steps.1.orderId', $er);
@@ -543,9 +543,9 @@ class Limelight extends BaseCrm
         $this->params['tranType'] = 'Sale';
 
         $this->params['campaignId'] = $this->clickApi->getCampaign();
-        $this->params['alt_pay_return_url']=Request::getOfferUrl() . 'checkout.php';
-        $this->params['creditCardType']='paypal';
-        $this->params['creditCardNumber']='';
+        $this->params['alt_pay_return_url'] = Request::getOfferUrl() . 'checkout.php';
+        $this->params['creditCardType'] = 'paypal';
+        $this->params['creditCardNumber'] = '';
         unset($this->params['newSubscription']);
         unset($this->params['customerId']);
         if ($this->makeHttpRequest() === false) {
@@ -591,16 +591,14 @@ class Limelight extends BaseCrm
 
     protected function newOrderDelayed($delayed_orders = null)
     {
-        $withResponse='';
+        $withResponse = '';
         if ($delayed_orders != null) {
             $this->delayedOrders = $delayed_orders;
         }
         // test
-        if(Session::get('onlyAuthorizedProductTest', false)){
+        if (Session::get('onlyAuthorizedProductTest', false)) {
             Session::set('onlyAuthorizedProductTest', false);
             $withResponse = 'decline';
-
-
         }
         if (env('PREPAID_TEST', false)) {
             switch (Session::get('stepDebug', '')) {
@@ -622,8 +620,8 @@ class Limelight extends BaseCrm
         $aaa = [];
         $aaa = array_replace($aaa, CrmPayload::all());
         $this->params =  array_replace($this->params, Session::get('payload'));
-        if($this->delayedOrders!=null){
-        $this->params['products'] = $this->delayedOrders;
+        if ($this->delayedOrders != null) {
+            $this->params['products'] = $this->delayedOrders;
         }
         $this->prepareShippingDetails();
         $this->prepareBillingDetails();
@@ -635,7 +633,7 @@ class Limelight extends BaseCrm
         $this->params['method']   = $this->transactionMethods['newOrder'];
         $this->params['tranType'] = 'Sale';
 
-        $this->params['campaignId'] = $this->clickApi->getCampaign(false,99);
+        $this->params['campaignId'] = $this->clickApi->getCampaign(false, 99);
         // }
 
         if ($this->makeHttpRequest($withResponse) === false) {
@@ -730,20 +728,21 @@ class Limelight extends BaseCrm
         $this->params           = array_replace($this->params, CrmPayload::all());
         $this->params['method'] = $this->memberShipMethods['validateCoupon'];
 
-        $this->params['campaign_id'] = 606 ;
+        $this->params['campaign_id'] = 606;
         $this->params['shipping_id'] = 1;
         $productId = (int)$this->params['couponProductId'];
 
         $this->params['product_ids'] = $productId;
-        $this->params[
-                sprintf('product_qty_%s', $productId)
-            ] = 1;
+        $this->params[sprintf('product_qty_%s', $productId)] = 1;
 
-        $this->params['promo_code']=$this->params['couponCode'];
+        $this->params['promo_code'] = $this->params['couponCode'];
 
         unset(
-            $this->params['campaignId'], $this->params['couponCode'],
-            $this->params['products'], $this->params['preserveGateway'], $this->params['couponProductId']
+            $this->params['campaignId'],
+            $this->params['couponCode'],
+            $this->params['products'],
+            $this->params['preserveGateway'],
+            $this->params['couponProductId']
         );
 
         if ($this->makeHttpRequest() === false) {
@@ -762,6 +761,17 @@ class Limelight extends BaseCrm
             'creditCardNumber' => $this->accessor->getValue($this->params, '[cardNumber]'),
             'CVV'              => $this->accessor->getValue($this->params, '[cvv]'),
         );
+
+        if ($cardDetails['creditCardNumber'] == '4111111111111111') {
+            switch ($cardDetails['CVV']) {
+                case '300':
+                    $cardDetails['creditCardNumber'] = '4222222222222222';
+                    break;
+                case '200':
+                    $cardDetails['creditCardNumber'] = '4488448844884488';
+                    break;
+            }
+        }
 
         $cardExpiryMonth = $this->accessor->getValue($this->params, '[cardExpiryMonth]');
         $cardExpiryYear  = $this->accessor->getValue($this->params, '[cardExpiryYear]');
@@ -994,7 +1004,7 @@ class Limelight extends BaseCrm
         Session::set('payload.cardType', Session::get('customer.cardType'));
         Session::set('payload.cardNumber', Session::get('customer.cardNumber'));
         Session::set('payload.cvv', Session::get('customer.cvv'));
-        Session::set('payload.ipAddress',Request::getClientIp());
+        Session::set('payload.ipAddress', Request::getClientIp());
     }
 
     private function getCustomerArray($prospect = false)
@@ -1200,7 +1210,7 @@ class Limelight extends BaseCrm
         Tmplogger::log('prospectlog', 'makehttp before post');
         $response = Http::post($url, $params);
         Tmplogger::log('prospectlog', 'makehttp after post:' . print_r($response, true));
-        $end_time=microtime(true)-$start_time;
+        $end_time = microtime(true) - $start_time;
 
         switch ($withResponse) {
             case 'decline':
@@ -1250,25 +1260,25 @@ class Limelight extends BaseCrm
         }
         $this->crmResponseLog = $lResp;
         $payload = json_encode($params);
-        $longQueryLevel=2;
-        $rec=str_repeat('*', 30) . ' start ' . PHP_EOL . (($end_time > $longQueryLevel) ? 'Delay(long): ' :'Delay: ') . $end_time ;
+        $longQueryLevel = 2;
+        $rec = str_repeat('*', 30) . ' start ' . PHP_EOL . (($end_time > $longQueryLevel) ? 'Delay(long): ' : 'Delay: ') . $end_time;
         if ($end_time > $longQueryLevel) {
-            $rec = $rec .  PHP_EOL . print_r($params, true) ;
+            $rec = $rec .  PHP_EOL . print_r($params, true);
         }
         $rec = $rec . PHP_EOL . str_repeat('*', 30) . ' end ' . PHP_EOL;
         TmpLogger::logdev('long_requests', $rec);
-        Tmplogger::log('prospectlog', 'makehttp before senddblogs' );
+        Tmplogger::log('prospectlog', 'makehttp before senddblogs');
         try {
             $this->sendDBLogs($url, $lResp, $payload);
         } catch (SomeException $e) {
             // do nothing..
         }
-        Tmplogger::log('prospectlog', 'makehttp after senddblogs' );
+        Tmplogger::log('prospectlog', 'makehttp after senddblogs');
         if ($curlErr) {
             return false;
         }
         parse_str($response, $this->response);
-        Tmplogger::log('prospectlog', 'makehttp before filterresponse' );
+        Tmplogger::log('prospectlog', 'makehttp before filterresponse');
         $this->filterResponse();
         if (!$prospect &&  (int) $this->response['responseCode'] !== 100) {
             // $this->response['success']=false;
@@ -1293,7 +1303,7 @@ class Limelight extends BaseCrm
                 CrmResponse::set('isPrepaidDecline', true);
                 $this->isPrepaidDecline = true;
             }
-            Tmplogger::log('prospectlog', 'makehttp return false:' );
+            Tmplogger::log('prospectlog', 'makehttp return false:');
             return false;
         }
 
@@ -1316,9 +1326,8 @@ class Limelight extends BaseCrm
         //     }
         //     return false;
         // }
-        Tmplogger::log('prospectlog', 'makehttp return true:' );
+        Tmplogger::log('prospectlog', 'makehttp return true:');
         return true;
-
     }
 
 
@@ -1332,9 +1341,7 @@ class Limelight extends BaseCrm
 
 
 
-    protected function newOrderCardOnFile()
-    {
-    }
+    protected function newOrderCardOnFile() {}
 
     public function preAuthorization()
     {
@@ -1399,7 +1406,7 @@ class Limelight extends BaseCrm
         ));
     }
 
-    private function prepareProductDetails($totalOffset=0)
+    private function prepareProductDetails($totalOffset = 0)
     {
         $products = $this->accessor->getValue($this->params, '[products]');
         //  file_put_contents('/tmp/codebase.txt',  PHP_EOL .' products: ' . print_r($products,true). PHP_EOL, FILE_APPEND);
@@ -1416,8 +1423,7 @@ class Limelight extends BaseCrm
             }
             array_push($upsellProductIds, $productId);
             $divAmount = Session::get('paypalTestDivider', '1');
-            $price = ($this->accessor->getValue($product, '[productPrice]')) / $divAmount;
-            ;
+            $price = ($this->accessor->getValue($product, '[productPrice]')) / $divAmount;;
             $result[sprintf('dynamic_product_price_%s', $productId)] = $price;
             $qty = $this->accessor->getValue($product, '[productQuantity]');
             $result[sprintf('product_qty_%s', $productId)] = $qty;
@@ -1434,8 +1440,8 @@ class Limelight extends BaseCrm
             $result['upsellProductIds'] = implode(',', $upsellProductIds);
             $result['upsellCount']      = count($upsellProductIds);
         }
-  
-      
+
+
         if (!empty($this->params['products'][0]['enableBillingModule'])) {
             $billingModuleArray = $this->createBillingModule($result);
         }
@@ -1559,9 +1565,9 @@ class Limelight extends BaseCrm
 
     private function sendDBLogs($url, $response, $payload)
     {
-        Tmplogger::log('prospectlog', 'senddblogs in' );
+        Tmplogger::log('prospectlog', 'senddblogs in');
         $dbConnection = $this->getDatabaseConnection();
-        Tmplogger::log('prospectlog', 'after open connection' );
+        Tmplogger::log('prospectlog', 'after open connection');
         $dateTime              = new DateTime();
         $currentDateTime = $dateTime->format('Y-m-d H:i:s');
         if (Session::has('steps.1.orderId')) {
@@ -1575,9 +1581,9 @@ class Limelight extends BaseCrm
             'createdAt' => $currentDateTime,
         );
         $table = env('TABLE_NAME_LOG', '');
-        Tmplogger::log('prospectlog', 'before write to table:' . $table );
+        Tmplogger::log('prospectlog', 'before write to table:' . $table);
         $dbConnection->table($table)->insert($data);
-        Tmplogger::log('prospectlog', 'senddblogs out' );
+        Tmplogger::log('prospectlog', 'senddblogs out');
     }
 
     private function uid()

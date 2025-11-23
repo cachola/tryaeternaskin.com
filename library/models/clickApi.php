@@ -31,8 +31,8 @@ class clickApi
         $this->totalProducts=0;
         $this->mainAcceptPrepaid=false;
         // $this->funnelId=env('FUNNEL_ID', 0);
-        $this->funnelId='33';
-        $this->funnelOrigin='MySuperGummies_keto_sample';
+        $this->funnelId='34';
+        $this->funnelOrigin='Tryaeternaskin_sample';
         //   $this->campaignId = CrmPayload::get('campaignId');
         $dev=env('IS_DEV', false);
         $rem=env('FORCE_REMOTE_CLICK_SERVER', false);
@@ -200,7 +200,7 @@ class clickApi
         // $campaign = Config::campaigns(sprintf('%d', $config['campaign_ids'][0]));
         // $this->campaignId = CrmPayload::get('campaignId');
 
-        $this->campaignId = 764;
+        $this->campaignId = 950;
         if (!$getNormalCampaign) {
             // if (env('ENABLE_CLICK_API', false)) {
             switch ($currentStepid) {
@@ -225,9 +225,9 @@ class clickApi
                     
                     default:
                                         if (Session::get('isScrapFlow') === true) {
-                                            $this->campaignId = 766;
+                                            $this->campaignId = 952;
                                         } elseif (Session::get('steps.meta.isPrepaidFlow') === true && !$this->mainAcceptPrepaid) {
-                                            $this->campaignId = 765;
+                                            $this->campaignId = 951;
                                         }
                
                         break;
