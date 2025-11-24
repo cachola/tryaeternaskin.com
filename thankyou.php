@@ -28,11 +28,11 @@ foreach ($orders_details as $key => $value) {
         $product['price'] = 0;
         $product['subtotal'] = 0;
         $product['qty'] = $value['product_qty'];
-        // if ($value['product_id'] != "922") {
-        //     $product['price'] = $value['price'];
-        //     $product['subtotal'] = number_format($value['price'] * $value['product_qty'], 2);
-        //     $total = $total + ($value['price'] * $value['product_qty']);
-        // };
+        if ($value['product_id'] != "969") {
+            $product['price'] = $value['price'];
+            $product['subtotal'] = number_format($value['price'] * $value['product_qty'], 2);
+            $total = $total + ($value['price'] * $value['product_qty']);
+        };
         array_push($items, $product);
     }
 }

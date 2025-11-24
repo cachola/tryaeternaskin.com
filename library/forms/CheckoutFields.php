@@ -34,6 +34,7 @@ class CheckoutFields
         'billingAddress2'       => array(
             'label'   => "Billing Address",
             'aliases' => array(),
+            'required' => false,
         ),
         'billingZip'            => array(
             'label'    => "Billing Zip",

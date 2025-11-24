@@ -324,11 +324,11 @@
                                id="gmap_autocomplete" />
                               
                         </div>
-                        <div class="fields">
+                        <!-- <div class="fields">
                            <input type="text" id="shippingAddress2" name="shippingAddress2" placeholder="Apt / Suite #"
                               class="input-fields form-control input-block"
                               data-error-message="Please enter your address2!" id="input-fields" />
-                        </div>
+                        </div> -->
                         <div class="fields">
                            <input type="tel" name="shippingZip" placeholder="Zip Code"
                               class="required input-fields form-control"
@@ -799,7 +799,7 @@
    <script type="text/javascript" async defer
       src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_PLACES_API_ID; ?>&libraries=places&callback=initAutocomplete"></script>
 
-   <script src="<?= $path['js'] ?>/slick_min.js"></script>
+   <!-- <script src="<?= $path['js'] ?>/slick_min.js"></script> -->
    <!-- <script type="text/javascript">
 
 
@@ -832,70 +832,70 @@
    </script> -->
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".accept_pop").click(function () {
-          $("#popoverNew").hide();
-          // window.location.href = 'dtc.php';
-        });
-        $(".no-thank").click(function () {
-          cb.ignoreExitPop = true;
-          $("#popoverNew").hide();
-        });
-        $(".cancel-butt").click(function () {
-          cb.ignoreExitPop = true;
-          $("#popoverNew").hide();
-        });
-        $(".slider-modal").slick({
-          arrows: false,
-          dots: true,
-          autoplay: false,
-          autoplaySpeed: 2600,
-        });
-        $('.line-block').click(function(e){
-         var _selfOptions= {
-            type: 'fullprospect',
-            errorModal: true,
-            autoFillFormElement: 'fullprospect_form', // form name only
-            countryDropdown: 'Select Country',
-            ajaxLoader: {
-                div: '#loading-indicator',
-                timeInOut: 0
-            },
-        };
-         e.preventDefault();
-            var errors = cb.validateForm($('#frm'), cb.formActions[_selfOptions.type]);
-            if (Object.keys(errors).length !== 0) {
-                cb.errorHandler(getArrangedErrorMessages(errors));
-                return;
-            }
-          doCheckout();
-        })
+      //   $(".accept_pop").click(function () {
+      //     $("#popoverNew").hide();
+      //     // window.location.href = 'dtc.php';
+      //   });
+      //   $(".no-thank").click(function () {
+      //     cb.ignoreExitPop = true;
+      //     $("#popoverNew").hide();
+      //   });
+      //   $(".cancel-butt").click(function () {
+      //     cb.ignoreExitPop = true;
+      //     $("#popoverNew").hide();
+      //   });
+      //   $(".slider-modal").slick({
+      //     arrows: false,
+      //     dots: true,
+      //     autoplay: false,
+      //     autoplaySpeed: 2600,
+      //   });
+      //   $('.line-block').click(function(e){
+      //    var _selfOptions= {
+      //       type: 'fullprospect',
+      //       errorModal: true,
+      //       autoFillFormElement: 'fullprospect_form', // form name only
+      //       countryDropdown: 'Select Country',
+      //       ajaxLoader: {
+      //           div: '#loading-indicator',
+      //           timeInOut: 0
+      //       },
+      //   };
+      //    e.preventDefault();
+      //       var errors = cb.validateForm($('#frm'), cb.formActions[_selfOptions.type]);
+      //       if (Object.keys(errors).length !== 0) {
+      //           cb.errorHandler(getArrangedErrorMessages(errors));
+      //           return;
+      //       }
+      //     doCheckout();
+      //   })
         getTid();
       });
-      function getArrangedErrorMessages(errors) {
-            var arrangedErrors = {};
-           $('#frm').find('input, select').each(function () {
-                if (errors.hasOwnProperty($(this).attr('name'))) {
-                    arrangedErrors[$(this).attr('name')] = errors[$(this).attr('name')];
-                    delete errors[$(this).attr('name')];
-                }
-            });
-            $.each(errors, function (key, value) {
-                arrangedErrors[key] = value;
-            });
-            return arrangedErrors;
-        }
-      $("a[href='#top']").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-      });
+      // function getArrangedErrorMessages(errors) {
+      //       var arrangedErrors = {};
+      //      $('#frm').find('input, select').each(function () {
+      //           if (errors.hasOwnProperty($(this).attr('name'))) {
+      //               arrangedErrors[$(this).attr('name')] = errors[$(this).attr('name')];
+      //               delete errors[$(this).attr('name')];
+      //           }
+      //       });
+      //       $.each(errors, function (key, value) {
+      //           arrangedErrors[key] = value;
+      //       });
+      //       return arrangedErrors;
+      //   }
+      // $("a[href='#top']").click(function () {
+      //   $("html, body").animate({ scrollTop: 0 }, "slow");
+      //   return false;
+      // });
 
       // nsZoomZoom();
 
       // $(window).resize(function () {
       //   nsZoomZoom();
       // });
-var prospectDone=false;
-var ajaxPending = 0;
+// var prospectDone=false;
+// var ajaxPending = 0;
 // $("input[name=email]").blur(function () {
 //                     if (!prospectDone) {
 //                         var re =
@@ -940,83 +940,83 @@ var ajaxPending = 0;
                 // })
 
 
-                function doProspect() {
-                var configData = $('#frm').serialize();
-                ajaxPending += 1;
-                $.ajax({
-                    url: AJAX_PATH + 'fullprospect',
-                    method: 'post',
-                    data: configData,
-                }).success(function (data) {
-                  ajaxPending -= 1;
-                    if (!data.errors) {
-                        prospectDone = true;
+//                 function doProspect() {
+//                 var configData = $('#frm').serialize();
+//                 ajaxPending += 1;
+//                 $.ajax({
+//                     url: AJAX_PATH + 'fullprospect',
+//                     method: 'post',
+//                     data: configData,
+//                 }).success(function (data) {
+//                   ajaxPending -= 1;
+//                     if (!data.errors) {
+//                         prospectDone = true;
                         
-                    }
-                }).fail(function () {
-                  ajaxPending -= 1;
-                    console.log("prospect error");
-                });
-            }
+//                     }
+//                 }).fail(function () {
+//                   ajaxPending -= 1;
+//                     console.log("prospect error");
+//                 });
+//             }
 
-            function doProspectUpdate() {
-                var configData = $('#frm').serialize();
-                ajaxPending += 1;
-                $.ajax({
-                    url: AJAX_PATH + 'prospectupdate',
-                    method: 'post',
-                    data: configData,
-                }).success(function (data) {
-                  ajaxPending -= 1;
-                    if (!data.errors) {
-                        console.log('prospect update success')
-                    }
-                }).fail(function () {
-                  ajaxPending -= 1;
-                    console.log("error");
-                });
-            }
-function doCheckout(){
-  if (! prospectDone){
-  doProspect();
-}
+//             function doProspectUpdate() {
+//                 var configData = $('#frm').serialize();
+//                 ajaxPending += 1;
+//                 $.ajax({
+//                     url: AJAX_PATH + 'prospectupdate',
+//                     method: 'post',
+//                     data: configData,
+//                 }).success(function (data) {
+//                   ajaxPending -= 1;
+//                     if (!data.errors) {
+//                         console.log('prospect update success')
+//                     }
+//                 }).fail(function () {
+//                   ajaxPending -= 1;
+//                     console.log("error");
+//                 });
+//             }
+// function doCheckout(){
+//   if (! prospectDone){
+//   doProspect();
+// }
 // doProspectUpdate();
-  waitForQueue(() => ajaxPending == 0, 15000).then((resolve) => {
-                        window.onbeforeunload = null;
-                        console.log('wait for queue authorize location to checkout')
-                        window.location.href = 'checkout.php';
-                    })
+//   waitForQueue(() => ajaxPending == 0, 15000).then((resolve) => {
+//                         window.onbeforeunload = null;
+//                         console.log('wait for queue authorize location to checkout')
+//                         window.location.href = 'checkout.php';
+//                     })
 
-}
+// }
 
-            let sleep = ms => new Promise(r => setTimeout(r, ms));
-            async function waitForQueue(f, timeout = 0) {
-                timeoutDone = false;
-                if (timeout != 0) {
-                    setTimeout(() => {
-                        timeoutDone = true;
-                        console.log('waitForQueue timeout. ajaxPending:' + ajaxPending)
-                        ajaxPending = 0;
-                    }, timeout);
-                }
-                while (!(f() || timeoutDone)) {
-                    await sleep(100);
-                    console.log('Waiting. ' + 'ajaxPending:' + ajaxPending + ' f():' + f());
+//             let sleep = ms => new Promise(r => setTimeout(r, ms));
+//             async function waitForQueue(f, timeout = 0) {
+//                 timeoutDone = false;
+//                 if (timeout != 0) {
+//                     setTimeout(() => {
+//                         timeoutDone = true;
+//                         console.log('waitForQueue timeout. ajaxPending:' + ajaxPending)
+//                         ajaxPending = 0;
+//                     }, timeout);
+//                 }
+//                 while (!(f() || timeoutDone)) {
+//                     await sleep(100);
+//                     console.log('Waiting. ' + 'ajaxPending:' + ajaxPending + ' f():' + f());
 
-                };
-                console.log('waitForQueue Done. ajaxPending:' + ajaxPending)
-                return f();
-            };
-function nsZoomZoom() {
-   htmlWidth = $('html').innerWidth();
-   bodyWidth = 992;
-   scale = 0.9;
+//                 };
+//                 console.log('waitForQueue Done. ajaxPending:' + ajaxPending)
+//                 return f();
+//             };
+// function nsZoomZoom() {
+//    htmlWidth = $('html').innerWidth();
+//    bodyWidth = 992;
+//    scale = 0.9;
   //  if (htmlWidth < bodyWidth) { scale = 1 } 
   //  // else { scale = htmlWidth / bodyWidth; } 
   //        else { scale = 0.9; }
-   $(".section1").css('-ms-transform', 'scale(' + scale + ')');
-   $(".section1").css('transform', 'scale(' + scale + ')');
-}
+   // $(".section1").css('-ms-transform', 'scale(' + scale + ')');
+   // $(".section1").css('transform', 'scale(' + scale + ')');
+// }
 var tidSession = '';
         var tidInterval;
         function getTid() {

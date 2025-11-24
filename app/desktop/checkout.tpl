@@ -397,11 +397,11 @@
                 <input type="text" name="billingAddress1" class="n-input form-control" placeholder="Billing Address"
                   id="billingAddress1" data-error-message="Please enter your billing Address!" />
               </div>
-              <div class="fields">
+              <!-- <div class="fields">
                 <label>Address 2</label>
                 <input type="text" id="billingAddress2" name="billingAddress2" class="n-input form-control"
                   placeholder="Apt / Suite #" data-error-message="Please enter your billing address2!" />
-              </div>
+              </div> -->
               <div class="fields">
                 <label>City</label>
                 <input type="text" name="billingCity" class="n-input form-control" placeholder="Billing City"
