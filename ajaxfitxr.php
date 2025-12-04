@@ -41,7 +41,7 @@ function sendApiRequestV2($url, $params = array())
     $curlSession = curl_init();
     curl_setopt($curlSession, CURLOPT_URL, $url);
     curl_setopt($curlSession, CURLOPT_HEADER, 0);
-    curl_setopt($curlSession, CURLOPT_USERPWD,  "ketofiregummies_fxr_api:jU9FGMuteAnaJ");
+    curl_setopt($curlSession, CURLOPT_USERPWD,  "aeterna_fxr_api:DkEnsq72w9EdtF");
     curl_setopt($curlSession, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 
     curl_setopt($curlSession, CURLOPT_POST, 1);

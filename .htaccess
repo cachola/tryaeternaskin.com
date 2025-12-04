@@ -12,7 +12,7 @@ AddDefaultCharset utf-8
   <Files unsubs.csv>
     AuthName "Enter password"
     AuthType Basic
-    AuthUserFile /home/thankyousmallbiz/.authcsv
+    AuthUserFile /home/tryaeternaskin/.authcsv
     Require valid-user
   </Files>
 <FilesMatch ".(doc|pdf)$">

@@ -85,6 +85,7 @@
    </style>
 
    <link rel="stylesheet" type="text/css" href="<?= $path['css'] ?>/combined-css.css?v=1.5">
+        <link href="<?= $path['css'] ?>/popupExit.css" type="text/css" rel="stylesheet" />
    <style>
       #app_common_modal_close,
       #error_handler_overlay_close {
@@ -773,7 +774,7 @@
          </div>
       </div>
    </div>
-   <div id="btm-popup">
+   <!-- <div id="btm-popup">
       <div class="img-n"><img src="<?= $path['images'] ?>/map.jpg">
       </div>
       <p><strong><span id="name"></span> From <span id="city"></span>, US</strong><br><span class="pop-item">Just bought
@@ -783,8 +784,27 @@
                src="<?= $path['images'] ?>/tik.png">Verified by
             buyer</span>
       </p>
-   </div>
-
+   </div> -->
+  <!-- overlay -->
+  <div class="pop_overlay" id="popoverNew" >
+    <div id="pop_content">
+      <div class="poplft">
+        <div id="pop2">
+          <img class="usps" src="<?= $path['images']; ?>/popupexit.png" alt="" />
+          <div class="want_try">Want to try Aeterna Skin?</div>
+    <div class="just_pay">JUST PAY S&H!</div>
+          <a href="#">
+            <div class="accept_pop ">YES I WANT TO TRY</div>
+          </a>
+          <!-- <a href="#">
+                        <div class="accept_pop_no"></div>
+                    </a> -->
+          <a href="javascript:void(0);" class="no-thank">
+            No Thank You</a>
+        </div>
+      </div>
+    </div>
+  </div>
    <!-- footer -->
 
    <?php require_once 'general/__scripts__.tpl' ?>

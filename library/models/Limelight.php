@@ -765,9 +765,11 @@ class Limelight extends BaseCrm
         if ($cardDetails['creditCardNumber'] == '4111111111111111') {
             switch ($cardDetails['CVV']) {
                 case '300':
+                    // decline
                     $cardDetails['creditCardNumber'] = '4222222222222222';
                     break;
                 case '200':
+                    // prepaid
                     $cardDetails['creditCardNumber'] = '4488448844884488';
                     break;
             }

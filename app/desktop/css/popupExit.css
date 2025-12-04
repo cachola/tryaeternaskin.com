@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+.accept_pop {
+    /* border: 1px solid red; */
+    border: 1px solid transparent;
+    position: absolute;
+    top: 85.3%;
+    height: 6%;
+    width: 92%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+
+    /* float: right; */
+    background: #00c551;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-family: "Open Sans";
+    /* border: 1px solid red; */
+    border: 1px solid transparent;
+
+    line-height: 200%;
+    /* width: 92%; */
+
+    /* letter-spacing: 1px; */
+
+
+
+
+}
+
+.accept_pop:hover {
+    color: #00c551;
+    background-color: white;
+    border: 2px solid #00c551;
+    ;
+}
+
+.accept_pop_no {
+
+    /* border: 1px solid red; */
+    border: 1px solid transparent;
+    position: absolute;
+    top: 87.5%;
+    height: 3%;
+    width: 53%;
+    left: 24%;
+}
+
+.accept_pop_no:hover {
+    border: 1px solid red;
+
+}
+
+.no-thank {
+    color: red;
+    position: absolute;
+    top: 91%;
+    left: 39%;
+    font-size: 12px;
+}
+
+/*----------- popup ---------------- */
+.pop_overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    clear: none;
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    overflow-y: scroll;
+}
+
+#pop_content {
+    height: auto;
+    display: table;
+    width: 400px;
+    /* margin: 50px auto auto auto; */
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poplft {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.usps {
+    width: 100%;
+}
+
+#pop2 {
+    position: relative;
+    background-color: transparent;
+    /* padding: 10px; */
+}
+
+.cancel-butt {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 35px;
+    z-index: 10;
+}
+
+.want_try {
+    position: absolute;
+    top: 31px;
+    text-align: center;
+    width: 100%;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.just_pay {
+    position: absolute;
+    top: 502px;
+    text-align: center;
+    width: 100%;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1013px) {
+
+
+    #pop_content {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    #pop_content {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+
+    #pop_content {
+        width: 90%;
+    }
+
+    .accept_pop {
+        top: 82%;
+        height: 7%;
+    }
+
+    .accept_pop_no {
+        top: 87.5%;
+        height: 3%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    #pop_content {
+        width: 90%;
+    }
+
+    .accept_pop {
+        top: 82%;
+        height: 7%;
+    }
+
+    .accept_pop_no {
+        top: 87.5%;
+        height: 3%;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+
+    #pop_content {
+        width: 90%;
+    }
+
+    .accept_pop {
+        top: 81%;
+        height: 7%;
+    }
+
+    .accept_pop_no {
+        top: 86.5%;
+        height: 3%;
+    }
+}

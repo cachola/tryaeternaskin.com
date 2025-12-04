@@ -70,11 +70,11 @@
 <body>
 	<h1 style="line-height: 0;"><strong>CONTACT US</strong></h1>
 	<p class="billing"><br><strong>Billing & Customer Support</strong></p>
-	<p class="cdata" >Toll Free: 888-506-2483 <br>
-		Email: support@getmysupergummies.com <br>
+	<p class="cdata" >Toll Free: 888-918-5943  <br>
+		Email: support@aeternaskin.com <br>
 		Customer Service Hours: 9AM - 5PM EST(Monday-Friday)</p>
-		<p class="cdatamob" >Toll Free: 888-506-2483 <br>
-		Email: support@getmysupergummies.com <br>
+		<p class="cdatamob" >Toll Free: 888-918-5943 <br>
+		Email: support@aeternaskin.com <br>
 		CS Hours: 9AM - 5PM EST(Mon-Fri)</p>
 
 </body>
