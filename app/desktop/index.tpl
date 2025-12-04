@@ -850,20 +850,31 @@
 
    
    </script> -->
+
+     <?php
+    $sampleurl = 'sample/';
+    $a1=$_SERVER['QUERY_STRING'];
+    $b1= $_GET['C1'];
+    if ($_SERVER['QUERY_STRING'] != '' && isset($_GET['C1'])){
+      $sampleurl = 'sample/?AFFID=1000&oid=425&C1=' . $_GET['C1'];
+
+    }
+    ?>
+
     <script type="text/javascript">
       $(document).ready(function () {
-      //   $(".accept_pop").click(function () {
-      //     $("#popoverNew").hide();
-      //     // window.location.href = 'dtc.php';
-      //   });
-      //   $(".no-thank").click(function () {
-      //     cb.ignoreExitPop = true;
-      //     $("#popoverNew").hide();
-      //   });
-      //   $(".cancel-butt").click(function () {
-      //     cb.ignoreExitPop = true;
-      //     $("#popoverNew").hide();
-      //   });
+        $(".accept_pop").click(function () {
+          $("#popoverNew").hide();
+          // window.location.href = 'dtc.php';
+        });
+        $(".no-thank").click(function () {
+          cb.ignoreExitPop = true;
+          $("#popoverNew").hide();
+        });
+        $(".cancel-butt").click(function () {
+          cb.ignoreExitPop = true;
+          $("#popoverNew").hide();
+        });
       //   $(".slider-modal").slick({
       //     arrows: false,
       //     dots: true,
