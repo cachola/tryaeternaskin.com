@@ -6,7 +6,7 @@
  <?php include 'general/__header__.tpl'; ?>
   <title>Aeterna Skin</title>
 
-  <meta name="description" content="Lumiera Skin" />
+  <meta name="description" content="Aeterna Skin" />
 
   <!--  -->
   <!-- <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noydir,noodp" />
@@ -232,7 +232,7 @@
           </p>
           <p>
             Your reservation of
-            <strong>Lumiera Skin Anti-Aging Serum</strong>
+            <strong>Aeterna Skincare Advanced Wrinkle Cream</strong>
             expires in
             <span id="countdown" class="timer">5:00!</span>
           </p>
@@ -267,10 +267,10 @@
             <div class="bottle">&nbsp;</div>
           </div>
           <div class="right">
-            <h3>Lumiera Skin Anti-Aging Serum</h3>
+            <h3>Aeterna Skincare Advanced Wrinkle Cream</h3>
             <div id="checkout_trial_length">
               <div class="supply" style="text-transform: capitalize">
-                30 Days Supply / Trial
+                7-Day SAMPLE
               </div>
             </div>
             <ul>
@@ -303,14 +303,14 @@
           <div>
             *Due to limited inventory levels on any given day,
             <b>we must limit trial sales to 250 maximum per day.</b>
-            Representations regarding the efficacy and safety of Lumiera Skin Anti-Aging Serum have not been
+            Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream have not been
             evaluated by the Food and Drug Administration.
           </div>
           <div>
             After your trial period has expired, you will be enrolled in our
-            membership program for $119.99 per month. You can
+            membership program for $88.97 per month. You can
             cancel anytime by calling
-            <a href="tel:888-260-6179">888-260-6179</a>.
+            <a href="tel:888-918-5943">888-918-5943</a>.
           </div>
         </div>
         <!-- <div class="frmCheckElemts forDesktop">
@@ -367,10 +367,7 @@
                 NO
               </p>
             </div>
-            <p class="mc-promo custom_style_wrapper pulse">
-              <span class="flx1"> Good News: Get a $5.05 additional discount on shipping when you checkout with
-                Mastercard!</span>
-            </p>
+
             <div id="billAddress" class="billing-info" style="display: none">
               <div style="padding-bottom: 15px; text-align: center; font-size: 18px; font-weight: bold">
                 Enter your billing information
@@ -532,7 +529,7 @@
             </div>
             <div class="fields submit">
               <button type="submit" class="submit" id="submit_btn">
-                RUSH ORDER
+                RUSH MY SAMPLE
               </button>
             </div>
           </form>
@@ -575,11 +572,11 @@
       <div style="position: absolute; overflow: hidden; width: 1px; height: 1px"></div>
       <div class="footer">
         <p class="copyright">
-          Copyright &copy; 2025 Lumiera Skin &mdash; All Rights Reserved.
+          Copyright &copy; 2026 Aeterna Skin &mdash; All Rights Reserved.
         </p>
         <p class="customerservice">
           Customer Service:
-          <a href="tel:888-260-6179" class="footertel">888-260-6179</a>
+          <a href="tel:888-918-5943" class="footertel">888-918-5943</a>
         </p>
         <p class="footerlinks">
           <a href="javascript:void(0);" class="bottomhref"

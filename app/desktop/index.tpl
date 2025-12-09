@@ -266,11 +266,11 @@
       <div class="container">
          <div class="row">
             <div class="col-sm-8 nopad">
-               <img src="<?= $path['images'] ?>/logo-exfol-trans.png" alt="logo" class="Top_Logo desk-logo">
+               <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo" class="Top_Logo desk-logo">
                <div class="mid-imglogo">
                   <img src="<?= $path['images'] ?>/logo-mob.png" alt="logo" class="Top_Logo mob-logo">
                </div>
-               <img src="<?= $path['images'] ?>/logo-exfol-trans.png" alt="logo" class="Top_Logo desk-logo">
+               <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo" class="Top_Logo desk-logo">
                <img src="<?= $path['images'] ?>/image.png" alt="product"
                   class="product Step1_Product device-desktop-page-index-flow-skin-v3-step-1-img-1 pos-chng1">
                <div>
@@ -282,9 +282,9 @@
                <div class="viraltext">
                   <img src="<?= $path['images'] ?>/stars.png" width="170" height="37"
                      class="img-responsive center-block" alt=""> <br>
-                  &ldquo;Find out why Lumiera Skin Anti-Aging Serum is going viral&rdquo;
+                  &ldquo;Find out why Aeterna Skincare Advanced Wrinkle Cream is going viral&rdquo;
                </div>
-               <div class="viraltextm"> CLAIM YOUR FREE BOTTLE! </div>
+               <div class="viraltextm"> CLAIM YOUR FREE SAMPLE! </div>
             </div>
             <div class="col-sm-4 nopad">
                <div class="formSeals">
@@ -293,7 +293,7 @@
                </div>
                <a name="ordernow" id="ordernow"></a>
                <div class="formBox">
-                  <div class="formTop">Where do we<br> Send your Bottle? <img
+                  <div class="formTop">Where do we<br> Send your Sample? <img
                         src="<?= $path['images'] ?>/form-arrow.png" class="desktop" height="415" alt="">
                   </div>
                   <div class="stripe"> EXCLUSIVE CLINICAL FORMULA AVAILABLE NOW </div>
@@ -390,13 +390,13 @@
                </p>
                <br>
                <p><strong><span class="maroon underline">The most talked about age reversal and wrinkle reducing formula
-                        is finally here!</span></strong> The Collagen and Retinol breakthrough that has the media in a
+                        is finally here!</span></strong> The Wrinkle Cream breakthrough that has the media in a
                   frenzy!
-                  Lumiera Skin Anti-Aging Serum contains the key that activates age reversal and can reverse the signs
+                  Aeterna Skincare Advanced Wrinkle Cream contains the key that activates age reversal and can reverse the signs
                   of
                   aging visibly in just a short period of time.
                </p>
-               <p><strong><span style="text-decoration: underline;">Lumiera Skin Anti-Aging Serum is here to stay
+               <p><strong><span style="text-decoration: underline;">Aeterna Skincare Advanced Wrinkle Cream is here to stay
                         because
                         of the unsurmountable success people are having turning back the hands of time!</span></strong>
                </p>
@@ -427,7 +427,7 @@
                <img src="<?= $path['images'] ?>/theresults.jpg" width="551" height="439"
                   class="img-responsive center-block" alt="Testimonials"> <br>
                <p class="text-center">Join the thousands already enjoying the incredible age defying effects of
-                  Lumiera Skin Anti-Aging Serum!
+                  Aeterna Skincare Advanced Wrinkle Cream!
                </p>
             </div>
             <div class="col-sm-12"> <img src="<?= $path['images'] ?>/the-proof-call-to-action.png"
@@ -450,8 +450,8 @@
       <div class="row">
          <div class=" col-lg-12 text-center">
             <h1 class="mont60"> HOW DOES IT WORK?</h1>
-            <span class="os28 lighter dark"> Lumiera Skin Anti-Aging Serum helps you achieve Visibly Younger Skin <span
-                  class="blue">faster than any other product</span> with a Powerfully Advanced Collagen and Retinol Age
+            <span class="os28 lighter dark"> Aeterna Skincare Advanced Wrinkle Cream helps you achieve Visibly Younger Skin <span
+                  class="blue">faster than any other product</span> with a Powerfully Advanced Wrinkle Cream Age
                Defying Formula </span>
             <div class="space">&nbsp;</div>
          </div>
@@ -479,11 +479,11 @@
             <br><br>
             <img src="<?= $path['images'] ?>/skinbeforeafter.jpg" width="410" height="259" class=" img-responsive "
                alt=""><br>
-            <h2 class="mb-d12">WHY <span class="orange" style='text-transform: uppercase;'>Lumiera Skin Anti-Aging Serum
+            <h2 class="mb-d12">WHY <span class="orange" style='text-transform: uppercase;'>Aeterna Skincare Advanced Wrinkle Cream
                </span> WORKS?
             </h2>
             <p class="content">
-               Lumiera Skin Anti-Aging Serum’s breakthrough formula delivers whole collagen molecules to the skin. The
+               Aeterna Skincare Advanced Wrinkle Cream’s breakthrough formula delivers whole collagen molecules to the skin. The
                peptide-rich wrinkle serum is applied to the skin, rebuilding and rejuvenating the skin.
             </p>
             <br>
@@ -492,9 +492,9 @@
             </h4>
             <br>
             <p class="content">
-               Lumiera Skin Anti-Aging Serum is your secret to radiant, beautiful skin that looks years younger. Don’t
+               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years younger. Don’t
                endure the physical pain and expense of costly procedures and surgeries.
-               Lumiera Skin Anti-Aging Serum works naturally to help replenish your skin’s moisture, firming its
+               Aeterna Skincare Advanced Wrinkle Cream works naturally to help replenish your skin’s moisture, firming its
                appearance and restoring your natural glow to reveal a younger-looking you.
             </p>
          </div>
@@ -537,7 +537,7 @@
          <div class=" col-lg-12 text-center">
             <img src="<?= $path['images'] ?>/3-seals_n.jpg" width="299" height="115" class="center-block" alt="non gmo">
             <h1 class="mont60 ">WHAT DO YOU GET?</h1>
-            <span class="os28 lighter dark"> The Collagen and Retinol Serum that is <span class="orange">Sweeping the
+            <span class="os28 lighter dark"> The Wrinkle Cream Serum that is <span class="orange">Sweeping the
                   Nation</span>! </span>
             <div class="space">&nbsp;</div>
          </div>
@@ -553,21 +553,21 @@
                <img src="<?= $path['images'] ?>/image.png" alt="product"
                   class="Step1_Product-col-sm-offset-2-03 device-desktop-page-index-flow-skin-v3-step-1-img-7">
             </div>
-            <h1 class="productTitle"> Lumiera Skin Anti-Aging Serum</h1>
+            <h1 class="productTitle"> Aeterna Skincare Advanced Wrinkle Cream</h1>
             <h3 class="productSub">Turn back the harsh effects of time! Visible results within as little as 7 days!</h3>
             <p class="content">
-               Lumiera Skin Anti-Aging Serum is your secret to radiant, beautiful skin that looks years younger. Don’t
-               endure the physical pain and expense of costly procedures and surgeries. Lumiera Skin Anti-Aging Serum
+               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years younger. Don’t
+               endure the physical pain and expense of costly procedures and surgeries. Aeterna Skincare Advanced Wrinkle Cream
                works naturally to help replenish your skin’s moisture, firming its appearance and restoring your natural
                glow to reveal a younger-looking you.
             </p>
             <p class="content">The boost in collagen and elastin helps retain the skin's dermal structure which results
                in reduction of wrinkles and fine lines. Active ingredients in
-               Lumiera Skin Anti-Aging Serum facilitate trapping moisture, which in turn hydrates the skin and prevents
+               Aeterna Skincare Advanced Wrinkle Cream facilitate trapping moisture, which in turn hydrates the skin and prevents
                cracking. <br>
                <br> Finally the beautiful, healthy, and confident face you deserve with our unique Collagen + Retinol
                Age Defying serum. Ideal for all skin types,
-               Lumiera Skin Anti-Aging Serum is a dynamic and powerful anti-aging product that will give you noticeable
+               Aeterna Skincare Advanced Wrinkle Cream is a dynamic and powerful anti-aging product that will give you noticeable
                results within 7 days!<br>
                <br>
             </p>
@@ -588,7 +588,7 @@
             <div class="space">&nbsp;</div>
             <center>
                <a class='toForm' style="cursor: pointer" onclick="goTopByScroll('form-top');">
-                  <btn class="c2abtn">ORDER NOW!</btn>
+                  <btn class="c2abtn">Rush My Sample!</btn>
                </a>
             </center>
             <div class="space">&nbsp;</div>
@@ -608,19 +608,19 @@
    <div class="container">
       <div class="row">
          <div class="col-sm-8 ketopiainfo">
-            <h2>HOW TO USE Lumiera Skin Anti-Aging Serum?</h2>
-            <p><strong> Lumiera Skin Anti-Aging Serum is a one-of-a-kind product designed to help you see visible
+            <h2>HOW TO USE Aeterna Skincare Advanced Wrinkle Cream?</h2>
+            <p><strong> Aeterna Skincare Advanced Wrinkle Cream is a one-of-a-kind product designed to help you see visible
                   results
                   within just 7 days!</strong>
             </p>
             <p>
-               Lumiera Skin Anti-Aging Serum is a twice daily age defying serum that allows the face to begin reducing
+               Aeterna Skincare Advanced Wrinkle Cream is a twice daily age defying serum that allows the face to begin reducing
                the appearance of age such as wrinkles, fine lines, spots and signs of stress in just a short time.
                Featuring a special blend of ingredients,
-               Lumiera Skin Anti-Aging Serum is a safe and simple way to turn back the hands of time.
+               Aeterna Skincare Advanced Wrinkle Cream is a safe and simple way to turn back the hands of time.
             </p>
             <p>
-               Lumiera Skin Anti-Aging Serum is extremely easy to use and experience fast noticeable results with.
+               Aeterna Skincare Advanced Wrinkle Cream is extremely easy to use and experience fast noticeable results with.
             </p>
             <ol class="firm_fines">
                <li>Wash face in the morning and before bed with gentle cleanser</li>
@@ -640,7 +640,7 @@
             </p>
             <h3>GET READY FOR A NEW YOU!</h3>
             <p>We know you will fall in love with the results of
-               Lumiera Skin Anti-Aging Serum. We want you to be 100% satisfied with your purchase so we offer a 100%
+               Aeterna Skincare Advanced Wrinkle Cream. We want you to be 100% satisfied with your purchase so we offer a 100%
                Money Back Satisfaction Guarantee.
             </p>
             <p>We rarely have product returns unlike most competitors due to the fact that people see noticeable results
@@ -656,7 +656,7 @@
             <img src="<?= $path['images'] ?>/skn-bottle1.png?v=1" width="382" height="353"
                class="img-responsive center-block skn_btls" alt="ketonx drink">
             <p class="small text-center adjsttxt">
-               Lumiera Skin Anti-Aging Serum is a daily regimen that helps you reduce wrinkles and the signs of aging.
+               Aeterna Skincare Advanced Wrinkle Cream is a daily regimen that helps you reduce wrinkles and the signs of aging.
             </p>
          </div>
          <div class="col-sm-12">
@@ -682,7 +682,7 @@
       <div class="row">
          <div class=" col-lg-12 text-center">
             <h1 class="mont50 centered">WHAT OTHERS ARE SAYING:</h1>
-            <span class="os28 lighter dark">Lumiera Skin Anti-Aging Serum is all over the Internet and the results <span
+            <span class="os28 lighter dark">Aeterna Skincare Advanced Wrinkle Cream is all over the Internet and the results <span
                   class="orange">are Astonishing</span>! </span><br>
             <div>
                <center>
@@ -734,13 +734,13 @@
                         <br>
                         <div>*Due to limited inventory levels on any given day, we must limit trial sales to 250 maximum
                            per day.
-                           Representations regarding the efficacy and safety of Lumiera Skin Anti-Aging Serum have not
+                           Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream have not
                            been evaluated by the Food and Drug Administration.
                         </div>
                      </div>
                      <div class="footer">
                         <p class="copyright">
-                           Copyright &copy; 2025 Lumiera Skin &mdash; All Rights Reserved.
+                           Copyright &copy; 2026 Aeterna Skin &mdash; All Rights Reserved.
                         </p>
                         <p class="footerlinks">
                            <a href="javascript:void(0);" class="bottomhref"
@@ -778,7 +778,7 @@
       <div class="img-n"><img src="<?= $path['images'] ?>/map.jpg">
       </div>
       <p><strong><span id="name"></span> From <span id="city"></span>, US</strong><br><span class="pop-item">Just bought
-            Lumiera Skin Anti-Aging Serum</span>
+            Aeterna Skincare Advanced Wrinkle Cream</span>
       </p>
       <p><span id="pur_time">2 minuts ago</span> <span class="verified-pop"><img
                src="<?= $path['images'] ?>/tik.png">Verified by

@@ -5,7 +5,7 @@ body {
 }
 #wrapper {
   background: none repeat scroll 0 0 white;
-  border: 1px solid #edcc0fcb;
+  border: 1px solid #b2b2b2;
   margin: 5px auto;
   max-width: 96%;
   overflow-x: hidden;
@@ -13,12 +13,11 @@ body {
   text-align: center;
   width: 960px;
 }
-#wrapper .up-btn {
-  text-decoration: none;
+#wrapper input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: #00bc4c;
+   background: #00bc4c;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 1px -1px black;
@@ -33,7 +32,6 @@ body {
   transition: all 0.2s ease;
   width: 400px;
 }
-
 #wrapper input:hover {
   background: #00bc4c;
   box-shadow: 0 0 6px -1px black;
@@ -51,7 +49,6 @@ body {
 #wrapper .thanks-purchase h1 {
   color: #0887e6;
   font-size: 1em;
-  line-height: .8em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -59,15 +56,12 @@ body {
   font-size: 0.875em;
   font-weight: normal;
   margin-top: 5px;
-  margin-bottom: 0px;
 }
 #wrapper .wait h1 {
   color: #f00;
   font-size: 1.125em;
-  list-style: .8em;
   font-weight: bold;
   margin-top: 12px;
-  margin-bottom: 0px;
   text-transform: uppercase;
 }
 #wrapper .wait p {
@@ -78,16 +72,9 @@ body {
 @media (max-width: 500px) {
   #wrapper .wait p {
     font-size: 12px;
-    margin: 4px 10px;
+    margin: 15px 10px;
   }
-#wrapper .bottom {
-margin: 55px 0px 24px 0px;
 }
-
-}
-     
-
-
 #wrapper .wait img {
   /* border: 2px dashed black; */
   box-sizing: border-box;
@@ -142,4 +129,11 @@ margin: 55px 0px 24px 0px;
   padding: 10px;
   vertical-align: top;
   width: 300px;
+}
+#upsell_img_block,
+.pointer-class {
+  cursor: pointer;
+}
+.award-right {
+  width: 200px;
 }

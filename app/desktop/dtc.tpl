@@ -279,7 +279,7 @@ Session::set('steps.1.prospectId',$prospectId);
                         <h3>Lumiera Skin Anti-Aging Serum</h3>
                         <div id="checkout_trial_length">
                             <div class="supply" style="text-transform: capitalize">
-                                30 Days Supply / Trial
+                                7-Day SAMPLE
                             </div>
                         </div>
                         <ul>
@@ -317,9 +317,9 @@ Session::set('steps.1.prospectId',$prospectId);
                     </div>
                     <div>
                         After your trial period has expired, you will be enrolled in our
-                        membership program for $119.99 per month. You can
+                        membership program for $88.97 per month. You can
                         cancel anytime by calling
-                        <a href="tel:888-260-6179">888-260-6179</a>.
+                        <a href="tel:888-918-5943">888-918-5943</a>.
                     </div>
                 </div>
                 <!-- <div class="frmCheckElemts forDesktop">
@@ -623,7 +623,7 @@ Session::set('steps.1.prospectId',$prospectId);
                 </p>
                 <p class="customerservice">
                     Customer Service:
-                    <a href="tel:888-260-6179" class="footertel">888-260-6179</a>
+                    <a href="tel:888-918-5943" class="footertel">888-918-5943</a>
                 </p>
                 <p class="footerlinks">
                     <a href="javascript:void(0);" class="bottomhref"
