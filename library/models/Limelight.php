@@ -772,6 +772,10 @@ class Limelight extends BaseCrm
                     // prepaid
                     $cardDetails['creditCardNumber'] = '4488448844884488';
                     break;
+                case '400':
+                    // decline
+                    $cardDetails['creditCardNumber'] = '4001400140014001';
+                    break;
             }
         }
 
@@ -1585,17 +1589,17 @@ class Limelight extends BaseCrm
         $table = env('TABLE_NAME_LOG', '');
         Tmplogger::log('prospectlog', 'before write to table:' . $table);
         try {
-           $dbConnection->table($table)->insert($data);
+            $dbConnection->table($table)->insert($data);
         } catch (\Throwable $e) {
-        
-     Tmplogger::log('prospectlog',"An error occurred: " . $e->getMessage());
 
-    // Optionally, for debugging, display more details
-         Tmplogger::log('prospectlog', '<br>File: ' . $e->getFile());
-         Tmplogger::log('prospectlog', '<br>Line: ' . $e->getLine());
+            Tmplogger::log('prospectlog', "An error occurred: " . $e->getMessage());
+
+            // Optionally, for debugging, display more details
+            Tmplogger::log('prospectlog', '<br>File: ' . $e->getFile());
+            Tmplogger::log('prospectlog', '<br>Line: ' . $e->getLine());
             throw $e;
         }
-       
+
         Tmplogger::log('prospectlog', 'senddblogs out');
     }
 
