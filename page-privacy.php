@@ -4,7 +4,7 @@
 
 <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Keto Fire</title>
+      <title>Aeterna Skincare</title>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
       <style type="text/css">
             body {
@@ -45,7 +45,7 @@
 
 <body>
 <h1><strong>Privacy Policy</strong></h1>
-<p><br>Welcome! This website (the "Website") is a member of the Keto Fire family of Internet properties, operated by Aeterna Skin https://www.aeternaskin.com/ ("We," or "Company").</p>
+<p><br>Welcome! This website (the "Website") is a member of the Aeterna Skincare family of Internet properties, operated by Aeterna Skin https://www.aeternaskin.com/ ("We," or "Company").</p>
 
 <p><br>By accessing, using, registering or placing an order at or from this Website, You agree to be bound by this Privacy Policy. You hereby state and affirm that they have read, understand, and agree with this policy. Therefore, please take the time to read this policy in full, which is part of the Terms and Condition of Use of this Website. If you do not agree to the terms and conditions of this Privacy Policy, please do not use this Website or order product from us. For your convenience we will change the "Last Updated" date above to reflect changes to this policy.<br>Purpose of the Privacy Policy.</p>
 

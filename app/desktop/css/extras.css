@@ -69,11 +69,25 @@ body {
   font-family: "Helvetica Neue", Helvetica;
   margin: 15px 0;
 }
-@media (max-width: 500px) {
+.br-mobile{
+  display: none;
+}
+@media (max-width: 550px) {
   #wrapper .wait p {
-    font-size: 12px;
+    font-size: 18px;
     margin: 15px 10px;
   }
+  .br-mobile{
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+.more-info{
+  flex-direction: column;
+}
+.more-info div{
+  width: 100%;
+}
 }
 #wrapper .wait img {
   /* border: 2px dashed black; */
@@ -90,7 +104,7 @@ body {
   margin: auto;
   max-width: 96%;
   position: relative;
-  width: 580px;
+  /* width: 580px; */
 }
 #wrapper .wait .form-wrap .arrow {
   border: none;
@@ -112,13 +126,14 @@ body {
   font-size: 0;
   margin-bottom: 10px;
   text-align: center;
+  display: flex !important;
 }
 .award {
   display: inline-block;
   font-size: 16px;
   margin: 0 auto 40px;
   max-width: 100%;
-  width: 350px;
+  width: 345px;
 }
 .stats {
   background: #e8e8e8;
@@ -135,5 +150,5 @@ body {
   cursor: pointer;
 }
 .award-right {
-  width: 200px;
+  width: 210px;
 }

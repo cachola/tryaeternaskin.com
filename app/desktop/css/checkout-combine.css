@@ -1347,7 +1347,7 @@ ul {list-style:none; padding:0;}
          width: 134%;
          left: -35px;
          }
-         .disclaimer {    padding: 25px 10px 15px; } 
+         .disclaimer {    padding: 25px 10px 15px;text-align: center; } 
          select { width: 60%; }
          .insure_ship_wrapper {
          background: #2984ff;
@@ -1668,7 +1668,7 @@ footer footer {
                #form-submit.disabled, [type="submit"].disabled, #kformSubmit.disabled { opacity: 0.2; }
  
 .gbox {
-    width: 100%;
+    width: 96%;
     min-height: auto;
     padding: 30px;
     background: linear-gradient(to bottom, rgba(228,238,241,1) 35%, rgba(206,224,226,1) 100%);

@@ -66,26 +66,26 @@
          }
       }
 
-         @media (max-width:420px) {
-            .symbol {
-               font-size: 48px;
-               position: absolute;
-               display: inline;
-               top: 31px;
-            }
-
-            .text_line {
-               position: relative;
-               left: 67px;
-               display: inline-block;
-               text-align: left;
-               width: 260px;
-            }
+      @media (max-width:420px) {
+         .symbol {
+            font-size: 48px;
+            position: absolute;
+            display: inline;
+            top: 31px;
          }
+
+         .text_line {
+            position: relative;
+            left: 67px;
+            display: inline-block;
+            text-align: left;
+            width: 260px;
+         }
+      }
    </style>
 
    <link rel="stylesheet" type="text/css" href="<?= $path['css'] ?>/combined-css.css?v=1.5">
-        <link href="<?= $path['css'] ?>/popupExit.css" type="text/css" rel="stylesheet" />
+   <link href="<?= $path['css'] ?>/popupExit.css" type="text/css" rel="stylesheet" />
    <style>
       #app_common_modal_close,
       #error_handler_overlay_close {
@@ -226,7 +226,7 @@
 </head>
 
 <body>
-    <?php include 'general/__gtag_script__.tpl';
+   <?php include 'general/__gtag_script__.tpl';
         perform_body_tag_open_actions(); ?>
    <p id="loading-indicator" style="display:none;">Processing...</p>
 
@@ -251,7 +251,7 @@
             <div class="row">
                <div class="navbar-header">
                   <div class="navbar-brand"> <img class="img-responsive"
-                        src="<?= $path['images'] ?>/logo-exfol-trans.png"> <span style="font-size:11px;">Visible Results
+                        src="<?= $path['images'] ?>/logo-exfol-transblack.png"> <span style="font-size:11px;">Visible Results
                         in <strong>1 WEEK!</strong></span> </div>
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                      aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span
@@ -298,8 +298,9 @@
                   </div>
                   <div class="stripe"> EXCLUSIVE CLINICAL FORMULA AVAILABLE NOW </div>
                   <div id="form-top"></div>
-                  <form method="post" class="prospect-form" action="ajax.php?method=new_prospect" name="fullprospect_form"
-                     accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8">
+                  <form method="post" class="prospect-form" action="ajax.php?method=new_prospect"
+                     name="fullprospect_form" accept-charset="utf-8"
+                     enctype="application/x-www-form-urlencoded;charset=utf-8">
                      <div class="formBody">
                         <div class="fields">
                            <input type="text" name="firstName" placeholder="First Name"
@@ -313,17 +314,15 @@
                         </div>
                         <div class="fields" style="display: none">
                            <select name="shippingCountry" class="required input-fields form-control" data-selected="US"
-                              data-error-message="Please select your Country!"
-                              id="shippingCountry" >
+                              data-error-message="Please select your Country!" id="shippingCountry">
                               <option>Select Country</option>
                            </select>
                         </div>
                         <div class="fields">
                            <input type="text" name="shippingAddress1" placeholder="Address"
-                              class="required input-fields form-control"
-                              data-error-message="Please enter your Address!"
-                               id="gmap_autocomplete" />
-                              
+                              class="required input-fields form-control" data-error-message="Please enter your Address!"
+                              id="gmap_autocomplete" />
+
                         </div>
                         <!-- <div class="fields">
                            <input type="text" id="shippingAddress2" name="shippingAddress2" placeholder="Apt / Suite #"
@@ -334,8 +333,7 @@
                            <input type="tel" name="shippingZip" placeholder="Zip Code"
                               class="required input-fields form-control"
                               data-error-message="Please enter a valid Zip Code!" maxlength="5"
-                              onkeypress="return isNumberKey(event)"
-                               id="zip" />
+                              onkeypress="return isNumberKey(event)" id="zip" />
                         </div>
                         <div class="fields">
                            <input type="text" name="shippingCity" placeholder="City"
@@ -344,9 +342,8 @@
                         </div>
                         <div class="fields">
                            <input type="text" name="shippingState" placeholder="State"
-                              class="required input-fields form-control"
-                              data-error-message="Please select your State!" 
-                               id="shippingState" />
+                              class="required input-fields form-control" data-error-message="Please select your State!"
+                              id="shippingState" />
                         </div>
                         <div class="fields">
                            <input value='' type='email' name='email' data-group='1' placeholder='Email Address' required
@@ -354,7 +351,7 @@
                               data-error-message="Please enter a valid Email Address!">
                         </div>
                         <div class="fields">
-                           <input type="tel" maxlength="10" name="phone" placeholder="Phone"
+                           <input type="tel" maxlength="12" name="phone" placeholder="Phone"
                               class="required input-fields form-control" data-validate="phone"
                               data-error-message="Please enter a valid Phone Number!" data-min-length="10"
                               data-max-length="10"
@@ -392,11 +389,13 @@
                <p><strong><span class="maroon underline">The most talked about age reversal and wrinkle reducing formula
                         is finally here!</span></strong> The Wrinkle Cream breakthrough that has the media in a
                   frenzy!
-                  Aeterna Skincare Advanced Wrinkle Cream contains the key that activates age reversal and can reverse the signs
+                  Aeterna Skincare Advanced Wrinkle Cream contains the key that activates age reversal and can reverse
+                  the signs
                   of
                   aging visibly in just a short period of time.
                </p>
-               <p><strong><span style="text-decoration: underline;">Aeterna Skincare Advanced Wrinkle Cream is here to stay
+               <p><strong><span style="text-decoration: underline;">Aeterna Skincare Advanced Wrinkle Cream is here to
+                        stay
                         because
                         of the unsurmountable success people are having turning back the hands of time!</span></strong>
                </p>
@@ -450,8 +449,8 @@
       <div class="row">
          <div class=" col-lg-12 text-center">
             <h1 class="mont60"> HOW DOES IT WORK?</h1>
-            <span class="os28 lighter dark"> Aeterna Skincare Advanced Wrinkle Cream helps you achieve Visibly Younger Skin <span
-                  class="blue">faster than any other product</span> with a Powerfully Advanced Wrinkle Cream Age
+            <span class="os28 lighter dark"> Aeterna Skincare Advanced Wrinkle Cream helps you achieve Visibly Younger
+               Skin <span class="blue">faster than any other product</span> with a Powerfully Advanced Wrinkle Cream Age
                Defying Formula </span>
             <div class="space">&nbsp;</div>
          </div>
@@ -479,11 +478,13 @@
             <br><br>
             <img src="<?= $path['images'] ?>/skinbeforeafter.jpg" width="410" height="259" class=" img-responsive "
                alt=""><br>
-            <h2 class="mb-d12">WHY <span class="orange" style='text-transform: uppercase;'>Aeterna Skincare Advanced Wrinkle Cream
+            <h2 class="mb-d12">WHY <span class="orange" style='text-transform: uppercase;'>Aeterna Skincare Advanced
+                  Wrinkle Cream
                </span> WORKS?
             </h2>
             <p class="content">
-               Aeterna Skincare Advanced Wrinkle Cream’s breakthrough formula delivers whole collagen molecules to the skin. The
+               Aeterna Skincare Advanced Wrinkle Cream’s breakthrough formula delivers whole collagen molecules to the
+               skin. The
                peptide-rich wrinkle serum is applied to the skin, rebuilding and rejuvenating the skin.
             </p>
             <br>
@@ -492,9 +493,11 @@
             </h4>
             <br>
             <p class="content">
-               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years younger. Don’t
+               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years
+               younger. Don’t
                endure the physical pain and expense of costly procedures and surgeries.
-               Aeterna Skincare Advanced Wrinkle Cream works naturally to help replenish your skin’s moisture, firming its
+               Aeterna Skincare Advanced Wrinkle Cream works naturally to help replenish your skin’s moisture, firming
+               its
                appearance and restoring your natural glow to reveal a younger-looking you.
             </p>
          </div>
@@ -556,18 +559,22 @@
             <h1 class="productTitle"> Aeterna Skincare Advanced Wrinkle Cream</h1>
             <h3 class="productSub">Turn back the harsh effects of time! Visible results within as little as 7 days!</h3>
             <p class="content">
-               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years younger. Don’t
-               endure the physical pain and expense of costly procedures and surgeries. Aeterna Skincare Advanced Wrinkle Cream
+               Aeterna Skincare Advanced Wrinkle Cream is your secret to radiant, beautiful skin that looks years
+               younger. Don’t
+               endure the physical pain and expense of costly procedures and surgeries. Aeterna Skincare Advanced
+               Wrinkle Cream
                works naturally to help replenish your skin’s moisture, firming its appearance and restoring your natural
                glow to reveal a younger-looking you.
             </p>
             <p class="content">The boost in collagen and elastin helps retain the skin's dermal structure which results
                in reduction of wrinkles and fine lines. Active ingredients in
-               Aeterna Skincare Advanced Wrinkle Cream facilitate trapping moisture, which in turn hydrates the skin and prevents
+               Aeterna Skincare Advanced Wrinkle Cream facilitate trapping moisture, which in turn hydrates the skin and
+               prevents
                cracking. <br>
                <br> Finally the beautiful, healthy, and confident face you deserve with our unique Collagen + Retinol
                Age Defying serum. Ideal for all skin types,
-               Aeterna Skincare Advanced Wrinkle Cream is a dynamic and powerful anti-aging product that will give you noticeable
+               Aeterna Skincare Advanced Wrinkle Cream is a dynamic and powerful anti-aging product that will give you
+               noticeable
                results within 7 days!<br>
                <br>
             </p>
@@ -609,18 +616,21 @@
       <div class="row">
          <div class="col-sm-8 ketopiainfo">
             <h2>HOW TO USE Aeterna Skincare Advanced Wrinkle Cream?</h2>
-            <p><strong> Aeterna Skincare Advanced Wrinkle Cream is a one-of-a-kind product designed to help you see visible
+            <p><strong> Aeterna Skincare Advanced Wrinkle Cream is a one-of-a-kind product designed to help you see
+                  visible
                   results
                   within just 7 days!</strong>
             </p>
             <p>
-               Aeterna Skincare Advanced Wrinkle Cream is a twice daily age defying serum that allows the face to begin reducing
+               Aeterna Skincare Advanced Wrinkle Cream is a twice daily age defying serum that allows the face to begin
+               reducing
                the appearance of age such as wrinkles, fine lines, spots and signs of stress in just a short time.
                Featuring a special blend of ingredients,
                Aeterna Skincare Advanced Wrinkle Cream is a safe and simple way to turn back the hands of time.
             </p>
             <p>
-               Aeterna Skincare Advanced Wrinkle Cream is extremely easy to use and experience fast noticeable results with.
+               Aeterna Skincare Advanced Wrinkle Cream is extremely easy to use and experience fast noticeable results
+               with.
             </p>
             <ol class="firm_fines">
                <li>Wash face in the morning and before bed with gentle cleanser</li>
@@ -640,7 +650,8 @@
             </p>
             <h3>GET READY FOR A NEW YOU!</h3>
             <p>We know you will fall in love with the results of
-               Aeterna Skincare Advanced Wrinkle Cream. We want you to be 100% satisfied with your purchase so we offer a 100%
+               Aeterna Skincare Advanced Wrinkle Cream. We want you to be 100% satisfied with your purchase so we offer
+               a 100%
                Money Back Satisfaction Guarantee.
             </p>
             <p>We rarely have product returns unlike most competitors due to the fact that people see noticeable results
@@ -656,7 +667,8 @@
             <img src="<?= $path['images'] ?>/skn-bottle1.png?v=1" width="382" height="353"
                class="img-responsive center-block skn_btls" alt="ketonx drink">
             <p class="small text-center adjsttxt">
-               Aeterna Skincare Advanced Wrinkle Cream is a daily regimen that helps you reduce wrinkles and the signs of aging.
+               Aeterna Skincare Advanced Wrinkle Cream is a daily regimen that helps you reduce wrinkles and the signs
+               of aging.
             </p>
          </div>
          <div class="col-sm-12">
@@ -682,8 +694,8 @@
       <div class="row">
          <div class=" col-lg-12 text-center">
             <h1 class="mont50 centered">WHAT OTHERS ARE SAYING:</h1>
-            <span class="os28 lighter dark">Aeterna Skincare Advanced Wrinkle Cream is all over the Internet and the results <span
-                  class="orange">are Astonishing</span>! </span><br>
+            <span class="os28 lighter dark">Aeterna Skincare Advanced Wrinkle Cream is all over the Internet and the
+               results <span class="orange">are Astonishing</span>! </span><br>
             <div>
                <center>
                   <img src="<?= $path['images'] ?>/fb-logo.jpg" width="263" height="120" alt="">
@@ -708,7 +720,7 @@
             <div class="col-md-4 col-sm-2"> &nbsp; </div>
 
             <div class="col-md-8 col-sm-10">
-               <img src="<?= $path['images'] ?>/logo-exfol-trans.png" alt="logo" class="footer-logo ftr-logo"> <a
+               <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo" class="footer-logo ftr-logo"> <a
                   class='toForm' onclick="goTopByScroll('form-top');" style="cursor: pointer"><img
                      src="<?= $path['images'] ?>/footer-cta.png?v=1722589431" width="680"
                      class="img-responsive center-block" height="771" alt=""></a>
@@ -734,7 +746,8 @@
                         <br>
                         <div>*Due to limited inventory levels on any given day, we must limit trial sales to 250 maximum
                            per day.
-                           Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream have not
+                           Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream
+                           have not
                            been evaluated by the Food and Drug Administration.
                         </div>
                      </div>
@@ -785,26 +798,40 @@
             buyer</span>
       </p>
    </div> -->
-  <!-- overlay -->
-  <div class="pop_overlay" id="popoverNew" >
-    <div id="pop_content">
-      <div class="poplft">
-        <div id="pop2">
-          <img class="usps" src="<?= $path['images']; ?>/popupexit.png" alt="" />
-          <div class="want_try">Want to try Aeterna Skin?</div>
-    <div class="just_pay">JUST PAY S&H!</div>
-          <a href="#">
-            <div class="accept_pop ">YES I WANT TO TRY</div>
-          </a>
-          <!-- <a href="#">
+   <!-- overlay -->
+<?php 
+
+if (!isMobile) {
+
+?>
+    <div class="welcome-message">
+        <h1>Welcome back, user!</h1>
+        <p>Here is your personalized content.</p>
+    </div>
+<?php
+   
+} 
+?>
+
+   <div class="pop_overlay" id="popoverNew">
+      <div id="pop_content">
+         <div class="poplft">
+            <div id="pop2">
+               <img class="usps" src="<?= $path['images']; ?>/popupexit.png" alt="" />
+               <div class="want_try">Want to try Aeterna Skin?</div>
+               <div class="just_pay">JUST PAY S&H!</div>
+               <a href="#">
+                  <div class="accept_pop ">YES I WANT TO TRY</div>
+               </a>
+               <!-- <a href="#">
                         <div class="accept_pop_no"></div>
                     </a> -->
-          <a href="javascript:void(0);" class="no-thank">
-            No Thank You</a>
-        </div>
+               <a href="javascript:void(0);" class="no-thank">
+                  No Thank You</a>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
    <!-- footer -->
 
    <?php require_once 'general/__scripts__.tpl' ?>
@@ -851,7 +878,7 @@
    
    </script> -->
 
-     <?php
+   <?php
     $sampleurl = 'sample/';
     $a1=$_SERVER['QUERY_STRING'];
     $b1= $_GET['C1'];
@@ -861,46 +888,46 @@
     }
     ?>
 
-    <script type="text/javascript">
+   <script type="text/javascript">
       $(document).ready(function () {
-        $(".accept_pop").click(function () {
-          $("#popoverNew").hide();
-          // window.location.href = 'dtc.php';
-        });
-        $(".no-thank").click(function () {
-          cb.ignoreExitPop = true;
-          $("#popoverNew").hide();
-        });
-        $(".cancel-butt").click(function () {
-          cb.ignoreExitPop = true;
-          $("#popoverNew").hide();
-        });
-      //   $(".slider-modal").slick({
-      //     arrows: false,
-      //     dots: true,
-      //     autoplay: false,
-      //     autoplaySpeed: 2600,
-      //   });
-      //   $('.line-block').click(function(e){
-      //    var _selfOptions= {
-      //       type: 'fullprospect',
-      //       errorModal: true,
-      //       autoFillFormElement: 'fullprospect_form', // form name only
-      //       countryDropdown: 'Select Country',
-      //       ajaxLoader: {
-      //           div: '#loading-indicator',
-      //           timeInOut: 0
-      //       },
-      //   };
-      //    e.preventDefault();
-      //       var errors = cb.validateForm($('#frm'), cb.formActions[_selfOptions.type]);
-      //       if (Object.keys(errors).length !== 0) {
-      //           cb.errorHandler(getArrangedErrorMessages(errors));
-      //           return;
-      //       }
-      //     doCheckout();
-      //   })
-        getTid();
+         $(".accept_pop").click(function () {
+            $("#popoverNew").hide();
+            // window.location.href = 'dtc.php';
+         });
+         $(".no-thank").click(function () {
+            cb.ignoreExitPop = true;
+            $("#popoverNew").hide();
+         });
+         $(".cancel-butt").click(function () {
+            cb.ignoreExitPop = true;
+            $("#popoverNew").hide();
+         });
+         //   $(".slider-modal").slick({
+         //     arrows: false,
+         //     dots: true,
+         //     autoplay: false,
+         //     autoplaySpeed: 2600,
+         //   });
+         //   $('.line-block').click(function(e){
+         //    var _selfOptions= {
+         //       type: 'fullprospect',
+         //       errorModal: true,
+         //       autoFillFormElement: 'fullprospect_form', // form name only
+         //       countryDropdown: 'Select Country',
+         //       ajaxLoader: {
+         //           div: '#loading-indicator',
+         //           timeInOut: 0
+         //       },
+         //   };
+         //    e.preventDefault();
+         //       var errors = cb.validateForm($('#frm'), cb.formActions[_selfOptions.type]);
+         //       if (Object.keys(errors).length !== 0) {
+         //           cb.errorHandler(getArrangedErrorMessages(errors));
+         //           return;
+         //       }
+         //     doCheckout();
+         //   })
+         getTid();
       });
       // function getArrangedErrorMessages(errors) {
       //       var arrangedErrors = {};
@@ -925,154 +952,154 @@
       // $(window).resize(function () {
       //   nsZoomZoom();
       // });
-// var prospectDone=false;
-// var ajaxPending = 0;
-// $("input[name=email]").blur(function () {
-//                     if (!prospectDone) {
-//                         var re =
-//                             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//                         if (re.test(String($(this).val()).toLowerCase()) == false) {
-//                             return;
-//                         }
+      // var prospectDone=false;
+      // var ajaxPending = 0;
+      // $("input[name=email]").blur(function () {
+      //                     if (!prospectDone) {
+      //                         var re =
+      //                             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      //                         if (re.test(String($(this).val()).toLowerCase()) == false) {
+      //                             return;
+      //                         }
 
 
-//                         //    doprospect
-//                         prospectPending=true;
-//                         setTimeout(() => {
-//                             doProspect();
+      //                         //    doprospect
+      //                         prospectPending=true;
+      //                         setTimeout(() => {
+      //                             doProspect();
 
 
-//                         }, 50);
+      //                         }, 50);
 
-//                     }
-//                 });
-
-
-                // $("input[name=firstName], input[name=lastName], input[name=shippingAddress1], input[name=shippingCity], input[name=shippingZip], input[name=phone]").blur(function () {
-                //     if (prospectDone) {
-                //         console.log('blur input all')
-                //         //    doprospectupdate
-                //         setTimeout(() => {
-                //             doProspectUpdate();
-
-                //         }, 50);
+      //                     }
+      //                 });
 
 
-                //     }
-                // });
+      // $("input[name=firstName], input[name=lastName], input[name=shippingAddress1], input[name=shippingCity], input[name=shippingZip], input[name=phone]").blur(function () {
+      //     if (prospectDone) {
+      //         console.log('blur input all')
+      //         //    doprospectupdate
+      //         setTimeout(() => {
+      //             doProspectUpdate();
+
+      //         }, 50);
 
 
-                // $("#shippingState").on('change', function () {
-                //     console.log('change input state')
-                //     setTimeout(() => {
-                //         doProspectUpdate();
-
-                //     }, 50);
-                // })
+      //     }
+      // });
 
 
-//                 function doProspect() {
-//                 var configData = $('#frm').serialize();
-//                 ajaxPending += 1;
-//                 $.ajax({
-//                     url: AJAX_PATH + 'fullprospect',
-//                     method: 'post',
-//                     data: configData,
-//                 }).success(function (data) {
-//                   ajaxPending -= 1;
-//                     if (!data.errors) {
-//                         prospectDone = true;
-                        
-//                     }
-//                 }).fail(function () {
-//                   ajaxPending -= 1;
-//                     console.log("prospect error");
-//                 });
-//             }
+      // $("#shippingState").on('change', function () {
+      //     console.log('change input state')
+      //     setTimeout(() => {
+      //         doProspectUpdate();
 
-//             function doProspectUpdate() {
-//                 var configData = $('#frm').serialize();
-//                 ajaxPending += 1;
-//                 $.ajax({
-//                     url: AJAX_PATH + 'prospectupdate',
-//                     method: 'post',
-//                     data: configData,
-//                 }).success(function (data) {
-//                   ajaxPending -= 1;
-//                     if (!data.errors) {
-//                         console.log('prospect update success')
-//                     }
-//                 }).fail(function () {
-//                   ajaxPending -= 1;
-//                     console.log("error");
-//                 });
-//             }
-// function doCheckout(){
-//   if (! prospectDone){
-//   doProspect();
-// }
-// doProspectUpdate();
-//   waitForQueue(() => ajaxPending == 0, 15000).then((resolve) => {
-//                         window.onbeforeunload = null;
-//                         console.log('wait for queue authorize location to checkout')
-//                         window.location.href = 'checkout.php';
-//                     })
-
-// }
-
-//             let sleep = ms => new Promise(r => setTimeout(r, ms));
-//             async function waitForQueue(f, timeout = 0) {
-//                 timeoutDone = false;
-//                 if (timeout != 0) {
-//                     setTimeout(() => {
-//                         timeoutDone = true;
-//                         console.log('waitForQueue timeout. ajaxPending:' + ajaxPending)
-//                         ajaxPending = 0;
-//                     }, timeout);
-//                 }
-//                 while (!(f() || timeoutDone)) {
-//                     await sleep(100);
-//                     console.log('Waiting. ' + 'ajaxPending:' + ajaxPending + ' f():' + f());
-
-//                 };
-//                 console.log('waitForQueue Done. ajaxPending:' + ajaxPending)
-//                 return f();
-//             };
-// function nsZoomZoom() {
-//    htmlWidth = $('html').innerWidth();
-//    bodyWidth = 992;
-//    scale = 0.9;
-  //  if (htmlWidth < bodyWidth) { scale = 1 } 
-  //  // else { scale = htmlWidth / bodyWidth; } 
-  //        else { scale = 0.9; }
-   // $(".section1").css('-ms-transform', 'scale(' + scale + ')');
-   // $(".section1").css('transform', 'scale(' + scale + ')');
-// }
-var tidSession = '';
-        var tidInterval;
-        function getTid() {
+      //     }, 50);
+      // })
 
 
-            tidInterval = setInterval(function () {
-                var tid = sessionStorage.getItem('tid');
-                if (tid != null && tid.length > 5) {
-                    var formData = new FormData();
-                    formData.append("tid", tid);
-                    $.ajax({
-                        url: 'ajaxtid.php',
-                        type: 'POST',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function (res) {
-                            res = JSON.parse(res);
-                        },
-                    });
-                    clearInterval(tidInterval);
-                }
-            }, 1000)
-        }
-    </script>
+      //                 function doProspect() {
+      //                 var configData = $('#frm').serialize();
+      //                 ajaxPending += 1;
+      //                 $.ajax({
+      //                     url: AJAX_PATH + 'fullprospect',
+      //                     method: 'post',
+      //                     data: configData,
+      //                 }).success(function (data) {
+      //                   ajaxPending -= 1;
+      //                     if (!data.errors) {
+      //                         prospectDone = true;
+
+      //                     }
+      //                 }).fail(function () {
+      //                   ajaxPending -= 1;
+      //                     console.log("prospect error");
+      //                 });
+      //             }
+
+      //             function doProspectUpdate() {
+      //                 var configData = $('#frm').serialize();
+      //                 ajaxPending += 1;
+      //                 $.ajax({
+      //                     url: AJAX_PATH + 'prospectupdate',
+      //                     method: 'post',
+      //                     data: configData,
+      //                 }).success(function (data) {
+      //                   ajaxPending -= 1;
+      //                     if (!data.errors) {
+      //                         console.log('prospect update success')
+      //                     }
+      //                 }).fail(function () {
+      //                   ajaxPending -= 1;
+      //                     console.log("error");
+      //                 });
+      //             }
+      // function doCheckout(){
+      //   if (! prospectDone){
+      //   doProspect();
+      // }
+      // doProspectUpdate();
+      //   waitForQueue(() => ajaxPending == 0, 15000).then((resolve) => {
+      //                         window.onbeforeunload = null;
+      //                         console.log('wait for queue authorize location to checkout')
+      //                         window.location.href = 'checkout.php';
+      //                     })
+
+      // }
+
+      //             let sleep = ms => new Promise(r => setTimeout(r, ms));
+      //             async function waitForQueue(f, timeout = 0) {
+      //                 timeoutDone = false;
+      //                 if (timeout != 0) {
+      //                     setTimeout(() => {
+      //                         timeoutDone = true;
+      //                         console.log('waitForQueue timeout. ajaxPending:' + ajaxPending)
+      //                         ajaxPending = 0;
+      //                     }, timeout);
+      //                 }
+      //                 while (!(f() || timeoutDone)) {
+      //                     await sleep(100);
+      //                     console.log('Waiting. ' + 'ajaxPending:' + ajaxPending + ' f():' + f());
+
+      //                 };
+      //                 console.log('waitForQueue Done. ajaxPending:' + ajaxPending)
+      //                 return f();
+      //             };
+      // function nsZoomZoom() {
+      //    htmlWidth = $('html').innerWidth();
+      //    bodyWidth = 992;
+      //    scale = 0.9;
+      //  if (htmlWidth < bodyWidth) { scale = 1 } 
+      //  // else { scale = htmlWidth / bodyWidth; } 
+      //        else { scale = 0.9; }
+      // $(".section1").css('-ms-transform', 'scale(' + scale + ')');
+      // $(".section1").css('transform', 'scale(' + scale + ')');
+      // }
+      var tidSession = '';
+      var tidInterval;
+      function getTid() {
+
+
+         tidInterval = setInterval(function () {
+            var tid = sessionStorage.getItem('tid');
+            if (tid != null && tid.length > 5) {
+               var formData = new FormData();
+               formData.append("tid", tid);
+               $.ajax({
+                  url: 'ajaxtid.php',
+                  type: 'POST',
+                  data: formData,
+                  processData: false,
+                  contentType: false,
+                  success: function (res) {
+                     res = JSON.parse(res);
+                  },
+               });
+               clearInterval(tidInterval);
+            }
+         }, 1000)
+      }
+   </script>
 
 
 </body>

@@ -146,7 +146,7 @@ MAIN CSS START
 .up-bnr:before {
   content: "";
   position: absolute;
-  background: #e54a52;
+  background: #ed145b;
   right: 0;
   top: 0;
   left: 0;
@@ -156,9 +156,9 @@ MAIN CSS START
 .up2-bnr:before {
   background: linear-gradient(180deg, rgba(15,15,163,1) 25%, rgba(53,55,202,1) 50%, rgba(143,146,239,1) 75%, rgba(197,199,247,1) 100%);
 }
-.up3-bnr:before {
+/* .up3-bnr:before {
   background: #dbbb89;
-}
+} */
 .up4-bnr:before {
   background: #0176a1;
 }
@@ -245,6 +245,7 @@ MAIN CSS START
 .up-prc-sec {
   float: left;
   width: 100%;
+  margin-top: 30px;
 }
 .prc-Dv {
   display: inline-block;
@@ -342,6 +343,7 @@ MAIN CSS START
 .no-thk-gray{
   color:gray;
   display: block;
+  margin-top:50px;
 }
 .secure-txt {
   float: left;
@@ -362,7 +364,7 @@ MAIN CSS START
   float: right;
   width: 41%;
   background: url(../images/up1-rgt-bg.jpg) repeat top center;
-  padding: 20% 0;
+  padding: 4% 0;
   position: relative;
   text-align: center;
   position: absolute;
@@ -566,7 +568,7 @@ MAIN CSS START
   }
   .up-rghtBx {
     width: 40%;
-    padding: 25% 0;
+    padding: 7% 0;
   }
 
   /* .up3-bnr .bnr-txt h3 {
@@ -751,9 +753,12 @@ MAIN CSS START
         margin-top:10px;
       }
       .no-thk-gray{
-        margin-top: 30vh;
+        margin-top: 7vh;
       }
+.up-prc-sec {
 
+  margin-top: 0;
+}
 }
 @media only screen and (max-width: 360px) {
   .ups1-txt1 {

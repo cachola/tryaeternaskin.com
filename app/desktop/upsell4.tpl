@@ -46,7 +46,7 @@
                     <li>Faster Delivery for Faster Results!</li>
                 </ul>
                 <form name="is-upsell" class="is-upsell" accept-charset="utf-8" enctype="application/x-www-form-urlencoded;charset=utf-8">
-                    <input type="hidden" name="campaigns[1][id]" id="dynamic_input" value="16">
+                    <input type="hidden" name="campaigns[16][id]" id="dynamic_input" value="16">
                 <a href="javascript:void(0);" class="up-btn pulse">Send My Products Now!</a>
                 </form>
                 <div class="up-prc-sec">
@@ -71,7 +71,7 @@
 </div>
 
 <!-- FOOTER SECTION -->
-<div class="footer">
+<!-- <div class="footer">
     <div class="container">
     	<img src="<?= $path['images']; ?>/logo.png" alt="" class="ftr-up-logo">
         
@@ -87,7 +87,7 @@
         
         <p class="ftr-txt">Copyright &copy; <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> My Super Gummies.<br class="forMob"> All rights reserved.</p>
     </div>
-</div>
+</div> -->
     <?php require_once 'general/__scripts__.tpl' ?>
     <?php require_once 'general/__analytics__.tpl' ?>
     <?php perform_body_tag_close_actions(); ?>

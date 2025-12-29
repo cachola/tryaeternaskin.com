@@ -15,11 +15,11 @@ $delay_orders = [];
 $steps = Session::get('steps');
 $orders_details = Provider::orderView($orderIDs);
 
-// $encodedString = json_encode($orders_details);
+$encodedString = json_encode($orders_details);
 
 //Save the JSON string to a text file.
 // file_put_contents('orderView3.txt', $encodedString);
-// $orders_details=json_decode(file_get_contents('orderView.txt'), true);
+$orders_details=json_decode(file_get_contents('orderView3.txt'), true);
 $items = [];
 foreach ($orders_details as $key => $value) {
     foreach ($orders_details[$key]['products'] as $key => $value) {

@@ -101,7 +101,7 @@ function formatPhone($phone){
 
     <div class="logo-sec">
         <div class="container">
-            <img src="<?= $path['images']; ?>/logo.png" alt="" class="logo">
+            <img src="<?= $path['images']; ?>/logo-exfol-transblack.png" alt="" class="logo">
         </div>
     </div>
     <div <?php echo $hidethk ? 'style="float:left;text-align:center;width:100%;"' : 'style = "display:none;"' ; ?>>
@@ -116,11 +116,11 @@ function formatPhone($phone){
                             
                             <div
                                 style="text-align: center; font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 22px; padding: 10px 0;">
-                                Email: <a href="mailto:support@getmysupergummies.com<"
-                                    style="color: #000; text-decoration: none;">support@getmysupergummies.com</a></div>
+                                Email: <a href="mailto:support@tryaeternaskin.com<"
+                                    style="color: #000; text-decoration: none;">support@tryaeternaskin.com</a></div>
                             <div
                                 style="text-align: center; font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 22px; padding: 10px 0;">
-                                Phone: 888-506-2483</div>
+                                Phone: 888-918-5943</div>
                             <div
                                 style="text-align: center; font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 22px; padding: 10px 0;">
                                 Customer Service Hours: 9AM - 5PM EST(Monday-Friday)</div>
@@ -146,8 +146,7 @@ function formatPhone($phone){
                 </div>
 
                 <div class="thank-dtl-box">
-                    <div class="cart-heading-row"
-                        style="background: url(<?= $path['images']; ?>/footer-bg.jpg) repeat-y center top;background-size: cover;">
+                    <div class="cart-heading-row">
                         <div class="cart-col-1">Order Summary</div>
                         <div class="cart-col-3">Qty.</div>
                         <div class="cart-col-4"><span class="hide-400">Sub</span> Total</div>
@@ -306,9 +305,9 @@ function formatPhone($phone){
                                                                         style=" padding:10px 0; font-size:14px; color:#fff;">
                                                                         Phone
                                                                         Support<br><a
-                                                                            href="skype:+888-506-2483?call"><span
+                                                                            href="skype:+888-918-5943?call"><span
                                                                                 style="font-weight:bold; font-size:16px; color:#f4ebb9;">
-                                                                                1-888-506-2483</span></a></td>
+                                                                                1-888-918-5943</span></a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td width="15%" align="left">
@@ -319,8 +318,8 @@ function formatPhone($phone){
                                                                         style="padding:10px 0; font-size:14px; color:#fff;">
                                                                         E-mail
                                                                         Support<br><a
-                                                                            href="mailto:support@getmysupergummies.com"><span
-                                                                                style="text-decoration:underline; font-size:16px; color:#f4ebb9;">support@getmysupergummies.com</span></a>
+                                                                            href="mailto:support@tryaeternaskin.com"><span
+                                                                                style="text-decoration:underline; font-size:16px; color:#f4ebb9;">support@tryaeternaskin.com</span></a>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -384,7 +383,7 @@ function formatPhone($phone){
               </p>
 
             <p class="ftr-txt">Copyright &copy;
-                <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> My Super Gummies. <br class="forMob"> All rights reserved.
+                <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> Aeterna Skin. <br class="forMob"> All rights reserved.
             </p>
         </div>
     </div>

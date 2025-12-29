@@ -257,8 +257,8 @@
           </p>
           <p>
             If you order in the next
-            <em><strong>1 hour and 13 minutes</strong></em>, your order is scheduled to arrive by
-            <span class="red nowrap">22nd September, 2025</span>
+            <em><strong><span id="toHours"></span> hour and <span id="toMinutes"></span> minutes</strong></em>, your order is scheduled to arrive by
+            <span class="red nowrap" id="dayArrives">22nd September, 2025</span>
             !
           </p>
         </div>
@@ -490,12 +490,12 @@
             </div>
             <div class="fields">
               <div class="disclaimer" style="padding: 10px 10px 0 10px">
-                By submitting, you affirm to have read and agreed to our
+                By submitting, you affirm to have read and agreed to <br>our
                 <a href="javascript:void(0);" onClick="javascript:openNewWindow('page-terms.php','modal');"
                   style="color: inherit; text-decoration: underline; cursor: pointer">Terms &amp; Conditions</a>.
               </div>
             </div>
-            <div class="label-checkbox">
+            <!-- <div class="label-checkbox">
               <input type="checkbox" name="offers" class="insurance_check" checked>
               <span>
                 <img src="<?= $path['images'] ?>/shipping_icon.png" alt="" class="ship_icon">
@@ -504,8 +504,8 @@
               <p><img src="<?= $path['images'] ?>/check_mark.png" alt="" class="check_icon">Protect your order against
                 loss or damage during transit.</p>
 
-            </div>
-            <div class="check-upsell">
+            </div> -->
+            <!-- <div class="check-upsell">
 
               <input type="checkbox" name="offers" class="mini_upsell_check" checked="">
               <div class="checkbox_content">
@@ -526,7 +526,7 @@
                   <p>(Limited-time add-on — not available after checkout!)</p>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="fields submit">
               <button type="submit" class="submit" id="submit_btn">
                 RUSH MY SAMPLE
@@ -554,6 +554,7 @@
         <p class="center">
           <img src="<?= $path['images'] ?>/secureicons.jpg" alt="secure icon" />
         </p>
+        <div style="display: flex;justify-content: center;">
         <div class="gbox mbp-10">
           <img src="<?= $path['images'] ?>/moneyback.png" class="mb-10" alt="moneyback" />
           <p>
@@ -562,6 +563,7 @@
             results simply return your order for 100% of your money back
             (minus shipping).
           </p>
+        </div>
         </div>
       </div>
     </div>
@@ -796,8 +798,88 @@
       });
 
     }
+function getTimeRemainingToTargetHour(targetHour) {
+    // 1. Get the current time
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentMinutes = now.getMinutes();
+    const currentSeconds = now.getSeconds();
+
+    // 2. Determine the time of the next occurrence of the target hour
+    const targetDateTime = new Date(now);
+    targetDateTime.setMinutes(0, 0, 0); // Set minutes, seconds, milliseconds to zero
+
+    // If the target hour is in the past today, set the target for tomorrow
+    if (currentHour >= targetHour) {
+        targetDateTime.setDate(now.getDate() + 1);
+    }
+    
+    // Set the target hour
+    targetDateTime.setHours(targetHour);
+
+    // 3. Calculate the time difference in milliseconds
+    const timeDifferenceMs = targetDateTime.getTime() - now.getTime();
+
+    // 4. Convert the difference into hours and minutes
+    // Calculate total minutes remaining
+    const totalSeconds = Math.floor(timeDifferenceMs / 1000);
+    const totalMinutes = Math.floor(totalSeconds / 60);
+
+    // Extract hours and remaining minutes
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    return {
+        hours: hours,
+        minutes: minutes,
+        // Optional: return total minutes or other formats
+        totalMinutes: totalMinutes,
+        targetTime: targetDateTime
+    };
+}
+
+// --- Example Usage ---
+
+// Calculate remaining time until 5 PM (17 in 24-hour format)
+const target = 17; 
+const remaining = getTimeRemainingToTargetHour(target);
+ $("#toHours").text(remaining.hours);
+  $("#toMinutes").text(remaining.minutes);
 
 
+
+function getDateFormatted(daysToAdd) {
+    const date = new Date();
+    // Add the specified number of days; setDate handles month/year overflows automatically
+    date.setDate(date.getDate() + daysToAdd);
+
+    const day = date.getDate();
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    // Helper function to get the ordinal suffix
+    const getOrdinalSuffix = (day) => {
+        if (day > 3 && day < 21) return 'th'; // Handles 11th, 12th, 13th, etc.
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    };
+
+    const formattedDay = `${day}${getOrdinalSuffix(day)}`;
+
+    return `${formattedDay} ${month}, ${year}`;
+}
+
+const fiveDaysLater = getDateFormatted(5);
+$('#dayArrives').text(fiveDaysLater)
+console.log(fiveDaysLater); // Example output: "27th December, 2025" (if run on Dec 22, 2025)
   </script>
 </body>
 
