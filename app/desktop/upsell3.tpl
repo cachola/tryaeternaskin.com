@@ -205,6 +205,31 @@
       }
 
     }
+
+    @media (max-width: 550px) {
+      .offer-product img {
+        max-width: 78% !important;
+      }
+
+      #wrapper .wait p {
+
+        margin: 0 0 12px 0;
+      }
+
+      .offer-top {
+        font-size: 5vw;
+      }
+
+      .offer-line2 {
+        margin-top: 32px !important;
+      }
+      .offer-red{
+        font-size: 17px !important;
+      }
+      .offer-line-red {
+        margin-top: 31px !important;
+      }
+    }
   </style>
 
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
- <?php include 'general/__header__.tpl'; ?>
+  <?php include 'general/__header__.tpl'; ?>
   <title>Aeterna Skin</title>
 
   <meta name="description" content="Aeterna Skin" />
@@ -104,6 +104,19 @@
   </style>
 
   <link rel="stylesheet" type="text/css" href="<?= $path['css'] ?>/checkout-combine.css?v=1.18" />
+  <style>
+    .sameAsShipping {
+      margin-bottom: 60px;
+    }
+
+    button.submit {
+      margin-top: 63px;
+    }
+
+    .checkout-form .fields {
+      padding-bottom: 16px;
+    }
+  </style>
   <style>
     #app_common_modal_close,
     #error_handler_overlay_close {
@@ -234,7 +247,7 @@
             Your reservation of
             <strong>Aeterna Skincare Advanced Wrinkle Cream</strong>
             expires in
-            <span id="countdown" class="timer">5:00!</span>
+            <span id="countdown" class="timer count-up">5:00!</span>
           </p>
           <p class="mb-only">Act now before our supplies run out!</p>
           <div class="risk">
@@ -257,7 +270,8 @@
           </p>
           <p>
             If you order in the next
-            <em><strong><span id="toHours"></span> hour and <span id="toMinutes"></span> minutes</strong></em>, your order is scheduled to arrive by
+            <em><strong><span id="toHours"></span> hour and <span id="toMinutes"></span> minutes</strong></em>, your
+            order is scheduled to arrive by
             <span class="red nowrap" id="dayArrives">22nd September, 2025</span>
             !
           </p>
@@ -267,7 +281,7 @@
             <div class="bottle">&nbsp;</div>
           </div>
           <div class="right">
-            <h3>Aeterna Skincare Advanced Wrinkle Cream</h3>
+            <h3>Aeterna Skincare <br>Advanced Wrinkle Cream</h3>
             <div id="checkout_trial_length">
               <div class="supply" style="text-transform: capitalize">
                 7-Day SAMPLE
@@ -276,13 +290,10 @@
             <ul>
               <li>Price:<span id="checkout-trial-price">$0.00</span></li>
               <li>
-                S&amp;H:<span>$14.99</span>
-              </li>
-              <li id="promo">
-                MasterCard Promo:<span class="red promo">-$5.05</span>
+                S&amp;H:<span>$9.95</span>
               </li>
               <li>
-                Total:<span><strong class="total">$9.94</strong></span>
+                Total:<span><strong class="total">$9.95</strong></span>
               </li>
             </ul>
           </div>
@@ -555,15 +566,15 @@
           <img src="<?= $path['images'] ?>/secureicons.jpg" alt="secure icon" />
         </p>
         <div style="display: flex;justify-content: center;">
-        <div class="gbox mbp-10">
-          <img src="<?= $path['images'] ?>/moneyback.png" class="mb-10" alt="moneyback" />
-          <p>
-            <strong>100% Guaranteed</strong> to meet or exceed your
-            expectations. If for ANY reason you are not thrilled with your
-            results simply return your order for 100% of your money back
-            (minus shipping).
-          </p>
-        </div>
+          <div class="gbox mbp-10">
+            <img src="<?= $path['images'] ?>/moneyback.png" class="mb-10" alt="moneyback" />
+            <p>
+              <strong>100% Guaranteed</strong> to meet or exceed your
+              expectations. If for ANY reason you are not thrilled with your
+              results simply return your order for 100% of your money back
+              (minus shipping).
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -709,7 +720,7 @@
         console.log('Element with ID:', $(this).attr('id'), 'was clicked! value:', $(this).is(":checked"));
 
         makeFitnessUpsell = $(this).is(":checked");
-        });
+      });
     });
 
 
@@ -755,7 +766,7 @@
 
 
     function doFitness() {
-      if (makeFitnessUpsell ) {
+      if (makeFitnessUpsell) {
         $.ajax({
           url: 'ajaxfitxr.php',
           type: 'POST',
@@ -798,88 +809,160 @@
       });
 
     }
-function getTimeRemainingToTargetHour(targetHour) {
-    // 1. Get the current time
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinutes = now.getMinutes();
-    const currentSeconds = now.getSeconds();
+    function getTimeRemainingToTargetHour(targetHour) {
+      // 1. Get the current time
+      const now = new Date();
+      const currentHour = now.getHours();
+      const currentMinutes = now.getMinutes();
+      const currentSeconds = now.getSeconds();
 
-    // 2. Determine the time of the next occurrence of the target hour
-    const targetDateTime = new Date(now);
-    targetDateTime.setMinutes(0, 0, 0); // Set minutes, seconds, milliseconds to zero
+      // 2. Determine the time of the next occurrence of the target hour
+      const targetDateTime = new Date(now);
+      targetDateTime.setMinutes(0, 0, 0); // Set minutes, seconds, milliseconds to zero
 
-    // If the target hour is in the past today, set the target for tomorrow
-    if (currentHour >= targetHour) {
+      // If the target hour is in the past today, set the target for tomorrow
+      if (currentHour >= targetHour) {
         targetDateTime.setDate(now.getDate() + 1);
-    }
-    
-    // Set the target hour
-    targetDateTime.setHours(targetHour);
+      }
 
-    // 3. Calculate the time difference in milliseconds
-    const timeDifferenceMs = targetDateTime.getTime() - now.getTime();
+      // Set the target hour
+      targetDateTime.setHours(targetHour);
 
-    // 4. Convert the difference into hours and minutes
-    // Calculate total minutes remaining
-    const totalSeconds = Math.floor(timeDifferenceMs / 1000);
-    const totalMinutes = Math.floor(totalSeconds / 60);
+      // 3. Calculate the time difference in milliseconds
+      const timeDifferenceMs = targetDateTime.getTime() - now.getTime();
 
-    // Extract hours and remaining minutes
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
+      // 4. Convert the difference into hours and minutes
+      // Calculate total minutes remaining
+      const totalSeconds = Math.floor(timeDifferenceMs / 1000);
+      const totalMinutes = Math.floor(totalSeconds / 60);
 
-    return {
+      // Extract hours and remaining minutes
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = totalMinutes % 60;
+
+      return {
         hours: hours,
         minutes: minutes,
         // Optional: return total minutes or other formats
         totalMinutes: totalMinutes,
         targetTime: targetDateTime
-    };
-}
+      };
+    }
 
-// --- Example Usage ---
+    // --- Example Usage ---
 
-// Calculate remaining time until 5 PM (17 in 24-hour format)
-const target = 17; 
-const remaining = getTimeRemainingToTargetHour(target);
- $("#toHours").text(remaining.hours);
-  $("#toMinutes").text(remaining.minutes);
+    // Calculate remaining time until 5 PM (17 in 24-hour format)
+    const target = 17;
+    const remaining = getTimeRemainingToTargetHour(target);
+    $("#toHours").text(remaining.hours);
+    $("#toMinutes").text(remaining.minutes);
 
 
 
-function getDateFormatted(daysToAdd) {
-    const date = new Date();
-    // Add the specified number of days; setDate handles month/year overflows automatically
-    date.setDate(date.getDate() + daysToAdd);
+    function getDateFormatted(daysToAdd) {
+      const date = new Date();
+      // Add the specified number of days; setDate handles month/year overflows automatically
+      date.setDate(date.getDate() + daysToAdd);
 
-    const day = date.getDate();
-    const monthNames = [
+      const day = date.getDate();
+      const monthNames = [
         "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
-    ];
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
+      ];
+      const month = monthNames[date.getMonth()];
+      const year = date.getFullYear();
 
-    // Helper function to get the ordinal suffix
-    const getOrdinalSuffix = (day) => {
+      // Helper function to get the ordinal suffix
+      const getOrdinalSuffix = (day) => {
         if (day > 3 && day < 21) return 'th'; // Handles 11th, 12th, 13th, etc.
         switch (day % 10) {
-            case 1: return 'st';
-            case 2: return 'nd';
-            case 3: return 'rd';
-            default: return 'th';
+          case 1: return 'st';
+          case 2: return 'nd';
+          case 3: return 'rd';
+          default: return 'th';
         }
-    };
+      };
 
-    const formattedDay = `${day}${getOrdinalSuffix(day)}`;
+      const formattedDay = `${day}${getOrdinalSuffix(day)}`;
 
-    return `${formattedDay} ${month}, ${year}`;
-}
+      return `${formattedDay} ${month}, ${year}`;
+    }
 
-const fiveDaysLater = getDateFormatted(5);
-$('#dayArrives').text(fiveDaysLater)
-console.log(fiveDaysLater); // Example output: "27th December, 2025" (if run on Dec 22, 2025)
+    const fiveDaysLater = getDateFormatted(5);
+    $('#dayArrives').text(fiveDaysLater)
+    console.log(fiveDaysLater); // Example output: "27th December, 2025" (if run on Dec 22, 2025)
+
+
+
+    var min = 5;
+    var second = 0;
+    var counterId = null;
+    var flashId = null;
+
+    startCountdown();
+
+    function startCountdown() {
+      // initial render
+      renderTime();
+
+      counterId = setInterval(function () {
+        countDown();
+      }, 1000);
+    }
+
+    function countDown() {
+      // If already at 0:00, stop and flash
+      if (min === 0 && second === 0) {
+        stopCountdownAndFlash();
+        return;
+      }
+
+      // Decrement one second
+      if (second === 0) {
+        min--;
+        second = 59;
+      } else {
+        second--;
+      }
+
+      renderTime();
+
+      // (Optional) keep your "every 15 seconds" logic but for countdown:
+      // Note: it triggers at 4:45, 4:30, ... 0:15, 0:00
+      var totalSecondsLeft = (min * 60) + second;
+      if (totalSecondsLeft % 15 === 0) {
+        var people_view = parseInt($("#people-view").html(), 10) || 0;
+        $("#people-view").html(people_view + 3);
+      }
+
+      // If we just hit 0:00, start flashing immediately
+      if (min === 0 && second === 0) {
+        stopCountdownAndFlash();
+      }
+    }
+
+    function renderTime() {
+      var zeroPlaceholder = (second < 10) ? '0' : '';
+      $('.count-up').html(min + ':' + zeroPlaceholder + second + '!');
+    }
+
+    function stopCountdownAndFlash() {
+      if (counterId) {
+        clearInterval(counterId);
+        counterId = null;
+      }
+
+      // Ensure it shows exactly 0:00
+      $('.count-up').html('0:00');
+
+      // Flash every 0.5s (toggle visibility)
+      if (!flashId) {
+        flashId = setInterval(function () {
+          $('.count-up').toggle();
+        }, 500);
+      }
+    }
+
   </script>
 </body>
 

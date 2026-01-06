@@ -247,7 +247,7 @@ function formatPhone($phone){
                         <tr>
                             <td style="">
                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"
-                                    style="color:#fff;background: url(<?= $path['images']; ?>/footer-bg.jpg) repeat-y center top; padding:25px 20px; background-size:100%;">
+                                    style="color:#fff;background: #ed145b; padding:25px 20px; background-size:100%;">
 
                                     <tr>
                                         <td align="center" style="font-size:20px; font-weight:600; color:#f4ebb9;">

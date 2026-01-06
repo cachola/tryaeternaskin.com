@@ -1291,7 +1291,7 @@ ul {list-style:none; padding:0;}
          .logo { 
          background-image: url(../images/logo-exfol-transblack.png); 
          top:64px;
-         margin-left: 190px!important;
+         margin-left: 252px!important;
          }
          .form-box .inner { background: #fff; }
          button.submit {  background:#ffa425; }
@@ -1637,7 +1637,7 @@ footer footer {
     height: 5px;
     width: 66%;}
 
-.logo{width: 253px;}
+.logo{width: 145px;}
 @media screen and (min-width:1200px) and (max-width:2500px){
 .progress .bar {
     height: 5px;

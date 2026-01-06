@@ -205,6 +205,28 @@
       }
 
     }
+
+        @media (max-width: 550px) {
+      .offer-product img {
+        max-width: 78% !important;
+      }
+
+      #wrapper .wait p {
+
+        margin: 0 0 12px 0;
+      }
+
+      .offer-top {
+        font-size: 5vw;
+      }
+      
+    .offer-line2 {
+      margin-top: 32px !important;
+    }
+    .offer-line-red {
+      margin-top: 30px !important;
+    }
+    }
   </style>
 
 
@@ -253,7 +275,7 @@
               <!-- <p class="offer-line1">Add a <b>SAMPLE</b> bottle</p> -->
               <p class="offer-line-red"><span class="strike-out">$59.95</span></p>
               <p class="offer-line2">Yours for only</p>
-              <div class="offer-price">$9.95</div>
+              <div class="offer-price">$29.95</div>
             </div>
           </div>
         </section>

@@ -13,9 +13,9 @@ Session::set('steps.1.prospectId',$prospectId);
 <head>
     <meta charset="utf-8" />
 
-    <title>Lumiera Skin</title>
+    <title>Aeterna Skin</title>
 
-    <meta name="description" content="Lumiera Skin" />
+    <meta name="description" content="Aeterna Skin" />
 
     <!--  -->
     <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noydir,noodp" />
@@ -241,9 +241,9 @@ Session::set('steps.1.prospectId',$prospectId);
                     </p>
                     <p>
                         Your reservation of
-                        <strong>Lumiera Skin Anti-Aging Serum</strong>
+                        <strong>Aeterna Skincare Advanced Wrinkle Cream</strong>
                         expires in
-                        <span id="countdown" class="timer">5:00!</span>
+                        <span id="countdown" class="timer count-up">5:00!</span>
                     </p>
                     <p class="mb-only">Act now before our supplies run out!</p>
                     <div class="risk">
@@ -276,7 +276,7 @@ Session::set('steps.1.prospectId',$prospectId);
                         <div class="bottle">&nbsp;</div>
                     </div>
                     <div class="right">
-                        <h3>Lumiera Skin Anti-Aging Serum</h3>
+                        <h3>Aeterna Skincare <br>Advanced Wrinkle Cream</h3>
                         <div id="checkout_trial_length">
                             <div class="supply" style="text-transform: capitalize">
                                 7-Day SAMPLE
@@ -285,22 +285,17 @@ Session::set('steps.1.prospectId',$prospectId);
                         <ul>
                             <li>Price:<span id="checkout-trial-price">$0.00</span></li>
                             <li>
-                                S&amp;H:<span>$14.99</span>
+                                S&amp;H:<span>$9.95</span>
                             </li>
-                            <li id="promo">
-                                MasterCard Promo:<span class="red promo">-$5.05</span>
-                            </li>
+
                             <li>
-                                Total:<span><strong class="total">$9.94</strong></span>
+                                Total:<span><strong class="total">$9.95</strong></span>
                             </li>
                         </ul>
                     </div>
                     <div class="clear"></div>
                 </div>
-                <div class="big-arrow">
-                    CONFIRM YOUR EXCLUSIVE OFFER NOW!
-                    <div>LIMITED QUANTITIES AVAILABLE</div>
-                </div>
+
                 <div class="footer_trial_disclaimer forDesktop">
                     <div>
                         We are committed to maintaining the highest quality products and
@@ -312,7 +307,7 @@ Session::set('steps.1.prospectId',$prospectId);
                     <div>
                         *Due to limited inventory levels on any given day,
                         <b>we must limit trial sales to 250 maximum per day.</b>
-                        Representations regarding the efficacy and safety of Lumiera Skin Anti-Aging Serum have not been
+                        Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream have not been
                         evaluated by the Food and Drug Administration.
                     </div>
                     <div>
@@ -321,6 +316,10 @@ Session::set('steps.1.prospectId',$prospectId);
                         cancel anytime by calling
                         <a href="tel:888-918-5943">888-918-5943</a>.
                     </div>
+                </div>
+                <div class="big-arrow">
+                    CONFIRM YOUR EXCLUSIVE OFFER NOW!
+                    <div>LIMITED QUANTITIES AVAILABLE</div>
                 </div>
                 <!-- <div class="frmCheckElemts forDesktop">
           <label class="spl-checkbox" style="vertical-align: top; text-align: center">
@@ -361,7 +360,7 @@ Session::set('steps.1.prospectId',$prospectId);
                                 NO
                             </p>
                         </div>
-             
+
                         <div id="billAddress" class="billing-info" style="display: block">
                             <div style="padding-bottom: 15px; text-align: center; font-size: 16px; font-weight: bold">
                                 Enter your billing/shipping information
@@ -452,11 +451,7 @@ Session::set('steps.1.prospectId',$prospectId);
                                 <option value="discover">Discover</option>
                             </select>
                         </p>
-                                   <p class="mc-promo custom_style_wrapper pulse">
-                            <span class="flx1"> Good News: Get a $5.05 additional discount on shipping when you checkout
-                                with
-                                Mastercard!</span>
-                        </p>
+
                         <p style="display: none" id="cc_type" type="select" name="cc_type">
                             <select name="creditCardType" class="required cctype" data-deselect="false"
                                 data-error-message="Please select valid card type!">
@@ -539,41 +534,8 @@ Session::set('steps.1.prospectId',$prospectId);
                                     Conditions</a>.
                             </div>
                         </div>
-                        <div class="label-checkbox">
-                            <input type="checkbox" name="offers" class="insurance_check" checked>
-                            <span>
-                                <img src="<?= $path['images'] ?>/shipping_icon.png" alt="" class="ship_icon">
-                                <strong>Add SHIPPING INSURANCE for $6.95</strong>
-                            </span>
-                            <p><img src="<?= $path['images'] ?>/check_mark.png" alt="" class="check_icon">Protect your
-                                order against
-                                loss or damage during transit.</p>
 
-                        </div>
-                        <div class="check-upsell">
 
-                            <input type="checkbox" name="offers" class="mini_upsell_check" checked="">
-                            <div class="checkbox_content">
-                                <span>
-                                    <img src="<?= $path['images'] ?>/up1-popup.png" alt="" class="ship_img">
-                                </span>
-                                <div class="checkbox_text">
-                                    <p>
-                                        <strong>Yes! Boost my Results with Skin-Balancing Toner - ONLY $19.99 (Reg:
-                                            <span style="text-decoration:line-through;"> $59.99</span>)</strong>
-                                    </p>
-                                    <ul class="check_list">
-                                        <li><img src="<?= $path['images'] ?>/check_mark.png" alt="" class="check_icon">
-                                            Hydrate, Balance,
-                                            and Renew Your Skin </li>
-                                        <li><img src="<?= $path['images'] ?>/check_mark.png" alt="" class="check_icon">
-                                            Crafted with care
-                                            with only the finest ingredients </li>
-                                    </ul>
-                                    <p>(Limited-time add-on — not available after checkout!)</p>
-                                </div>
-                            </div>
-                        </div>
                         <div class="fields submit">
                             <button type="submit" class="submit" id="submit_btn">
                                 RUSH ORDER
@@ -601,14 +563,16 @@ Session::set('steps.1.prospectId',$prospectId);
                 <p class="center">
                     <img src="<?= $path['images'] ?>/secureicons.jpg" alt="secure icon" />
                 </p>
-                <div class="gbox mbp-10">
-                    <img src="<?= $path['images'] ?>/moneyback.png" class="mb-10" alt="moneyback" />
-                    <p>
-                        <strong>100% Guaranteed</strong> to meet or exceed your
-                        expectations. If for ANY reason you are not thrilled with your
-                        results simply return your order for 100% of your money back
-                        (minus shipping).
-                    </p>
+                <div style="display: flex;justify-content: center;">
+                    <div class="gbox mbp-10">
+                        <img src="<?= $path['images'] ?>/moneyback.png" class="mb-10" alt="moneyback" />
+                        <p>
+                            <strong>100% Guaranteed</strong> to meet or exceed your
+                            expectations. If for ANY reason you are not thrilled with your
+                            results simply return your order for 100% of your money back
+                            (minus shipping).
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -619,7 +583,7 @@ Session::set('steps.1.prospectId',$prospectId);
             <div style="position: absolute; overflow: hidden; width: 1px; height: 1px"></div>
             <div class="footer">
                 <p class="copyright">
-                    Copyright &copy; 2025 Lumiera Skin &mdash; All Rights Reserved.
+                    Copyright &copy; 2025 Aeterna Skin &mdash; All Rights Reserved.
                 </p>
                 <p class="customerservice">
                     Customer Service:
@@ -842,6 +806,79 @@ Session::set('steps.1.prospectId',$prospectId);
                 }
             });
 
+        }
+
+
+
+
+
+        var min = 5;
+        var second = 0;
+        var counterId = null;
+        var flashId = null;
+
+        startCountdown();
+
+        function startCountdown() {
+            // initial render
+            renderTime();
+
+            counterId = setInterval(function () {
+                countDown();
+            }, 1000);
+        }
+
+        function countDown() {
+            // If already at 0:00, stop and flash
+            if (min === 0 && second === 0) {
+                stopCountdownAndFlash();
+                return;
+            }
+
+            // Decrement one second
+            if (second === 0) {
+                min--;
+                second = 59;
+            } else {
+                second--;
+            }
+
+            renderTime();
+
+            // (Optional) keep your "every 15 seconds" logic but for countdown:
+            // Note: it triggers at 4:45, 4:30, ... 0:15, 0:00
+            var totalSecondsLeft = (min * 60) + second;
+            if (totalSecondsLeft % 15 === 0) {
+                var people_view = parseInt($("#people-view").html(), 10) || 0;
+                $("#people-view").html(people_view + 3);
+            }
+
+            // If we just hit 0:00, start flashing immediately
+            if (min === 0 && second === 0) {
+                stopCountdownAndFlash();
+            }
+        }
+
+        function renderTime() {
+            var zeroPlaceholder = (second < 10) ? '0' : '';
+            $('.count-up').html(min + ':' + zeroPlaceholder + second + '!');
+        }
+
+        function stopCountdownAndFlash() {
+            if (counterId) {
+                clearInterval(counterId);
+                counterId = null;
+            }
+
+            // Ensure it shows exactly 0:00
+            $('.count-up').html('0:00');
+
+            // Flash every 0.5s (toggle visibility)
+            if (!flashId) {
+                flashId = setInterval(function () {
+                    $('.count-up').toggle();
+                }, 500);
+            }
         }
 
 

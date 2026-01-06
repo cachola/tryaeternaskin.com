@@ -204,6 +204,21 @@
         padding-right: 0;
       }
     }
+
+    @media (max-width: 550px) {
+      .offer-product img {
+        max-width: 78% !important;
+      }
+
+      #wrapper .wait p {
+
+        margin: 0 0 12px 0;
+      }
+
+      .offer-top {
+        font-size: 5vw;
+      }
+    }
   </style>
 
 
@@ -216,7 +231,7 @@
   <div id="wrapper">
     <div class="thanks-purchase">
       <h1>Thank you for your purchase!</h1>
-      <h2>We hope you enjoy the benefits of our<br class="br-mobile"> Advanced Wrinkle Cream.</h2>
+      <p>We hope you enjoy the benefits of our<br class="br-mobile"> Advanced Wrinkle Cream.</p>
     </div>
     <div class="wait">
       <h1>Wait! Your order is not complete</h1>

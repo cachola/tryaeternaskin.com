@@ -892,7 +892,7 @@ if (!isMobile) {
       $(document).ready(function () {
          $(".accept_pop").click(function () {
             $("#popoverNew").hide();
-            // window.location.href = 'dtc.php';
+            window.location.href = 'dtc.php';
          });
          $(".no-thank").click(function () {
             cb.ignoreExitPop = true;
