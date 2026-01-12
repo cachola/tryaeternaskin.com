@@ -233,10 +233,10 @@
      perform_body_tag_open_actions(); ?>
   <p id="loading-indicator" style="display:none;">Processing...</p>
   <div id="wrapper">
-    <div class="thanks-purchase">
+    <!-- <div class="thanks-purchase">
       <h1>Thank you for your purchase!</h1>
-      <p>We hope you enjoy the benefits of our <br class="br-mobile"> Advanced Wrinkle Cream.</p>
-    </div>
+      <p>We hope you enjoy the benefits of our <br class="br-mobile"> Age Defying Cream</p>
+    </div> -->
     <div class="wait">
       <h1>Wait! Your order is not complete</h1>
 
@@ -252,7 +252,7 @@
         <form name="is-upsell" class="is-upsell" accept-charset="utf-8"
           enctype="application/x-www-form-urlencoded;charset=utf-8">
           <input type="hidden" name="limelight_charset" id="limelight_charset" value="utf-8" />
-          <input type="hidden" name="campaigns[15][id]" id="dynamic_input" value="15">
+          <input type="hidden" name="campaigns[16][id]" id="dynamic_input" value="16">
           <p id="loading-indicator" style="display:none;">Processing...</p>
         </form>
         <section class="offer-block">

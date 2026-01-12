@@ -237,10 +237,10 @@
      perform_body_tag_open_actions(); ?>
   <p id="loading-indicator" style="display:none;">Processing...</p>
   <div id="wrapper">
-    <div class="thanks-purchase">
+    <!-- <div class="thanks-purchase">
       <h1>Thank you for your purchase!</h1>
-      <p>We hope you enjoy the benefits of our <br class="br-mobile"> Advanced Wrinkle Cream.</p>
-    </div>
+      <p>We hope you enjoy the benefits of our <br class="br-mobile"> Age Defying Cream</p>
+    </div> -->
     <div class="wait">
       <h1>Wait! Your order is not complete</h1>
       <p>Customers also purchased our <br class="br-mobile">Advanced Eye Cream.</p>
@@ -263,7 +263,7 @@
             <img class="arrow-inner" src="<?= $path['images'] ?>/arrow_red.png" alt="" />
             <div class="offer-product">
               <!-- Replace with your bottle PNG (transparent background recommended) -->
-              <img src="<?= $path['images'] ?>/image.png" alt="RevEye Ageless Eye Cream">
+              <img src="<?= $path['images'] ?>/up2-image.png" alt="RevEye Ageless Eye Cream">
             </div>
 
             <div class="offer-copy">
@@ -273,7 +273,7 @@
               <p class="offer-title">Advanced Eye Cream</p>
 
               <!-- <p class="offer-line1">Add a <b>SAMPLE</b> bottle</p> -->
-              <p class="offer-line-red"><span class="strike-out">$59.95</span></p>
+              <p class="offer-line-red"><span class="strike-out">$59.90</span></p>
               <p class="offer-line2">Yours for only</p>
               <div class="offer-price">$29.95</div>
             </div>

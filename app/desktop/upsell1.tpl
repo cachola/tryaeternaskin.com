@@ -229,10 +229,10 @@
      perform_body_tag_open_actions(); ?>
   <p id="loading-indicator" style="display:none;">Processing...</p>
   <div id="wrapper">
-    <div class="thanks-purchase">
+    <!-- <div class="thanks-purchase">
       <h1>Thank you for your purchase!</h1>
-      <p>We hope you enjoy the benefits of our<br class="br-mobile"> Advanced Wrinkle Cream.</p>
-    </div>
+      <p>We hope you enjoy the benefits of our<br class="br-mobile"> Age Defying Cream.</p>
+    </div> -->
     <div class="wait">
       <h1>Wait! Your order is not complete</h1>
       <p>Customers also purchased our<br class="br-mobile"> Hyaluronic Acid + Collagen Anti Age Serum.</p>
@@ -255,7 +255,7 @@
             <img class="arrow-inner" src="<?= $path['images'] ?>/arrow_red.png" alt="" />
             <div class="offer-product">
               <!-- Replace with your bottle PNG (transparent background recommended) -->
-              <img src="<?= $path['images'] ?>/image.png" alt="RevEye Ageless Eye Cream">
+              <img src="<?= $path['images'] ?>/up1-image.png" alt="RevEye Ageless Eye Cream">
             </div>
 
             <div class="offer-copy">

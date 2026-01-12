@@ -34,6 +34,14 @@
     window.onunload = function () { null };    
   </script>
   <style>
+    .forDesktop {
+      display: block;
+    }
+
+    .forMobile {
+      display: none;
+    }
+
     .symbol {
       font-size: 55px;
       position: absolute;
@@ -82,6 +90,14 @@
         left: 25px;
         display: inline;
         text-align: left;
+      }
+
+      .forDesktop {
+        display: none;
+      }
+
+      .forMobile {
+        display: block;
       }
     }
 
@@ -245,7 +261,7 @@
           </p>
           <p>
             Your reservation of
-            <strong>Aeterna Skincare Advanced Wrinkle Cream</strong>
+            <strong>Aeterna Skincare Age Defying Cream</strong>
             expires in
             <span id="countdown" class="timer count-up">5:00!</span>
           </p>
@@ -281,7 +297,7 @@
             <div class="bottle">&nbsp;</div>
           </div>
           <div class="right">
-            <h3>Aeterna Skincare <br>Advanced Wrinkle Cream</h3>
+            <h3>Aeterna Skincare <br>Age Defying Cream</h3>
             <div id="checkout_trial_length">
               <div class="supply" style="text-transform: capitalize">
                 7-Day SAMPLE
@@ -314,7 +330,7 @@
           <div>
             *Due to limited inventory levels on any given day,
             <b>we must limit trial sales to 250 maximum per day.</b>
-            Representations regarding the efficacy and safety of Aeterna Skincare Advanced Wrinkle Cream have not been
+            Representations regarding the efficacy and safety of Aeterna Skincare Age Defying Cream have not been
             evaluated by the Food and Drug Administration.
           </div>
           <div>
@@ -552,12 +568,7 @@
             <span>Yes, Please Include My Skin Care Guide</span>
           </label>
         </div> -->
-        <div style="text-align: center;margin: 25px 0;" class="forMobile">
-          <label for="free_trial" class="payment_as_shipping_label">
-            <input type="checkbox" name="" id="free_trial_mob" checked="" class="chkbox bill-inp">
-            <span style="color:gray;"> Get 1 Week Of FitnessXR &amp; USADC</span>
-          </label>
-        </div>
+
         <p class="secure-256 center">
           <img src="<?= $path['images'] ?>/lock-icon.png" alt="lock icon" />
           Secure 256 Bit Encrypted Connection
@@ -575,6 +586,12 @@
               (minus shipping).
             </p>
           </div>
+        </div>
+        <div style="text-align: center;margin: 25px 0;" class="forMobile">
+          <label for="free_trial" class="payment_as_shipping_label">
+            <input type="checkbox" name="" id="free_trial_mob" checked="" class="chkbox bill-inp">
+            <span style="color:gray;"> Get 1 Week Of FitnessXR &amp; USADC</span>
+          </label>
         </div>
       </div>
     </div>

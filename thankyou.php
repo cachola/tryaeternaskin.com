@@ -38,10 +38,10 @@ foreach ($orders_details as $key => $value) {
 }
 
 $productsDesc = [
-    '969' => array('Aeterna Skincare Advanced Wrinkle Cream', 'Sample Pack', 'image.png', 1),
-    '971' => array('Aeterna Skincare Hyaluronic Acid + Collagen Anti Age Serum', 'Sample Pack', 'image.png', 2),
-    '973' => array('Aeterna Skincare Advanced Eye Cream', '1 Bottle Special', 'image.png', 3),
-    '974' => array('Aeterna Skincare Vitamin C Cleanser', '1 Bottle Special', 'image.png', 4),
+    '969' => array('Aeterna Skincare Age Defying Cream', 'Sample Pack', 'image.png', 1),
+    '971' => array('Aeterna Skincare Hyaluronic Acid + Collagen Anti Age Serum', 'Sample Pack', 'up1-image.png', 2),
+    '973' => array('Aeterna Skincare Advanced Eye Cream', '1 Bottle Special', 'up2-image.png', 3),
+    '974' => array('Aeterna Skincare Vitamin C Cleanser', '1 Bottle Special', 'up3-image.png', 4),
     '924' => array('Rush Processing', '', 'up3-prod.png', 4),
     // '776' => array('FitnessXr Free Trial', '', 'up4-prod.png'),
     // '774' => array('USADC Free Trial', '', 'up4-prod.png'),
