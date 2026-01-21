@@ -263,8 +263,23 @@
       </div>
    </nav>
    <!--/nav-->
+   <style>
+      #headup {
+         height: 1000px;
+         width: 100%;
+         position: absolute;
+      }
+
+      .conta {
+         position: relative;
+         height: 1000px;
+      }
+   </style>
+
+   <div class="headerbg headup" id="headup"></div>
+
    <div id="zoomed">
-      <section id="header" class="headerbg">
+      <section id="header">
          <div class="container">
             <div class="row">
                <div class="col-sm-8 nopad">
@@ -886,19 +901,41 @@
          if (htmlWidth < bodyWidth) {
             scale = 1;
             isZoom = false;
-            // $("html").css('height', '100vh');
+            $("#zoomed").css('position', 'relative');
+                        $('#header').addClass('headerbg')
+            $('#headup').removeClass('headerbg')
+
+            $('#headup').hide();
+            $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
+            $("#zoomed").css('transform', 'scale(' + scale + ')');
+            $("#zoomed").css('transform-origin', 'top center');
+              $("#zoomed").css('left', '0px');
+       
          }
-         // else { scale = htmlWidth / bodyWidth; } 
+
          else {
             scale = 0.9;
+            $("#zoomed").css('position', 'absolute');
             isZoom = true;
-            // $("#zoomed").css('height', '90vh');
+            $('#headup').addClass('headerbg')
+            $('#header').removeClass('headerbg')
+            $('#headup').show()
+            const divElement = document.getElementById("zoomed");
+            $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
+            $("#zoomed").css('transform', 'scale(' + scale + ')');
+            $("#zoomed").css('transform-origin', 'top center');
+            // Get the width including padding and border (e.g., 130)
+            const offsetWidth = divElement.offsetWidth;
+            console.log("offsetWidth:", offsetWidth);
+            var margins = window.innerWidth - offsetWidth;
+            console.log('margins:', margins)
+            var leftMargin = margins / 2;
+            console.log('left margin:', leftMargin)
+            $("#zoomed").css('left', leftMargin + 'px');
          }
-         $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
-         $("#zoomed").css('transform', 'scale(' + scale + ')');
-         $("#zoomed").css('transform-origin', 'top center');
 
       }
+
       var tidSession = '';
       var tidInterval;
       function getTid() {
@@ -924,22 +961,10 @@
          }, 1000)
       }
 
-      //       (function () {
-      //   let maxScroll = window.innerHeight * 0.9;
-
-      //   window.addEventListener('wheel', (e) => {
-      //     if (window.scrollY >= maxScroll && e.deltaY > 0) {
-      //       e.preventDefault();
-      //     }
-      //   }, { passive: false });
-
-
-      // })();
+  
       function fixScroll() {
          var topPosition = $('.footer').offset().top + $('.footer').outerHeight();
-         // topPosition=(topPosition * 0.9) + window.outerHeight - window.innerHeight ;
-         // topPosition=document.documentElement.scrollHeight * 0.9;
-         const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
+           const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
          var hiddenPx = screen.height - maxViewportHeight;
          console.log('Position relative to document:', topPosition, 'px');
          const limit = (topPosition * .9) + hiddenPx; // Height in pixels where you want scrolling to stop
