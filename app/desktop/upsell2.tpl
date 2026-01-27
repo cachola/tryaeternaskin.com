@@ -319,6 +319,15 @@
         margin-bottom: 10px;
       }
     }
+
+    @media screen and (max-height: 600px) {
+
+      /* CSS rules to be applied when the viewport height is less than 650px */
+      .offer-block {
+        height: 100vh;
+
+      }
+    }
   </style>
 
 
@@ -383,9 +392,9 @@
       <!-- <div > -->
       <img class="award" src="<?= $path['images'] ?>/award_upsell2.png" alt="" />
       <!-- </div> -->
-           <div class="bottom forMobile">
-      <a href="upsell3.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
-    </div>
+      <div class="bottom forMobile">
+        <a href="upsell3.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
+      </div>
       <!-- <div> -->
       <img class="award award-right" src="<?= $path['images'] ?>/award_right.jpg" alt="" />
       <!-- </div> -->

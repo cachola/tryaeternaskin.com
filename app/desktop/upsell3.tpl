@@ -37,6 +37,7 @@
       font-family: "Open Sans", sans-serif;
       /* padding: 24px; */
     }
+
     .forDesktop {
       display: block;
     }
@@ -44,6 +45,7 @@
     .forMobile {
       display: none;
     }
+
     .offer-block {
       max-width: 1200px;
       margin: 0 10px 0 10px;
@@ -247,13 +249,15 @@
         height: 100%;
         margin: 0;
       }
-    .forDesktop {
-      display: none;
-    }
 
-    .forMobile {
-      display: block;
-    }
+      .forDesktop {
+        display: none;
+      }
+
+      .forMobile {
+        display: block;
+      }
+
       #wrapper {
         padding-bottom: 0;
         /* remove extra space below */
@@ -316,6 +320,16 @@
 
       .bottom {
         margin-bottom: 10px;
+      }
+    }
+
+
+    @media screen and (max-height: 600px) {
+
+      /* CSS rules to be applied when the viewport height is less than 650px */
+      .offer-block {
+        height: 100vh;
+
       }
     }
   </style>
@@ -383,9 +397,9 @@
       <!-- <div > -->
       <img class="award" src="<?= $path['images'] ?>/award_upsell3.png" alt="" />
       <!-- </div> -->
-           <div class="bottom forMobile">
-      <a href="upsell4.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
-    </div>
+      <div class="bottom forMobile">
+        <a href="upsell4.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
+      </div>
       <!-- <div> -->
       <img class="award award-right" src="<?= $path['images'] ?>/award_right.jpg" alt="" />
       <!-- </div> -->
