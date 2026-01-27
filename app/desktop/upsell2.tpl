@@ -38,6 +38,14 @@
       /* padding: 24px; */
     }
 
+    .forDesktop {
+      display: block;
+    }
+
+    .forMobile {
+      display: none;
+    }
+
     .offer-block {
       max-width: 1200px;
       margin: 0 10px 0 10px;
@@ -91,8 +99,8 @@
     }
 
     .offer-product img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 50%;
       display: block;
       filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .25));
     }
@@ -206,7 +214,7 @@
 
     }
 
-        @media (max-width: 550px) {
+    @media (max-width: 550px) {
       .offer-product img {
         max-width: 78% !important;
       }
@@ -219,13 +227,97 @@
       .offer-top {
         font-size: 5vw;
       }
-      
-    .offer-line2 {
-      margin-top: 32px !important;
+
+      .offer-line2 {
+        margin-top: 32px !important;
+      }
+
+      .offer-line-red {
+        margin-top: 30px !important;
+      }
     }
-    .offer-line-red {
-      margin-top: 30px !important;
-    }
+
+
+    /* FULL-SCREEN UPSELL ON SMALL MOBILE */
+    @media (max-width: 500px) {
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .forDesktop {
+        display: none;
+      }
+
+      .forMobile {
+        display: block;
+      }
+
+      #wrapper {
+        padding-bottom: 0;
+        /* remove extra space below */
+      }
+
+      .wait {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .offer-block {
+        height: 70vh;
+        /* 🔥 Full screen height */
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Vertical center */
+        padding: 16px 14px;
+        margin: 10px 6px;
+        box-sizing: border-box;
+      }
+
+      .offer-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .offer-product img {
+        max-height: 32vh;
+        /* Scale bottle to screen */
+        width: auto;
+        height: auto;
+      }
+
+      .offer-copy {
+        text-align: center;
+        padding: 0;
+      }
+
+      .offer-price {
+        font-size: 12vw;
+        /* Big but responsive */
+      }
+
+      .arrow-inner {
+        display: none;
+        /* Hide arrow on small screens */
+      }
+
+      #submit-btn {
+        width: 92%;
+        max-width: 420px;
+        font-size: 1.4em;
+        margin-top: 14px;
+      }
+
+      .bottom {
+        margin-bottom: 10px;
+      }
     }
   </style>
 
@@ -280,9 +372,7 @@
           </div>
         </section>
         <input type="submit" id="submit-btn" value="Complete Checkout" />
-        <div class="bottom">
-          <a href="upsell3.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
-        </div>
+
         <p id="loading-indicator" style="display:none;">Processing...</p>
         <p id="crm-response-container" style="display:none;">Limelight messages will appear here...</p>
         </form>
@@ -293,10 +383,16 @@
       <!-- <div > -->
       <img class="award" src="<?= $path['images'] ?>/award_upsell2.png" alt="" />
       <!-- </div> -->
+           <div class="bottom forMobile">
+      <a href="upsell3.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
+    </div>
       <!-- <div> -->
       <img class="award award-right" src="<?= $path['images'] ?>/award_right.jpg" alt="" />
       <!-- </div> -->
 
+    </div>
+    <div class="bottom forDesktop">
+      <a href="upsell3.php"><i class="fa fa-times-circle"></i> <span>No thanks, I decline this offer</span></a>
     </div>
     <h2>We Care About Your Privacy</h2>
     <div class="secure"><img id="secureimg" src="<?= $path['images'] ?>/secure.png" alt="" /></div>

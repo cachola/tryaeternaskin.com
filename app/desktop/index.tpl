@@ -534,16 +534,7 @@
                <h1 class="os33 lighter dark">Visible Results in 1 Week has been difficult to achieve...</h1>
                <span class="os33 orange super montbold">UNTIL NOW</span>
             </div>
-         </div>
-         <div href="" srcset="" data-secondsdelay="" class="video-box video-box-1">
-            <div data-text="text" href="" srcset="" data-secondsdelay="" class="box-headline">See How It Works
-            </div>
-            <video width="100%" poster="<?= $path['images'] ?>/vid2-thumb.png" controls="" playsinline=""
-               allow="fullscreen" allowfullscreen="" muted="" controlsList="nodownload">
-               <source src="<?= $path['images'] ?>/vid2.mp4" type="video/mp4" playsinline="">
 
-            </video>
-         </div>
       </div>
       <div class="ketpoia-ketosis-banner">
          <div class="container">
@@ -571,15 +562,6 @@
             <div class="col-sm-8 col-sm-offset-2">
                <img src="<?= $path['images'] ?>/whatdoyouget.jpg" class="img-responsive center-block"
                   alt="ketopia ketosis ketonx drink">
-               <div class="prod_img">
-
-                  <img src="<?= $path['images'] ?>/image.png" alt="product"
-                     class="Step1_Product-col-sm-offset-2-01 device-desktop-page-index-flow-skin-v3-step-1-img-5">
-                  <img src="<?= $path['images'] ?>/image.png" alt="product"
-                     class="Step1_Product-col-sm-offset-2-02 device-desktop-page-index-flow-skin-v3-step-1-img-6">
-                  <img src="<?= $path['images'] ?>/image.png" alt="product"
-                     class="Step1_Product-col-sm-offset-2-03 device-desktop-page-index-flow-skin-v3-step-1-img-7">
-               </div>
                <h1 class="productTitle"> Aeterna Skincare Age Defying Cream</h1>
                <h3 class="productSub">Turn back the harsh effects of time! Visible results within as little as 7 days!
                </h3>
@@ -976,8 +958,15 @@
       }
       window.addEventListener('scroll', fixScroll, { passive: true });
 
-
-
+      $("a[href='#top']").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+      });
+                  
+function goTopByScroll(param){
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+}
    </script>
 </body>
 

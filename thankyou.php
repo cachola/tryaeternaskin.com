@@ -28,7 +28,7 @@ foreach ($orders_details as $key => $value) {
         $product['price'] = 0;
         $product['subtotal'] = 0;
         $product['qty'] = $value['product_qty'];
-        if ($value['product_id'] != "969") {
+        if ($value['product_id'] != "971") {
             $product['price'] = $value['price'];
             $product['subtotal'] = number_format($value['price'] * $value['product_qty'], 2);
             $total = $total + ($value['price'] * $value['product_qty']);
@@ -38,10 +38,10 @@ foreach ($orders_details as $key => $value) {
 }
 
 $productsDesc = [
-    '969' => array('Aeterna Skincare Age Defying Cream', 'Sample Pack', 'image.png', 1),
-    '971' => array('Aeterna Skincare Hyaluronic Acid + Collagen Anti Age Serum', 'Sample Pack', 'up1-image.png', 2),
-    '973' => array('Aeterna Skincare Advanced Eye Cream', '1 Bottle Special', 'up2-image.png', 3),
-    '974' => array('Aeterna Skincare Vitamin C Cleanser', '1 Bottle Special', 'up3-image.png', 4),
+    '969' => array('Aeterna Skincare Age Defying Cream', 'Sample Pack', 'prod-1.png', 1),
+    '971' => array('Aeterna Skincare Hyaluronic Acid + Collagen Anti Age Serum', 'Sample Pack', 'prod-2.png', 2),
+    '973' => array('Aeterna Skincare Advanced Eye Cream', '1 Bottle Special', 'prod-3.png', 3),
+    '974' => array('Aeterna Skincare Vitamin C Cleanser', '1 Bottle Special', 'prod-4.png', 4),
     '924' => array('Rush Processing', '', 'up3-prod.png', 4),
     // '776' => array('FitnessXr Free Trial', '', 'up4-prod.png'),
     // '774' => array('USADC Free Trial', '', 'up4-prod.png'),

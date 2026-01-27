@@ -334,7 +334,7 @@
             evaluated by the Food and Drug Administration.
           </div>
           <div>
-            After your trial period has expired, you will be enrolled in our
+            After your sample period has expired, you will be enrolled in our
             membership program for $88.97 per month. You can
             cancel anytime by calling
             <a href="tel:888-918-5943">888-918-5943</a>.

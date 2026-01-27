@@ -97,7 +97,7 @@ function assignAddress(place,fieldsList){
                 city=val;
              }
     }
-    $(fieldsList[0]).val(address);
+    $(fieldsList[0]).val(address.trim());
     $(fieldsList[1]).val(locality);
     $(fieldsList[2]).val(city);
     $(fieldsList[3]).val(postcode);

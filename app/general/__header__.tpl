@@ -21,7 +21,7 @@
 <meta name="HandheldFriendly" content="true" />
 <meta
   name="viewport"
-  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, viewport-fit=cover"
 />
 <link rel="stylesheet" href="<?= $path['assets_css'] . '/app.css' ?>" />
 
