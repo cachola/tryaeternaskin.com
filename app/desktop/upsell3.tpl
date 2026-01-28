@@ -249,6 +249,18 @@
         height: 100%;
         margin: 0;
       }
+     body {
+
+        padding-top: constant(safe-area-inset-top);
+        padding-right: constant(safe-area-inset-right);
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-left: constant(safe-area-inset-left);
+
+        padding-top: env(safe-area-inset-top);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+      }
 
       .forDesktop {
         display: none;
@@ -270,8 +282,8 @@
       }
 
       .offer-block {
-        height: 70vh;
-        /* 🔥 Full screen height */
+        height: 65vh;
+  
         max-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -289,11 +301,29 @@
         gap: 14px;
       }
 
+      .offer-block {
+        height: 65svh;
+        /* “small viewport height” (safe, visible area) */
+        height: 65dvh;
+        /* “dynamic viewport height” (updates as bars show/hide) */
+        max-height: 100dvh;
+        overflow: hidden;
+        /* prevents weird overflow outside dashed border */
+      }
+
+      .offer-inner {
+        height: 100%;
+      }
+
       .offer-product img {
         max-height: 32vh;
         /* Scale bottle to screen */
         width: auto;
         height: auto;
+      }
+
+      .offer-product img {
+        max-height: 28dvh;
       }
 
       .offer-copy {
@@ -314,15 +344,27 @@
       #submit-btn {
         width: 92%;
         max-width: 420px;
-        font-size: 1.4em;
+        font-size: 1.2em;
         margin-top: 14px;
+        height: 10svh;
       }
+
 
       .bottom {
         margin-bottom: 10px;
       }
-    }
 
+
+      .offer-block {
+        height: calc(100svh - 20svh - 10svh);
+        /* “small viewport height” (safe, visible area) */
+        height: calc(100dvh - 20dvh - 10dvh);
+        /* “dynamic viewport height” (updates as bars show/hide) */
+        max-height: 100dvh;
+        overflow: hidden;
+        /* prevents weird overflow outside dashed border */
+      }
+    }
 
     @media screen and (max-height: 600px) {
 
@@ -330,6 +372,12 @@
       .offer-block {
         height: 100vh;
 
+      }
+    }
+
+    @media only screen and (min-device-width: 393px) and (max-device-width: 393px) and (min-device-height: 852px) and (max-device-height: 852px) and (-webkit-min-device-pixel-ratio: 3) {
+      .offer-block {
+        height: 61vh;
       }
     }
   </style>

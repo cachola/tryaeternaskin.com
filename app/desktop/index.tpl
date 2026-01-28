@@ -456,7 +456,7 @@
 
                   <img src="<?= $path['images'] ?>/the-proof-call-to-action-mob.png"
                      class="toForm img-responsive center-block show-mob " style="cursor:pointer;"
-                     onclick="goTopByScroll('form-top');" alt="order ketopia">
+                     onclick="goTopByScroll(event);" alt="order ketopia">
                </div>
             </div>
          </div>
@@ -603,7 +603,7 @@
                <div class="space">&nbsp;</div>
                <div class="space">&nbsp;</div>
                <center>
-                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll('form-top');">
+                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
                      <btn class="c2abtn">Rush My Sample!</btn>
                   </a>
                </center>
@@ -685,7 +685,7 @@
             <div class="col-sm-12">
                <span class="space">&nbsp;</span><br><br>
                <center>
-                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll('form-top');">
+                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
                      <btn class="c2abtn">GET IT NOW</btn>
                   </a>
                </center>
@@ -732,7 +732,7 @@
 
                <div class="col-md-8 col-sm-10">
                   <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo" class="footer-logo ftr-logo">
-                  <a class='toForm' onclick="goTopByScroll('form-top');" style="cursor: pointer"><img
+                  <a class='toForm' onclick="goTopByScroll(event);" style="cursor: pointer"><img
                         src="<?= $path['images'] ?>/footer-cta.png?v=1722589431" width="680"
                         class="img-responsive center-block" height="771" alt=""></a>
                </div>
@@ -944,28 +944,40 @@
       }
 
   
-      function fixScroll() {
-         var topPosition = $('.footer').offset().top + $('.footer').outerHeight();
-           const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
-         var hiddenPx = screen.height - maxViewportHeight;
-         console.log('Position relative to document:', topPosition, 'px');
-         const limit = (topPosition * .9) + hiddenPx; // Height in pixels where you want scrolling to stop
-         if (isZoom) {
-            if (window.scrollY >= limit) {
-               window.scrollTo(0, limit);
-            }
-         }
-      }
-      window.addEventListener('scroll', fixScroll, { passive: true });
+      // function fixScroll() {
+      //    var topPosition = $('.footer').offset().top + $('.footer').outerHeight();
+      //      const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
+      //    var hiddenPx = screen.height - maxViewportHeight;
+      //    console.log('Position relative to document:', topPosition, 'px');
+      //    const limit = (topPosition * .9) + hiddenPx + 500; // Height in pixels where you want scrolling to stop
+      //    if (isZoom) {
+      //       if (window.scrollY >= limit) {
+      //          window.scrollTo(0, limit);
+      //       }
+      //    }
+      // }
+      // window.addEventListener('scroll', fixScroll, { passive: true });
 
-      $("a[href='#top']").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-      });
+//       $("a[href='#top']").click(function () {
+//         $("html, body").animate({ scrollTop: 0 }, "slow");
+//         return false;
+//       });
                   
-function goTopByScroll(param){
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
+function goTopByScroll(event){
+scrollToSection(event,'form-top');
+}
+
+function scrollToSection(event, sectionId) {
+    event.preventDefault(); // Prevents the default jump behavior
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+        // This animates the scroll smoothly
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Aligns the top of the element to the top of the viewport
+        });
+    }
 }
    </script>
 </body>
