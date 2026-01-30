@@ -765,10 +765,10 @@
                            class="img-responsive center-block forDesktop" height="771" alt=""></a>
                      <img src="<?= $path['images'] ?>/footer-cta-top.png?v=1722589431" style="margin-bottom: 0px;" width="680"
                         class="img-responsive center-block forMobile" alt="">
-                     <a class='toForm forMobile' onclick="goTopByScroll(event);" style="cursor: pointer"><img
-                           src="<?= $path['images'] ?>/footer-cta-button.png?v=1722589431" width="680"
+                     <a class='toForm forMobile' onclick="goTopByScroll(event);" style="cursor: pointer;"><img
+                           src="<?= $path['images'] ?>/footer-cta-button.png?v=1722589431" style="width: 80%;" width="680"
                            class="img-responsive center-block forMobile" height="771" alt=""></a>
-                     <img src="<?= $path['images'] ?>/footer-cta-bottom.png?v=1722589431" style="width: 90%;" width="680"
+                     <img src="<?= $path['images'] ?>/footer-cta-bottom.png?v=1722589431"  width="680"
                         class="img-responsive center-block forMobile" height="771" alt="">
                   </div>
                </div>
