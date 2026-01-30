@@ -249,7 +249,8 @@
         height: 100%;
         margin: 0;
       }
-     body {
+
+      body {
 
         padding-top: constant(safe-area-inset-top);
         padding-right: constant(safe-area-inset-right);
@@ -283,7 +284,7 @@
 
       .offer-block {
         height: 65vh;
-  
+
         max-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -381,7 +382,7 @@
       }
     }
   </style>
-  </style>
+
 
 
 </head>

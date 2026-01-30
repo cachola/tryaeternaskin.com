@@ -128,7 +128,7 @@
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: var(--blue);
-      font-size: clamp(27px, 2.6vw, 46px) !important;
+      font-size: clamp(19px, 2.6vw, 46px) !important;
       margin: 0 0 clamp(10px, 1.2vw, 18px);
     }
 
@@ -223,6 +223,148 @@
         margin-top: 3px !important;
       }
     }
+
+      /* FULL-SCREEN UPSELL ON SMALL MOBILE */
+    @media (max-width: 500px) {
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+
+        padding-top: constant(safe-area-inset-top);
+        padding-right: constant(safe-area-inset-right);
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-left: constant(safe-area-inset-left);
+
+        padding-top: env(safe-area-inset-top);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+      }
+
+      .forDesktop {
+        display: none;
+      }
+
+      .forMobile {
+        display: block;
+      }
+
+      #wrapper {
+        padding-bottom: 0;
+        /* remove extra space below */
+      }
+
+      .wait {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .offer-block {
+        height: 65vh;
+
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Vertical center */
+        padding: 16px 14px;
+        margin: 10px 6px;
+        box-sizing: border-box;
+      }
+
+      .offer-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .offer-block {
+        height: 65svh;
+        /* “small viewport height” (safe, visible area) */
+        height: 65dvh;
+        /* “dynamic viewport height” (updates as bars show/hide) */
+        max-height: 100dvh;
+        overflow: hidden;
+        /* prevents weird overflow outside dashed border */
+      }
+
+      .offer-inner {
+        height: 100%;
+      }
+
+      .offer-product img {
+        max-height: 32vh;
+        /* Scale bottle to screen */
+        width: auto;
+        height: auto;
+      }
+
+      .offer-product img {
+        max-height: 20dvh;
+      }
+
+      .offer-copy {
+        text-align: center;
+        padding: 0;
+      }
+
+      .offer-price {
+        font-size: 12vw;
+        /* Big but responsive */
+      }
+
+      .arrow-inner {
+        display: none;
+        /* Hide arrow on small screens */
+      }
+
+      #submit-btn {
+        width: 92%;
+        max-width: 420px;
+        font-size: 1.2em;
+        margin-top: 14px;
+        height: 10svh;
+      }
+
+
+      .bottom {
+        margin-top:50px;
+        margin-bottom: 10px;
+      }
+
+
+      .offer-block {
+        height: calc(100svh - 21svh - 10svh);
+        /* “small viewport height” (safe, visible area) */
+        height: calc(100dvh - 21dvh - 10dvh);
+        /* “dynamic viewport height” (updates as bars show/hide) */
+        max-height: 100dvh;
+        overflow: hidden;
+        /* prevents weird overflow outside dashed border */
+      }
+    }
+
+    @media screen and (max-height: 600px) {
+
+      /* CSS rules to be applied when the viewport height is less than 650px */
+      .offer-block {
+        height: 100vh;
+
+      }
+    }
+/* 
+    @media only screen and (min-device-width: 393px) and (max-device-width: 393px) and (min-device-height: 852px) and (max-device-height: 852px) and (-webkit-min-device-pixel-ratio: 3) {
+      .offer-block {
+        height: 61vh;
+      }
+    } */
   </style>
 
 

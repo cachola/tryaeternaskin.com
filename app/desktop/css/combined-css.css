@@ -9238,6 +9238,8 @@ form {
   }
   .c2abtn {
     font-size: 20px !important;
+    display:block;
+    width: 92%;
   }
   img.img-responsive.center-block {
     margin-bottom: 70px;

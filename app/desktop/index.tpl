@@ -15,6 +15,24 @@
       window.onunload = function () { null };    
    </script>
    <style>
+      .forDesktop {
+         display: block
+      }
+
+      .forMobile {
+         display: none;
+      }
+
+      @media (max-width:767px) {
+         .forDesktop {
+            display: none
+         }
+
+         .forMobile {
+            display: block;
+         }
+      }
+
       .symbol {
          font-size: 55px;
          position: absolute;
@@ -310,11 +328,12 @@
                   </div>
                   <a name="ordernow" id="ordernow"></a>
                   <div class="formBox">
+                     <div id="form-top"></div>
                      <div class="formTop">Where do we<br> Send your Sample? <img
                            src="<?= $path['images'] ?>/form-arrow.png" class="desktop" height="415" alt="">
                      </div>
                      <div class="stripe"> EXCLUSIVE CLINICAL FORMULA AVAILABLE NOW </div>
-                     <div id="form-top"></div>
+
                      <form method="post" class="prospect-form" action="ajax.php?method=new_prospect"
                         name="fullprospect_form" accept-charset="utf-8"
                         enctype="application/x-www-form-urlencoded;charset=utf-8">
@@ -535,263 +554,282 @@
                <span class="os33 orange super montbold">UNTIL NOW</span>
             </div>
 
-      </div>
-      <div class="ketpoia-ketosis-banner">
-         <div class="container">
-            <!-- <h2>Stunning visual results are waiting for you.</h2> -->
-            <div class="flx-wrap-prod">
-               <img src="<?= $path['images'] ?>/image.png" alt="product"
-                  class="Step1_Product-ketpoia  device-desktop-page-index-flow-skin-v3-step-1-img-4 flow-imgs">
-               <img src="<?= $path['images'] ?>/logo-w-line2.png" alt="logo" class="Logo-Ketpoia mx-w">
-               <!--<img src="<?= $path['images'] ?>/feature-brand-fleu.png" class="center-block img-responsive ket-prod"  alt="Ketopia Logo ">-->
-            </div>
-            <h2 style="text-align: center;">Stunning visual results are waiting for you.</h2>
          </div>
-      </div>
-      <a name="whatyouget" id="whatyouget"></a>
-      <div class="container">
-         <div class="row">
-            <div class=" col-lg-12 text-center">
-               <img src="<?= $path['images'] ?>/3-seals_n.jpg" width="299" height="115" class="center-block"
-                  alt="non gmo">
-               <h1 class="mont60 ">WHAT DO YOU GET?</h1>
-               <span class="os28 lighter dark"> The Age Defying Cream that is <span class="orange">Sweeping the
-                     Nation</span>! </span>
-               <div class="space">&nbsp;</div>
-            </div>
-            <div class="col-sm-8 col-sm-offset-2">
-               <img src="<?= $path['images'] ?>/whatdoyouget.jpg" class="img-responsive center-block"
-                  alt="ketopia ketosis ketonx drink">
-               <h1 class="productTitle"> Aeterna Skincare Age Defying Cream</h1>
-               <h3 class="productSub">Turn back the harsh effects of time! Visible results within as little as 7 days!
-               </h3>
-               <p class="content">
-                  Aeterna Skincare Age Defying Cream is your secret to radiant, beautiful skin that looks years
-                  younger. Don’t
-                  endure the physical pain and expense of costly procedures and surgeries. Aeterna Skincare Age Defying
-                  Cream
-                  works naturally to help replenish your skin’s moisture, firming its appearance and restoring your
-                  natural
-                  glow to reveal a younger-looking you.
-               </p>
-               <p class="content">The boost in collagen and elastin helps retain the skin's dermal structure which
-                  results
-                  in reduction of wrinkles and fine lines. Active ingredients in
-                  Aeterna Skincare Age Defying Cream facilitate trapping moisture, which in turn hydrates the skin and
-                  prevents
-                  cracking. <br>
-                  <br> Finally the beautiful, healthy, and confident face you deserve with our unique Collagen + Retinol
-                  Age Defying serum. Ideal for all skin types,
-                  Aeterna Skincare Age Defying Cream is a dynamic and powerful anti-aging product that will give you
-                  noticeable
-                  results within 7 days!<br>
-                  <br>
-               </p>
-               <ul class="firm_fines">
-                  <li>Firm &amp; Tighten Skin *</li>
-                  <li>Reduce Wrinkles &amp; Fine Lines *</li>
-                  <li>Reduce Signs of Aging *</li>
-                  <li>Brighten Skin's Appearance *</li>
-                  <li>Eliminates the Look of Dark Circles *</li>
-                  <li>Enhances Skin Hydration *</li>
-                  <li>Counter the Effects of Stress *</li>
-               </ul>
-               <p></p>
-            </div>
-            <div class="space">&nbsp;</div>
-            <div class="col-sm-6 col-sm-offset-3">
-               <div class="space">&nbsp;</div>
-               <div class="space">&nbsp;</div>
-               <center>
-                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
-                     <btn class="c2abtn">Rush My Sample!</btn>
-                  </a>
-               </center>
-               <div class="space">&nbsp;</div>
+         <div class="ketpoia-ketosis-banner">
+            <div class="container">
+               <!-- <h2>Stunning visual results are waiting for you.</h2> -->
+               <div class="flx-wrap-prod">
+                  <img src="<?= $path['images'] ?>/image.png" alt="product"
+                     class="Step1_Product-ketpoia  device-desktop-page-index-flow-skin-v3-step-1-img-4 flow-imgs">
+                  <img src="<?= $path['images'] ?>/logo-w-line2.png" alt="logo" class="Logo-Ketpoia mx-w">
+                  <!--<img src="<?= $path['images'] ?>/feature-brand-fleu.png" class="center-block img-responsive ket-prod"  alt="Ketopia Logo ">-->
+               </div>
+               <h2 style="text-align: center;">Stunning visual results are waiting for you.</h2>
             </div>
          </div>
-      </div>
-      <div class="stayingKetosis">
+         <a name="whatyouget" id="whatyouget"></a>
          <div class="container">
             <div class="row">
-               <h3>ACHIEVING BEAUTIFUL</h3>
-               <h2>YOUNGER SKIN</h2>
-               <h3>IS SIMPLE</h3>
-            </div>
-         </div>
-      </div>
-      <a name="howto"></a>
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-8 ketopiainfo">
-               <h2>HOW TO USE Aeterna Skincare Age Defying Cream?</h2>
-               <p><strong> Aeterna Skincare Age Defying Cream is a one-of-a-kind product designed to help you see
-                     visible
+               <div class=" col-lg-12 text-center">
+                  <img src="<?= $path['images'] ?>/3-seals_n.jpg" width="299" height="115" class="center-block"
+                     alt="non gmo">
+                  <h1 class="mont60 ">WHAT DO YOU GET?</h1>
+                  <span class="os28 lighter dark"> The Age Defying Cream that is <span class="orange">Sweeping the
+                        Nation</span>! </span>
+                  <div class="space">&nbsp;</div>
+               </div>
+               <div class="col-sm-8 col-sm-offset-2">
+                  <img src="<?= $path['images'] ?>/whatdoyouget.jpg" class="img-responsive center-block"
+                     alt="ketopia ketosis ketonx drink">
+                  <h1 class="productTitle"> Aeterna Skincare Age Defying Cream</h1>
+                  <h3 class="productSub">Turn back the harsh effects of time! Visible results within as little as 7
+                     days!
+                  </h3>
+                  <p class="content">
+                     Aeterna Skincare Age Defying Cream is your secret to radiant, beautiful skin that looks years
+                     younger. Don’t
+                     endure the physical pain and expense of costly procedures and surgeries. Aeterna Skincare Age
+                     Defying
+                     Cream
+                     works naturally to help replenish your skin’s moisture, firming its appearance and restoring your
+                     natural
+                     glow to reveal a younger-looking you.
+                  </p>
+                  <p class="content">The boost in collagen and elastin helps retain the skin's dermal structure which
                      results
-                     within just 7 days!</strong>
-               </p>
-               <p>
-                  Aeterna Skincare Age Defying Cream is a twice daily age defying serum that allows the face to begin
-                  reducing
-                  the appearance of age such as wrinkles, fine lines, spots and signs of stress in just a short time.
-                  Featuring a special blend of ingredients,
-                  Aeterna Skincare Age Defying Cream is a safe and simple way to turn back the hands of time.
-               </p>
-               <p>
-                  Aeterna Skincare Age Defying Cream is extremely easy to use and experience fast noticeable results
-                  with.
-               </p>
-               <ol class="firm_fines">
-                  <li>Wash face in the morning and before bed with gentle cleanser</li>
-                  <li>Apply 1-2 pumps. once a day on face and neck in gentle cirular motion
-                  </li>
-                  <li>Apply moisturizer and sunblock as needed<br><br>
-                  </li>
-               </ol>
-               <h3>TIPS FOR SUCCESS</h3>
-               <p>Before you begin, you are encouraged to take a "before" photo and an inventory of your current aging
-                  signs.
-               </p>
-               <p>Be sure to get enough deep sleep and drink lots of water. Eat foods high in vitamin A. Be sun safe and
-                  keep your face out of the sun. Lower your stress levels and load up on antioxidants. Also don't forget
-                  your neck and chest. These are commonly missed areas when using an anti-aging Regimen.<br>
-                  <br>
-               </p>
-               <h3>GET READY FOR A NEW YOU!</h3>
-               <p>We know you will fall in love with the results of
-                  Aeterna Skincare Age Defying Cream. We want you to be 100% satisfied with your purchase so we offer
-                  a 100%
-                  Money Back Satisfaction Guarantee.
-               </p>
-               <p>We rarely have product returns unlike most competitors due to the fact that people see noticeable
-                  results
-                  in just a short period of time and generally come back to buy more. We hope you enjoy the most
-                  exciting
-                  new Skin regimen available today!
-               </p>
-               <p>&nbsp;</p>
-               <p>&nbsp;</p>
-            </div>
-            <div class="col-sm-4">
-               <img src="<?= $path['images'] ?>/image.png" alt="product"
-                  class="Step1_Product-col-sm-4 device-desktop-page-index-flow-skin-v3-step-1-img-8">
-               <img src="<?= $path['images'] ?>/skn-bottle1.png?v=1" width="382" height="353"
-                  class="img-responsive center-block skn_btls" alt="ketonx drink">
-               <p class="small text-center adjsttxt">
-                  Aeterna Skincare Age Defying Cream is a daily regimen that helps you reduce wrinkles and the signs
-                  of aging.
-               </p>
-            </div>
-            <div class="col-sm-12">
-               <span class="space">&nbsp;</span><br><br>
-               <center>
-                  <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
-                     <btn class="c2abtn">GET IT NOW</btn>
-                  </a>
-               </center>
+                     in reduction of wrinkles and fine lines. Active ingredients in
+                     Aeterna Skincare Age Defying Cream facilitate trapping moisture, which in turn hydrates the skin
+                     and
+                     prevents
+                     cracking. <br>
+                     <br> Finally the beautiful, healthy, and confident face you deserve with our unique Collagen +
+                     Retinol
+                     Age Defying serum. Ideal for all skin types,
+                     Aeterna Skincare Age Defying Cream is a dynamic and powerful anti-aging product that will give you
+                     noticeable
+                     results within 7 days!<br>
+                     <br>
+                  </p>
+                  <ul class="firm_fines">
+                     <li>Firm &amp; Tighten Skin *</li>
+                     <li>Reduce Wrinkles &amp; Fine Lines *</li>
+                     <li>Reduce Signs of Aging *</li>
+                     <li>Brighten Skin's Appearance *</li>
+                     <li>Eliminates the Look of Dark Circles *</li>
+                     <li>Enhances Skin Hydration *</li>
+                     <li>Counter the Effects of Stress *</li>
+                  </ul>
+                  <p></p>
+               </div>
+               <div class="space">&nbsp;</div>
+               <div class="col-sm-6 col-sm-offset-3">
+                  <div class="space">&nbsp;</div>
+                  <div class="space">&nbsp;</div>
+                  <center>
+                     <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
+                        <btn class="c2abtn">Rush My Sample!</btn>
+                     </a>
+                  </center>
+                  <div class="space">&nbsp;</div>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="allnatural">
+         <div class="stayingKetosis">
+            <div class="container">
+               <div class="row">
+                  <h3>ACHIEVING BEAUTIFUL</h3>
+                  <h2>YOUNGER SKIN</h2>
+                  <h3>IS SIMPLE</h3>
+               </div>
+            </div>
+         </div>
+         <a name="howto"></a>
          <div class="container">
             <div class="row">
-               <img src="<?= $path['images'] ?>/allnatural-new.png" class="center-block img-responsive" width="796"
-                  height="395" alt="allnatural">
-            </div>
-         </div>
-      </div>
-      <a name="theproof" id="theproof"></a>
-      <div class="container">
-         <div class="row">
-            <div class=" col-lg-12 text-center">
-               <h1 class="mont50 centered">WHAT OTHERS ARE SAYING:</h1>
-               <span class="os28 lighter dark">Aeterna Skincare Age Defying Cream is all over the Internet and the
-                  results <span class="orange">are Astonishing</span>! </span><br>
-               <div>
+               <div class="col-sm-8 ketopiainfo">
+                  <h2>HOW TO USE Aeterna Skincare Age Defying Cream?</h2>
+                  <p><strong> Aeterna Skincare Age Defying Cream is a one-of-a-kind product designed to help you see
+                        visible
+                        results
+                        within just 7 days!</strong>
+                  </p>
+                  <p>
+                     Aeterna Skincare Age Defying Cream is a twice daily age defying serum that allows the face to begin
+                     reducing
+                     the appearance of age such as wrinkles, fine lines, spots and signs of stress in just a short time.
+                     Featuring a special blend of ingredients,
+                     Aeterna Skincare Age Defying Cream is a safe and simple way to turn back the hands of time.
+                  </p>
+                  <p>
+                     Aeterna Skincare Age Defying Cream is extremely easy to use and experience fast noticeable results
+                     with.
+                  </p>
+                  <ol class="firm_fines">
+                     <li>Wash face in the morning and before bed with gentle cleanser</li>
+                     <li>Apply 1-2 pumps. once a day on face and neck in gentle cirular motion
+                     </li>
+                     <li>Apply moisturizer and sunblock as needed<br><br>
+                     </li>
+                  </ol>
+                  <h3>TIPS FOR SUCCESS</h3>
+                  <p>Before you begin, you are encouraged to take a "before" photo and an inventory of your current
+                     aging
+                     signs.
+                  </p>
+                  <p>Be sure to get enough deep sleep and drink lots of water. Eat foods high in vitamin A. Be sun safe
+                     and
+                     keep your face out of the sun. Lower your stress levels and load up on antioxidants. Also don't
+                     forget
+                     your neck and chest. These are commonly missed areas when using an anti-aging Regimen.<br>
+                     <br>
+                  </p>
+                  <h3>GET READY FOR A NEW YOU!</h3>
+                  <p>We know you will fall in love with the results of
+                     Aeterna Skincare Age Defying Cream. We want you to be 100% satisfied with your purchase so we offer
+                     a 100%
+                     Money Back Satisfaction Guarantee.
+                  </p>
+                  <p>We rarely have product returns unlike most competitors due to the fact that people see noticeable
+                     results
+                     in just a short period of time and generally come back to buy more. We hope you enjoy the most
+                     exciting
+                     new Skin regimen available today!
+                  </p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+               </div>
+               <div class="col-sm-4">
+                  <img src="<?= $path['images'] ?>/image.png" alt="product"
+                     class="Step1_Product-col-sm-4 device-desktop-page-index-flow-skin-v3-step-1-img-8">
+                  <img src="<?= $path['images'] ?>/skn-bottle1.png?v=1" width="382" height="353"
+                     class="img-responsive center-block skn_btls" alt="ketonx drink">
+                  <p class="small text-center adjsttxt">
+                     Aeterna Skincare Age Defying Cream is a daily regimen that helps you reduce wrinkles and the signs
+                     of aging.
+                  </p>
+               </div>
+               <div class="col-sm-12">
+                  <span class="space">&nbsp;</span><br><br>
                   <center>
-                     <img src="<?= $path['images'] ?>/fb-logo.jpg" width="263" height="120" alt="">
+                     <a class='toForm' style="cursor: pointer" onclick="goTopByScroll(event);">
+                        <btn class="c2abtn">GET IT NOW</btn>
+                     </a>
                   </center>
                </div>
-               <div class="space">&nbsp;</div>
-            </div>
-            <div class="col-md-6 col-md-offset-3">
-               <center>
-                  <img src="<?= $path['images'] ?>/skin-serum-rv.png" class="img-responsive" width="481" height="1025"
-                     alt="">
-               </center>
-            </div>
-            <div class="col-lg-12">
-               <div class="space">&nbsp;</div>
             </div>
          </div>
-      </div>
-      <div class="footerC2a">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4 col-sm-2"> &nbsp; </div>
-
-               <div class="col-md-8 col-sm-10">
-                  <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo" class="footer-logo ftr-logo">
-                  <a class='toForm' onclick="goTopByScroll(event);" style="cursor: pointer"><img
-                        src="<?= $path['images'] ?>/footer-cta.png?v=1722589431" width="680"
-                        class="img-responsive center-block" height="771" alt=""></a>
+         <div class="allnatural">
+            <div class="container">
+               <div class="row">
+                  <img src="<?= $path['images'] ?>/allnatural-new.png" class="center-block img-responsive" width="796"
+                     height="395" alt="allnatural">
                </div>
             </div>
          </div>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-               <img src="<?= $path['images'] ?>/footer-lg-trd.png" width="960" height="87"
-                  class="center-block img-responsive footerNavBlk" alt=""><br>
-               <div class="col-lg-12 content centered" style="font-size:12px;">
-                  <div id="disclaimers">
-                     <div style='position: absolute; overflow: hidden; width: 1px; height: 1px;'>
-                     </div>
-                     <footer>
-                        <div id="footer_trial_disclaimer">
-                           <div>We are committed to maintaining the highest quality products and the utmost integrity in
-                              business practices. All products sold on this website are certified by Good Manufacturing
-                              Practices (GMP), which is the highest standard of testing in the supplement industry.
-                           </div>
-                           <br>
-                           <div>*Due to limited inventory levels on any given day, we must limit trial sales to 250
-                              maximum
-                              per day.
-                              Representations regarding the efficacy and safety of Aeterna Skincare Age Defying Cream
-                              have not
-                              been evaluated by the Food and Drug Administration.
-                           </div>
+         <a name="theproof" id="theproof"></a>
+         <div class="container">
+            <div class="row">
+               <div class=" col-lg-12 text-center">
+                  <h1 class="mont50 centered">WHAT OTHERS ARE SAYING:</h1>
+                  <span class="os28 lighter dark">Aeterna Skincare Age Defying Cream is all over the Internet and the
+                     results <span class="orange">are Astonishing</span>! </span><br>
+                  <div>
+                     <center>
+                        <img src="<?= $path['images'] ?>/fb-logo.jpg" width="263" height="120" alt="">
+                     </center>
+                  </div>
+                  <div class="space">&nbsp;</div>
+               </div>
+               <div class="col-md-6 col-md-offset-3">
+                  <center>
+                     <img src="<?= $path['images'] ?>/skin-serum-rv.png" class="img-responsive" width="481"
+                        height="1025" alt="">
+                  </center>
+               </div>
+               <div class="col-lg-12">
+                  <div class="space">&nbsp;</div>
+               </div>
+            </div>
+         </div>
+         <div class="footerC2a">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 col-sm-2"> &nbsp; </div>
+
+                  <div class="col-md-8 col-sm-10">
+                     <img src="<?= $path['images'] ?>/logo-exfol-transblack.png" alt="logo"
+                        class="footer-logo ftr-logo">
+
+                     <a class='toForm forDesktop' onclick="goTopByScroll(event);" style="cursor: pointer"><img
+                           src="<?= $path['images'] ?>/footer-cta.png?v=1722589431 forDesktop" width="680"
+                           class="img-responsive center-block forDesktop" height="771" alt=""></a>
+                     <img src="<?= $path['images'] ?>/footer-cta-top.png?v=1722589431" style="margin-bottom: 0px;" width="680"
+                        class="img-responsive center-block forMobile" alt="">
+                     <a class='toForm forMobile' onclick="goTopByScroll(event);" style="cursor: pointer"><img
+                           src="<?= $path['images'] ?>/footer-cta-button.png?v=1722589431" width="680"
+                           class="img-responsive center-block forMobile" height="771" alt=""></a>
+                     <img src="<?= $path['images'] ?>/footer-cta-bottom.png?v=1722589431" style="width: 90%;" width="680"
+                        class="img-responsive center-block forMobile" height="771" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-10 col-sm-offset-1">
+                  <img src="<?= $path['images'] ?>/footer-lg-trd.png" width="960" height="87"
+                     class="center-block img-responsive footerNavBlk" alt=""><br>
+                  <div class="col-lg-12 content centered" style="font-size:12px;">
+                     <div id="disclaimers">
+                        <div style='position: absolute; overflow: hidden; width: 1px; height: 1px;'>
                         </div>
-                        <div class="footer">
-                           <p class="copyright">
-                              Copyright &copy; 2026 Aeterna Skin &mdash; All Rights Reserved.
-                           </p>
-                           <p class="footerlinks">
-                              <a href="javascript:void(0);" class="bottomhref"
-                                 onClick="javascript:openNewWindow('page-terms.php','modal');">Terms &amp;
-                                 Conditions</a> |
-                              <a href="javascript:void(0);" class="bottomhref"
-                                 onClick="javascript:openNewWindow('page-privacy.php','modal');">Privacy Policy</a> |
-                              <a href="javascript:void(0);" class="bottomhref"
-                                 onClick="javascript:openNewWindow('page-contact.php','modal');">Contact Us</a>
-                           </p>
-                        </div>
-                     </footer>
-                     <div class="modal softModal">
-                        <div class="modal-inner soft-modal-inner">
-                           <a data-modal-close>&times;</a>
-                           <div class="modal-content soft-modal-content"></div>
-                        </div>
-                     </div>
-                     <div id="vmodal" style="display:none"></div>
-                     <div id="vmodal-submitting" style="display:none">
-                        <div class='vmodal-custom-content'>
-                           <div style='text-align: center;'>
-                              <div style='margin: 20px 0;'><span class='submitting-text'>Submitting Your
-                                    Information</span><span class='dots'></span>
+                        <footer>
+                           <div id="footer_trial_disclaimer">
+                              <div>We are committed to maintaining the highest quality products and the utmost integrity
+                                 in
+                                 business practices. All products sold on this website are certified by Good
+                                 Manufacturing
+                                 Practices (GMP), which is the highest standard of testing in the supplement industry.
                               </div>
-                              <div><img src="<?= $path['images'] ?>/secure.png" width='400'></div>
+                              <br>
+                              <div>*Due to limited inventory levels on any given day, we must limit trial sales to 250
+                                 maximum
+                                 per day.
+                                 Representations regarding the efficacy and safety of Aeterna Skincare Age Defying Cream
+                                 have not
+                                 been evaluated by the Food and Drug Administration.
+                              </div>
+                           </div>
+                           <div class="footer">
+                              <p class="copyright">
+                                 Copyright &copy; 2026 Aeterna Skin &mdash; All Rights Reserved.
+                              </p>
+                              <p class="footerlinks">
+                                 <a href="javascript:void(0);" class="bottomhref"
+                                    onClick="javascript:openNewWindow('page-terms.php','modal');">Terms &amp;
+                                    Conditions</a> |
+                                 <a href="javascript:void(0);" class="bottomhref"
+                                    onClick="javascript:openNewWindow('page-privacy.php','modal');">Privacy Policy</a> |
+                                 <a href="javascript:void(0);" class="bottomhref"
+                                    onClick="javascript:openNewWindow('page-contact.php','modal');">Contact Us</a>
+                              </p>
+                           </div>
+                        </footer>
+                        <div class="modal softModal">
+                           <div class="modal-inner soft-modal-inner">
+                              <a data-modal-close>&times;</a>
+                              <div class="modal-content soft-modal-content"></div>
+                           </div>
+                        </div>
+                        <div id="vmodal" style="display:none"></div>
+                        <div id="vmodal-submitting" style="display:none">
+                           <div class='vmodal-custom-content'>
+                              <div style='text-align: center;'>
+                                 <div style='margin: 20px 0;'><span class='submitting-text'>Submitting Your
+                                       Information</span><span class='dots'></span>
+                                 </div>
+                                 <div><img src="<?= $path['images'] ?>/secure.png" width='400'></div>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -799,48 +837,47 @@
                </div>
             </div>
          </div>
+
       </div>
 
-   </div>
 
 
-
-   <div class="pop_overlay" id="popoverNew">
-      <div id="pop_content">
-         <div class="poplft">
-            <div id="pop2">
-               <img class="usps" src="<?= $path['images']; ?>/popupexit.png" alt="" />
-               <div class="want_try">Want to try Aeterna Skin?</div>
-               <div class="just_pay">JUST PAY S&H!</div>
-               <a href="#">
-                  <div class="accept_pop ">YES I WANT TO TRY</div>
-               </a>
-               <!-- <a href="#">
+      <div class="pop_overlay" id="popoverNew">
+         <div id="pop_content">
+            <div class="poplft">
+               <div id="pop2">
+                  <img class="usps" src="<?= $path['images']; ?>/popupexit.png" alt="" />
+                  <div class="want_try">Want to try Aeterna Skin?</div>
+                  <div class="just_pay">JUST PAY S&H!</div>
+                  <a href="#">
+                     <div class="accept_pop ">YES I WANT TO TRY</div>
+                  </a>
+                  <!-- <a href="#">
                         <div class="accept_pop_no"></div>
                     </a> -->
-               <a href="javascript:void(0);" class="no-thank">
-                  No Thank You</a>
+                  <a href="javascript:void(0);" class="no-thank">
+                     No Thank You</a>
+               </div>
             </div>
          </div>
       </div>
-   </div>
-   <!-- footer -->
+      <!-- footer -->
 
-   <?php require_once 'general/__scripts__.tpl' ?>
-   <?php perform_body_tag_close_actions(); ?>
+      <?php require_once 'general/__scripts__.tpl' ?>
+      <?php perform_body_tag_close_actions(); ?>
 
-   <!-- <script type="text/javascript" src="<?= $path['js']; ?>/bookmarkscroll.js"></script> -->
-   <script type="text/ecmascript" src="<?= $path['assets_js'] ?>/jquery.magnific-popup.js"></script>
+      <!-- <script type="text/javascript" src="<?= $path['js']; ?>/bookmarkscroll.js"></script> -->
+      <script type="text/ecmascript" src="<?= $path['assets_js'] ?>/jquery.magnific-popup.js"></script>
 
-   <script type="text/javascript" src="<?= $path['assets_js'] ?>/places.js"></script>
-   <!-- <script type="text/javascript" async defer src="<?= $path['js']; ?>/socialproof.js"></script> -->
+      <script type="text/javascript" src="<?= $path['assets_js'] ?>/places.js"></script>
+      <!-- <script type="text/javascript" async defer src="<?= $path['js']; ?>/socialproof.js"></script> -->
 
-   <script type="text/javascript" async defer
-      src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_PLACES_API_ID; ?>&libraries=places&callback=initAutocomplete"></script>
-
+      <script type="text/javascript" async defer
+         src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_PLACES_API_ID; ?>&libraries=places&callback=initAutocomplete"></script>
 
 
-   <?php
+
+      <?php
     $sampleurl = 'sample/';
     $a1=$_SERVER['QUERY_STRING'];
     $b1= $_GET['C1'];
@@ -850,136 +887,136 @@
     }
     ?>
 
-   <script type="text/javascript">
-      $(document).ready(function () {
-         $(".accept_pop").click(function () {
-            $("#popoverNew").hide();
-            window.location.href = 'dtc.php';
-         });
-         $(".no-thank").click(function () {
-            cb.ignoreExitPop = true;
-            $("#popoverNew").hide();
-         });
-         $(".cancel-butt").click(function () {
-            cb.ignoreExitPop = true;
-            $("#popoverNew").hide();
-         });
+      <script type="text/javascript">
+         $(document).ready(function () {
+            $(".accept_pop").click(function () {
+               $("#popoverNew").hide();
+               window.location.href = 'dtc.php';
+            });
+            $(".no-thank").click(function () {
+               cb.ignoreExitPop = true;
+               $("#popoverNew").hide();
+            });
+            $(".cancel-butt").click(function () {
+               cb.ignoreExitPop = true;
+               $("#popoverNew").hide();
+            });
 
-         getTid();
-      });
-      var isZoom = false;
-      nsZoomZoom();
-
-      $(window).resize(function () {
+            getTid();
+         });
+         var isZoom = false;
          nsZoomZoom();
 
-      });
+         $(window).resize(function () {
+            nsZoomZoom();
+
+         });
 
 
-      function nsZoomZoom() {
-         htmlWidth = $('html').innerWidth();
-         bodyWidth = 992;
+         function nsZoomZoom() {
+            htmlWidth = $('html').innerWidth();
+            bodyWidth = 992;
 
-         if (htmlWidth < bodyWidth) {
-            scale = 1;
-            isZoom = false;
-            $("#zoomed").css('position', 'relative');
-                        $('#header').addClass('headerbg')
-            $('#headup').removeClass('headerbg')
+            if (htmlWidth < bodyWidth) {
+               scale = 1;
+               isZoom = false;
+               $("#zoomed").css('position', 'relative');
+               $('#header').addClass('headerbg')
+               $('#headup').removeClass('headerbg')
 
-            $('#headup').hide();
-            $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
-            $("#zoomed").css('transform', 'scale(' + scale + ')');
-            $("#zoomed").css('transform-origin', 'top center');
-              $("#zoomed").css('left', '0px');
-       
-         }
+               $('#headup').hide();
+               $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
+               $("#zoomed").css('transform', 'scale(' + scale + ')');
+               $("#zoomed").css('transform-origin', 'top center');
+               $("#zoomed").css('left', '0px');
 
-         else {
-            scale = 0.9;
-            $("#zoomed").css('position', 'absolute');
-            isZoom = true;
-            $('#headup').addClass('headerbg')
-            $('#header').removeClass('headerbg')
-            $('#headup').show()
-            const divElement = document.getElementById("zoomed");
-            $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
-            $("#zoomed").css('transform', 'scale(' + scale + ')');
-            $("#zoomed").css('transform-origin', 'top center');
-            // Get the width including padding and border (e.g., 130)
-            const offsetWidth = divElement.offsetWidth;
-            console.log("offsetWidth:", offsetWidth);
-            var margins = window.innerWidth - offsetWidth;
-            console.log('margins:', margins)
-            var leftMargin = margins / 2;
-            console.log('left margin:', leftMargin)
-            $("#zoomed").css('left', leftMargin + 'px');
-         }
-
-      }
-
-      var tidSession = '';
-      var tidInterval;
-      function getTid() {
-
-
-         tidInterval = setInterval(function () {
-            var tid = sessionStorage.getItem('tid');
-            if (tid != null && tid.length > 5) {
-               var formData = new FormData();
-               formData.append("tid", tid);
-               $.ajax({
-                  url: 'ajaxtid.php',
-                  type: 'POST',
-                  data: formData,
-                  processData: false,
-                  contentType: false,
-                  success: function (res) {
-                     res = JSON.parse(res);
-                  },
-               });
-               clearInterval(tidInterval);
             }
-         }, 1000)
-      }
 
-  
-      // function fixScroll() {
-      //    var topPosition = $('.footer').offset().top + $('.footer').outerHeight();
-      //      const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
-      //    var hiddenPx = screen.height - maxViewportHeight;
-      //    console.log('Position relative to document:', topPosition, 'px');
-      //    const limit = (topPosition * .9) + hiddenPx + 500; // Height in pixels where you want scrolling to stop
-      //    if (isZoom) {
-      //       if (window.scrollY >= limit) {
-      //          window.scrollTo(0, limit);
-      //       }
-      //    }
-      // }
-      // window.addEventListener('scroll', fixScroll, { passive: true });
+            else {
+               scale = 0.9;
+               $("#zoomed").css('position', 'absolute');
+               isZoom = true;
+               $('#headup').addClass('headerbg')
+               $('#header').removeClass('headerbg')
+               $('#headup').show()
+               const divElement = document.getElementById("zoomed");
+               $("#zoomed").css('-ms-transform', 'scale(' + scale + ')');
+               $("#zoomed").css('transform', 'scale(' + scale + ')');
+               $("#zoomed").css('transform-origin', 'top center');
+               // Get the width including padding and border (e.g., 130)
+               const offsetWidth = divElement.offsetWidth;
+               console.log("offsetWidth:", offsetWidth);
+               var margins = window.innerWidth - offsetWidth;
+               console.log('margins:', margins)
+               var leftMargin = margins / 2;
+               console.log('left margin:', leftMargin)
+               $("#zoomed").css('left', leftMargin + 'px');
+            }
 
-//       $("a[href='#top']").click(function () {
-//         $("html, body").animate({ scrollTop: 0 }, "slow");
-//         return false;
-//       });
-                  
-function goTopByScroll(event){
-scrollToSection(event,'form-top');
-}
+         }
 
-function scrollToSection(event, sectionId) {
-    event.preventDefault(); // Prevents the default jump behavior
+         var tidSession = '';
+         var tidInterval;
+         function getTid() {
 
-    const section = document.getElementById(sectionId);
-    if (section) {
-        // This animates the scroll smoothly
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start' // Aligns the top of the element to the top of the viewport
-        });
-    }
-}
-   </script>
+
+            tidInterval = setInterval(function () {
+               var tid = sessionStorage.getItem('tid');
+               if (tid != null && tid.length > 5) {
+                  var formData = new FormData();
+                  formData.append("tid", tid);
+                  $.ajax({
+                     url: 'ajaxtid.php',
+                     type: 'POST',
+                     data: formData,
+                     processData: false,
+                     contentType: false,
+                     success: function (res) {
+                        res = JSON.parse(res);
+                     },
+                  });
+                  clearInterval(tidInterval);
+               }
+            }, 1000)
+         }
+
+
+         // function fixScroll() {
+         //    var topPosition = $('.footer').offset().top + $('.footer').outerHeight();
+         //      const maxViewportHeight = window.visualViewport.height + window.visualViewport.offsetTop;
+         //    var hiddenPx = screen.height - maxViewportHeight;
+         //    console.log('Position relative to document:', topPosition, 'px');
+         //    const limit = (topPosition * .9) + hiddenPx + 500; // Height in pixels where you want scrolling to stop
+         //    if (isZoom) {
+         //       if (window.scrollY >= limit) {
+         //          window.scrollTo(0, limit);
+         //       }
+         //    }
+         // }
+         // window.addEventListener('scroll', fixScroll, { passive: true });
+
+         //       $("a[href='#top']").click(function () {
+         //         $("html, body").animate({ scrollTop: 0 }, "slow");
+         //         return false;
+         //       });
+
+         function goTopByScroll(event) {
+            scrollToSection(event, 'form-top');
+         }
+
+         function scrollToSection(event, sectionId) {
+            event.preventDefault(); // Prevents the default jump behavior
+
+            const section = document.getElementById(sectionId);
+            if (section) {
+               // This animates the scroll smoothly
+               section.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start' // Aligns the top of the element to the top of the viewport
+               });
+            }
+         }
+      </script>
 </body>
 
 </html>
