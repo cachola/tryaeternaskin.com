@@ -1219,7 +1219,7 @@ ul {list-style:none; padding:0;}
     transform: translateX(-50%);
 }
 
-.big-arrow { display: none; font-weight: bold; letter-spacing: -1px; margin-top: 25px; padding: 10px ; position: relative; width: 85%; text-align: right;  color: white; font-size: 16px; }
+.big-arrow { display: none; font-weight: bold; letter-spacing: -1px; margin-top: 86px; padding: 10px ; position: relative; width: 85%; text-align: right;  color: white; font-size: 16px; }
 .big-arrow div { font-size: 14px; letter-spacing: 0px;}
 .big-arrow::after { content: " "; display: block; width: 0; height: 0; border: 31px solid transparent; position: absolute; top: 0; left: 100%; }
 
