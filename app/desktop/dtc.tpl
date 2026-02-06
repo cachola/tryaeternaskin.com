@@ -255,15 +255,7 @@ Session::set('steps.1.prospectId',$prospectId);
                             LOW. Sell-Out Risk: <strong class="red">HIGH</strong>
                         </div>
                     </div>
-                    <p>
-                        Just pay a small shipping fee. Enjoy your expedited delivery to
-                        <b>test</b>
-                        <b>test</b>,
-                        <b>4844 NW 18th Avenue</b>,
-                        <b>Pompano Beach</b>, <b></b>
-                        <b>FL</b>
-                        <b>33064</b>!
-                    </p>
+
                     <p>
                         If you order in the next
                         <em><strong>1 hour and 13 minutes</strong></em>, your order is scheduled to arrive by
